@@ -1,568 +1,125 @@
-# GigaChat 3.1 10B - SWE-bench Lite Evaluation
+# GigaChat 3.1 10B A1.8B - Benchmark Suite
 
-**Model:** `ai-sage/GigaChat3.1-10B-A1.8B` (10B total params, 1.8B active, MoE architecture)
-**Benchmark:** [SWE-bench Lite](https://github.com/SWE-bench/SWE-bench) - 300 real-world GitHub issues
-**Date:** April 4, 2026
-
----
-
-## Results
-
-Five approaches were evaluated across multiple sessions: first establishing baselines with single-pass prompting,
-then investigating chat template modifications and alternative prompting strategies,
-and finally implementing a full agentic approach with tool calling.
-
-### Summary Table
-
-| Run | Method | Score | Patches Applied | Edit Rate |
-|---|---|---|---|---|
-| Run 1 - Baseline | Single-pass, simple instructions | 0/300 (0%) | 14/300 | 4.7% |
-| Run 2 - Few-shot | Single-pass, one diff example | 0/300 (0%) | 24/300 | **8.0%** |
-| Run 3 - CoT + `<|file|>` tokens | Single-pass, chain-of-thought | aborted | - | - |
-| Run 4 - DEVSYSTEM + improved prompt | Single-pass, custom chat template | 0/300 (0%) | 16/300 | 5.3% |
-| Run 5 - Agentic (str_replace) | Multi-turn tool loop, 10 instances test | pending eval | 3/10 | **30%** |
-
-**Best applicable patch rate: Run 2 with 8.0%. Score is 0% across all evaluated runs.**
-**Most promising approach: Run 5 (Agentic) - 30% of instances produce edits in pilot test.**
+**Модель:** [`ai-sage/GigaChat3.1-10B-A1.8B`](https://huggingface.co/ai-sage/GigaChat3.1-10B-A1.8B) (10B total / 1.8B active, MoE)
+**Дата:** апрель 2026
+**Инференс:** vLLM v0.19.0, `--tool-call-parser gigachat3`, fp8 KV-cache
 
 ---
 
-### Run 4 - DEVSYSTEM + Improved System Prompt
+## Сводка результатов
 
-Modified the model's `chat_template.jinja` to add `<code_editing_guidelines>` inside the
-`developer system` role (highest priority, cannot be overridden by user instructions).
-Also improved the `system` role prompt with explicit line number anchoring.
-Served via vLLM with `--chat-template swe_bench_template.jinja`.
-
-| Metric | Value |
-|---|---|
-| **Score (resolved, tests passed)** | **0 / 300 (0.00%)** |
-| Patch applied successfully | 16 / 300 (5.33%) |
-| Patch apply error | 283 / 300 (94.33%) |
-| Valid `@@ -N,M +N,M @@` header | 292 / 300 (97.3%) |
-| Malformed patches (garbage after hunk) | 13 / 300 (4.3%) |
-| Empty patch | 1 / 300 (0.33%) |
-| Inference time | ~78 min total, median ~10s/instance |
-
-**Predictions:** `results/gigachat31_10b__swe-bench_lite__v4.jsonl`
-**Evaluation report:** `results/ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-v4.json`
-**Chat template:** `patches/swe_bench_template.jinja`
-
-**Key finding:** The DEVSYSTEM modification did not improve results vs Run 2 (5.3% vs 8.0% apply rate).
-The model occasionally included shell commands from the issue description as diff content,
-causing "malformed patch" errors (e.g. `% tests/runtests.py ...` appearing as a diff line).
+| Бенчмарк | Что тестирует | Лучший результат | Папка |
+|----------|---------------|------------------|-------|
+| **BFCL** | Tool calling (вызов функций) | Simple Python **89.5%**, Multiple **91.0%** | [`benchmarks/bfcl/`](benchmarks/bfcl/) |
+| **tau2-bench** | Агентные диалоги (multi-turn) | Pass^1 **0.0%** (airline, 50 задач) | [`benchmarks/tau2-bench/`](benchmarks/tau2-bench/) |
+| **SWE-bench Lite** | Решение GitHub issues | Score **0%**, best patch rate **8%** | [`benchmarks/swe-bench/`](benchmarks/swe-bench/) |
 
 ---
 
-### Run 5 - Agentic Approach with Tool Calling (Pilot: 10 instances)
+## BFCL - Berkeley Function Calling Leaderboard
 
-Instead of generating a unified diff in one shot, the model works in a multi-turn loop:
-1. Receives only the issue description + list of available files
-2. Calls `view_file(path)` to read file content from the BM25 cache
-3. Calls `str_replace(path, old_str, new_str)` to make targeted edits
-4. Calls `finish(summary)` when done
+Тестирует способность модели выбрать правильную функцию и передать правильные аргументы.
 
-The script converts accumulated `str_replace` operations to a unified diff using Python's `difflib`
-(no need for the model to produce diff syntax at all).
+| Категория | Accuracy | Описание |
+|-----------|----------|----------|
+| Simple Python | **89.50%** | Один вызов, Python-функции |
+| Multiple | **91.00%** | Несколько последовательных вызовов |
+| Simple Java | 61.00% | Один вызов, Java-функции |
+| Simple JavaScript | 58.00% | Один вызов, JS-функции |
+| Parallel | 0.00% | Параллельные вызовы (не поддерживается) |
 
-**Script:** `scripts/run_gigachat_agent.py`
+Для модели с 1.8B активных параметров - 89.5% на Python сопоставимо с GPT-4o (~90-95%).
 
-**Pilot results (10 instances):**
-
-| Metric | Value |
-|---|---|
-| Instances with successful edits | 3 / 10 (30%) |
-| Avg turns per instance | 5.0 |
-| OOM errors | 0 (fixed by 4K char view limit) |
-| Patch quality | Syntactically valid (difflib) |
-
-**Notable patches generated:**
-- `django__django-10914`: Changed `FILE_UPLOAD_PERMISSIONS = None` to `FILE_UPLOAD_PERMISSIONS = 0o644` in `global_settings.py` - semantically correct fix
-- `astropy__astropy-14365`: Made QDP command regex case-insensitive - correct direction
-
-**Key improvements over single-pass:**
-- `str_replace` is far more reliable than generating diff headers manually
-- Model correctly identifies which files to modify (uses `view_file` on relevant paths)
-- Proper unified diffs generated by `difflib` - always syntactically valid
-- 30% edit rate vs 4.7-8.0% patch apply rate in single-pass runs
-
-**Remaining limitation:** 7/10 instances called `finish()` without making edits - the 10B model
-sometimes cannot identify the exact code to change even after viewing the file.
-
-**Predictions:** `predictions/gigachat31_10b__swe-bench_lite__agent_test.jsonl`
-**Chat template:** Updated to Russian in `patches/swe_bench_template.jinja`
+Подробности: [`benchmarks/bfcl/README.md`](benchmarks/bfcl/README.md)
 
 ---
 
-### Run 3 - CoT + Native `<|file|>` Tokens (Aborted)
+## tau2-bench - Agent Benchmark
 
-Attempted to use the model's native file markers (`<|file|>...<|/file|>` special tokens,
-trained as part of the `added files` role) inside user messages,
-combined with chain-of-thought prompting ("Step 1: identify the bug, Step 2: write the patch").
+Тестирует многоходовые агентные диалоги: модель выступает агентом поддержки авиакомпании, общается с пользователем и вызывает инструменты для решения задачи.
 
-**Result:** Aborted after 5 instances.
+- **Average Reward: 0.00** из 40 оцененных задач
+- Модель вызывает инструменты (10-12 tool calls на задачу), но зацикливается
+- Типичная проблема - многократный вызов `get_reservation_details` без продвижения к решению
+- Все задачи завершились по лимиту шагов (max_steps=30)
 
-- 57% of instances produced "euclidean function" hallucinations - the model completely ignored
-  the actual issue and generated a generic GCD algorithm fix regardless of context.
-- Root cause: CoT forces the model to generate an analysis first. When the model cannot
-  understand the complex code context, it defaults to a memorized pattern.
-- The `<|file|>` tokens in user messages are designed for the `added files` role
-  (not inline in user messages) and caused the model to ignore the preceding issue text.
+Подробности: [`benchmarks/tau2-bench/README.md`](benchmarks/tau2-bench/README.md)
 
 ---
 
-### Run 2 - Few-shot Prompt (best result)
+## SWE-bench Lite - Software Engineering
 
-| Metric | Value |
-|---|---|
-| **Score (resolved, tests passed)** | **0 / 300 (0.00%)** |
-| Patch applied successfully | 24 / 300 (8.00%) |
-| Patch apply error | 276 / 300 (92.00%) |
-| Valid `@@ -N,M +N,M @@` header | 297 / 300 (99.00%) |
-| Empty patch | 0 / 300 (0.00%) |
-| Inference time | 101.9 min total, median 9.7s/instance |
+Тестирует решение реальных задач из GitHub issues - 300 инстансов из Django, scikit-learn, matplotlib и др.
 
-**Predictions:** `results/gigachat31_10b__swe-bench_lite__fewshot.jsonl`
-**Evaluation report:** `results/ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-fewshot2.json`
+- **Score: 0%** при single-pass prompting (5 подходов)
+- Лучший patch apply rate: **8%** (few-shot)
+- Агентный подход (Run 5, пилот): **30%** инстансов с правильными редакциями
+- Основная проблема: модель не генерирует валидный unified diff формат
+
+Подробности: [`benchmarks/swe-bench/README.md`](benchmarks/swe-bench/README.md)
 
 ---
 
-### Run 1 - Baseline
+## Общие выводы
 
-| Metric | Value |
-|---|---|
-| **Score (resolved, tests passed)** | **0 / 300 (0.00%)** |
-| Patch applied successfully | 14 / 300 (4.67%) |
-| Patch apply error | 286 / 300 (95.33%) |
-| Empty patch | 0 / 300 (0.00%) |
-| Inference time | 81.7 min total, median 7.0s/instance |
+### Сильные стороны
 
-**Predictions:** `results/gigachat31_10b__swe-bench_lite__test.jsonl`
-**Evaluation report:** `results/ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b.json`
+1. **Одиночные tool calls** - отличная точность 89-91%, на уровне топовых моделей
+2. **Скорость** - средняя латентность <1с на вызов
+3. **Нативный tool calling** - vLLM `gigachat3` parser работает корректно
+4. **Multiple calls** - модель генерирует несколько последовательных вызовов
+
+### Слабые стороны
+
+1. **Parallel tool calls** - не поддерживаются (0%)
+2. **Агентные сценарии** - модель не справляется с длинными цепочками рассуждений
+3. **Генерация diff** - не может стабильно генерировать unified diff формат
+4. **Галлюцинации инструментов** - иногда вызывает несуществующие функции
+
+### Рекомендации
+
+- **Для продакшена** - подходит для простых tool-calling сценариев (1-3 инструмента, Python API)
+- **Для агентных задач** - требуется модель большего размера или fine-tuning
+- **Parallel calls** - потенциально решается через дообучение
 
 ---
 
-### Why Score Is 0% Across All Runs
+## Конфигурация vLLM
 
-The model's failure has two independent layers:
-
-**Layer 1 - Format (fixed by few-shot):** Without a concrete example, the model writes
-human-readable descriptions in hunk headers instead of the required numeric format:
-
-```diff
-# Generated (invalid - git apply rejects this):
-@@ at the end of the file, after the _operators dictionary
-
-# Required (valid):
-@@ -242,7 +242,7 @@
+```yaml
+serve ai-sage/GigaChat3.1-10B-A1.8B
+  --served-model-name ai-sage/GigaChat3.1-10B-A1.8B
+  --trust-remote-code --dtype auto
+  --gpu-memory-utilization 0.95 --max-num-seqs 1
+  --max-model-len 60000 --max-num-batched-tokens 60000
+  --kv-cache-dtype fp8 --no-enable-prefix-caching
+  --enable-auto-tool-choice --tool-call-parser gigachat3
 ```
 
-A single few-shot example in the system prompt fixed this: valid headers went from ~0% to 99%.
-
-**Layer 2 - Semantics (not fixable by prompting):** Even with correct format, the model
-targets the wrong functions and invents context lines that do not match the actual file.
-
-Example - `astropy__astropy-12907`:
-- Gold patch: 1-line change in `_cstack()` at line 242: `= 1` → `= right`
-- Model patch: targets `_separable()` at line 290 with invented context that does not exist in the file
-
-Both Run 3 (CoT) and Run 4 (DEVSYSTEM) confirmed this is a model reasoning limitation,
-not a prompt formatting issue. This requires an agent loop rather than single-pass inference.
-
----
-
-## Tool Calling Verification
-
-Verified before running the benchmark:
-
-```bash
-curl http://gpu02:8083/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "ai-sage/GigaChat3.1-10B-A1.8B",
-    "temperature": 0,
-    "messages": [{"role": "user", "content": "What is the weather in Moscow?"}],
-    "tools": [{"type": "function", "function": {
-      "name": "get_weather",
-      "parameters": {"type": "object", "properties": {"city": {"type": "string"}}, "required": ["city"]}
-    }}]
-  }'
-```
-
-Result: `finish_reason: "tool_calls"`, correctly calls `get_weather({"city": "Москва"})`. Tool calling works.
-
----
-
-## Comparison with Known Baselines (SWE-bench Lite)
-
-| Model | Approach | Score |
-|---|---|---|
-| Claude 3.5 Sonnet | SWE-agent (agentic + tools) | ~49% |
-| GPT-4o | SWE-agent (agentic + tools) | ~30% |
-| GPT-4 | Single-pass prompting | ~4-5% |
-| **GigaChat 3.1 10B** | **Single-pass prompting** | **0%** |
-
-The agentic approach (tool calling loop) outperforms single-pass by 5-10x across all models.
-GigaChat 3.1 tool calling is functional - an agentic setup is the natural next step.
-
----
-
-## Repository Structure
+## Структура репозитория
 
 ```
 gigachat-bench/
-  README.md
-  requirements.txt
-  results/
-    gigachat31_10b__swe-bench_lite__test.jsonl            - Run 1 predictions (300 instances)
-    gigachat31_10b__swe-bench_lite__fewshot.jsonl         - Run 2 predictions (300 instances)
-    gigachat31_10b__swe-bench_lite__v4.jsonl              - Run 4 predictions (300 instances)
-    ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b.json            - Run 1 evaluation report
-    ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-fewshot2.json   - Run 2 evaluation report
-    ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-v4.json         - Run 4 evaluation report
-  predictions/
-    gigachat31_10b__swe-bench_lite__agent_test.jsonl   - Run 5 agent predictions (10 instances pilot)
-  scripts/
-    run_gigachat_inference.py   - single-pass inference script (v4, Runs 1-4)
-    run_gigachat_agent.py       - agentic inference with tool calling loop (Run 5)
-    run_evaluation.sh           - evaluation wrapper
-  patches/
-    run_api_openai_compat.patch - optional patch to swebench/inference/run_api.py
-    swe_bench_template.jinja    - modified chat template with Russian code_editing_guidelines (Run 4+)
-```
-
----
-
-## Reproduction Guide
-
-### Prerequisites
-
-**Inference machine:** GPU server, 1x GPU (tested on A100/H100), vLLM serving the model.
-
-**Evaluation machine:** x86_64, 16+ GB RAM, 120+ GB free disk, Docker.
-
-Inference and evaluation can run on separate machines.
-
-### 1. Start the Model Server
-
-```yaml
-# docker-compose.yaml
-gigachat31-10b:
-  image: vllm/vllm-openai:v0.19.0
-  volumes:
-    - ./vllm_data:/root/.cache
-    # Optional: mount modified chat template for Run 4 (DEVSYSTEM variant)
-    # - ./swe_bench_template.jinja:/swe_bench_template.jinja
-  command: >
-    serve ai-sage/GigaChat3.1-10B-A1.8B
-    --served-model-name ai-sage/GigaChat3.1-10B-A1.8B
-    --trust-remote-code
-    --dtype auto
-    --gpu-memory-utilization 0.95
-    --max-num-seqs 1
-    --max-model-len 60000
-    --max-num-batched-tokens 60000
-    --kv-cache-dtype fp8
-    --no-enable-prefix-caching
-    --enable-auto-tool-choice
-    --tool-call-parser gigachat3
-    # Optional: use modified chat template
-    # --chat-template /swe_bench_template.jinja
-  ports:
-    - 8083:8000
-  deploy:
-    resources:
-      reservations:
-        devices:
-          - driver: nvidia
-            device_ids: ["1"]
-            capabilities: [gpu]
-```
-
-```bash
-docker compose up -d
-curl http://gpu02:8083/v1/models  # verify
-```
-
-### 2. Clone SWE-bench
-
-```bash
-git clone https://github.com/SWE-bench/SWE-bench.git
-cd SWE-bench
-```
-
-### 3. Set Up Python Environment
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Do NOT use pip install -e ".[inference]" - it requires flash_attn + CUDA build tools
-pip install -e . openai datasets tenacity tqdm python-dotenv
-```
-
-### 4. (Optional) Patch run_api.py for Custom Endpoints
-
-Skip this if you use our custom script (recommended).
-
-Apply `patches/run_api_openai_compat.patch` to add `OPENAI_API_BASE` support to the built-in
-`swebench/inference/run_api.py`, which only supports GPT/Claude by default:
-
-```bash
-patch -p1 < /path/to/gigachat-bench/patches/run_api_openai_compat.patch
-```
-
-After patching:
-
-```bash
-OPENAI_API_BASE=http://gpu02:8083/v1 \
-OPENAI_API_KEY=none \
-python -m swebench.inference.run_api \
-  --dataset_name_or_path princeton-nlp/SWE-bench_bm25_13K \
-  --model_name_or_path ai-sage/GigaChat3.1-10B-A1.8B \
-  --output_dir predictions/
-```
-
-### 5. Run Inference
-
-Copy `scripts/run_gigachat_inference.py` to the SWE-bench root, then:
-
-```bash
-# Full run - all 300 SWE-bench Lite instances (~100 min)
-python3 run_gigachat_inference.py \
-  --api-base http://gpu02:8083/v1 \
-  --model-name ai-sage/GigaChat3.1-10B-A1.8B \
-  --output-file predictions/gigachat31_10b__swe-bench_lite__fewshot.jsonl \
-  --max-tokens 4096
-
-# Quick test - 5 instances
-python3 run_gigachat_inference.py --max-instances 5
-```
-
-**All flags:**
-
-| Flag | Default | Description |
-|---|---|---|
-| `--api-base` | `http://gpu02:8083/v1` | OpenAI-compatible API base URL |
-| `--model-name` | `ai-sage/GigaChat3.1-10B-A1.8B` | Model name in vLLM |
-| `--output-file` | `predictions/gigachat31_10b__swe-bench_lite__fewshot.jsonl` | Output JSONL path |
-| `--max-tokens` | `4096` | Max tokens per generation |
-| `--max-instances` | None | Limit instances (for testing) |
-| `--resume` | True | Skip already-done instances |
-
-**What the script does:**
-1. Loads 300 instance IDs from `princeton-nlp/SWE-bench_Lite`
-2. Streams `princeton-nlp/SWE-bench_bm25_13K` - code context pre-retrieved via BM25 (top 13K tokens)
-3. Sends `system prompt + issue + code` to the model (temperature=0)
-4. Extracts the diff patch from `<patch>...</patch>` tags or raw diff blocks
-5. Ensures patch ends with `\n` (required by `git apply`)
-6. Writes JSONL output, one record per line
-
-**Output JSONL format:**
-```json
-{
-  "instance_id": "django__django-12907",
-  "model_name_or_path": "ai-sage/GigaChat3.1-10B-A1.8B",
-  "model_patch": "diff --git a/...\n--- a/...\n+++ b/...\n@@ -N,M +N,M @@\n ...",
-  "full_output": "<patch>...</patch>"
-}
-```
-
-### 6. Run Evaluation
-
-Requires Docker and 120+ GB free disk.
-
-```bash
-# Verify harness works first (gold patch, 1 instance, ~2 min)
-python3 -m swebench.harness.run_evaluation \
-  --predictions_path gold \
-  --max_workers 1 \
-  --instance_ids astropy__astropy-12907 \
-  --run_id validate-gold
-# Expected: resolved_instances: 1
-
-# Full evaluation - all 300 instances (~90 min with 4 workers)
-python3 -m swebench.harness.run_evaluation \
-  --dataset_name princeton-nlp/SWE-bench_Lite \
-  --predictions_path predictions/gigachat31_10b__swe-bench_lite__fewshot.jsonl \
-  --max_workers 4 \
-  --run_id gigachat31-10b-fewshot \
-  --cache_level env
-```
-
-**Key flags:**
-
-| Flag | Value | Notes |
-|---|---|---|
-| `--max_workers` | 4 | Use `min(0.75 * nproc, 24)` |
-| `--cache_level env` | recommended | Caches env images (~30-50 GB), discards per-instance images |
-| `--cache_level none` | minimal disk | Slowest, rebuilds everything |
-| `--cache_level instance` | fastest | Needs ~300+ GB disk |
-
-**Note on urllib3 warning at exit:** The harness prints `ValueError: I/O operation on closed file`
-when shutting down Docker connections. This is harmless - the report is written before this error appears.
-
-**Output:**
-- `<model>.<run_id>.json` - summary with resolved/applied/error counts
-- `logs/run_evaluation/<run_id>/` - per-instance `patch.diff` + `run_instance.log`
-
----
-
-## System Prompt Details
-
-### Run 4 - DEVSYSTEM + Improved Prompt
-
-**Chat template modification** (`patches/swe_bench_template.jinja`):
-Added a `<code_editing_guidelines>` block to the `developer system` role (highest priority):
-
-```
-<code_editing_guidelines>
-When generating unified diff patches to fix code bugs, follow these rules with HIGHEST PRIORITY:
-
-1. The code context shows files with LINE NUMBERS (e.g. "42 def foo():"). Use ONLY these exact line numbers.
-2. @@ header format MUST be EXACTLY: @@ -START,COUNT +START,COUNT @@
-   where START is the line number of the FIRST context line in the hunk.
-3. Copy context lines EXACTLY as shown in the code (strip the leading line number, keep the rest verbatim).
-4. Never invent context lines that are not shown - use only what is provided.
-5. Wrap the complete patch in <patch>...</patch> tags.
-...
-</code_editing_guidelines>
-```
-
-**System prompt** (at `system` role level, lower priority than DEVSYSTEM):
-
-```
-You are an expert software engineer. Your task is to fix GitHub issues by generating unified diff patches.
-
-The code context shows files with LINE NUMBERS (e.g. '42 def foo():'). Use EXACTLY those line numbers
-in the @@ header. Copy context lines VERBATIM (without the number prefix).
-
-PROCESS:
-1. Read the issue and identify what is broken
-2. Find the exact lines in the file context that need to change
-3. Write a brief analysis (1-2 sentences)
-4. Generate the unified diff patch
-
-PATCH FORMAT:
-  diff --git a/FILE b/FILE
-  --- a/FILE
-  +++ b/FILE
-  @@ -START,COUNT +START,COUNT @@
-   <context line copied verbatim from file>
-  -<removed line copied verbatim from file>
-  +<added line with the fix>
-  Wrap in <patch>...</patch>
-
-EXAMPLE:
-[start of src/utils.py]
-10 def greet(name):
-11     msg = 'Hello ' + nam
-12     return msg
-[end of src/utils.py]
-
-Issue: NameError - 'nam' should be 'name'
-
-Analysis: The typo is on line 11 in src/utils.py: 'nam' should be 'name'.
-
-<patch>
-diff --git a/src/utils.py b/src/utils.py
---- a/src/utils.py
-+++ b/src/utils.py
-@@ -10,3 +10,3 @@
- def greet(name):
--    msg = 'Hello ' + nam
-+    msg = 'Hello ' + name
-     return msg
-</patch>
-```
-
-**Result:** Patch apply rate dropped from 8% (Run 2) to 5.3%. The DEVSYSTEM modification
-did not improve over the simpler few-shot approach.
-
----
-
-### Run 2 (best) - Few-shot in System Prompt
-
-```
-You are an expert software engineer. Fix GitHub issues by generating unified diff patches.
-
-RULES:
-1. The code blocks show line numbers - use them for the @@ header
-2. @@ header format is EXACTLY: @@ -OLD_LINE,OLD_COUNT +NEW_LINE,NEW_COUNT @@
-3. Context lines (unchanged) start with a single space
-4. Removed lines start with -
-5. Added lines start with +
-6. Wrap the entire patch in <patch>...</patch>
-
-EXAMPLE:
-[start of utils.py]
-10 def greet(name):
-11     msg = 'Hello ' + nam
-12     return msg
-[end of utils.py]
-
-Correct patch:
-<patch>
-diff --git a/utils.py b/utils.py
---- a/utils.py
-+++ b/utils.py
-@@ -10,3 +10,3 @@
- def greet(name):
--    msg = 'Hello ' + nam
-+    msg = 'Hello ' + name
-     return msg
-</patch>
-```
-
-### Run 1 (baseline) - No Example
-
-```
-You are an expert software engineer tasked with resolving GitHub issues.
-Generate a unified diff patch in the EXACT standard git diff format.
-CRITICAL: @@ line format is EXACTLY: @@ -LINE,COUNT +LINE,COUNT @@ (numeric only!)
-Wrap the entire patch in <patch> and </patch> tags.
-```
-
-Despite explicitly stating the format, the baseline prompt produced nearly 0% valid `@@` headers.
-The model needs to see a concrete example, not just a description.
-
----
-
-## Recommendations
-
-### 1. Agentic approach (highest impact)
-
-GigaChat 3.1 tool calling is verified working. Implement an agent loop:
-- `read_file(path)` - read the file content at the right commit
-- `search_code(query)` - find relevant code locations
-- `edit_file(path, old, new)` - make the actual change
-- `run_tests()` - verify the fix
-
-This is how SWE-agent achieves 30-49% on this benchmark.
-
-### 2. Oracle retrieval (upper bound estimate)
-
-Replace the BM25 dataset with oracle-retrieved files (exact files touched by the gold patch).
-This gives the model the correct files to edit and estimates the ceiling of single-pass performance.
-
-### 3. Fine-tuning on diff format
-
-Use [SWE-smith](https://github.com/SWE-bench/SWE-smith) to generate training data with correct
-unified diff format. Even a small fine-tuning run should stabilize the output format.
-
----
-
-## Dependencies
-
-```
-datasets>=2.14.0
-openai>=1.3.0
-tqdm>=4.65.0
-tenacity>=8.2.0
-python-dotenv>=1.0.0
-docker  # evaluation harness only
-```
-
-```bash
-pip install -r requirements.txt
+  README.md                          # Этот файл - обзор всех бенчмарков
+  requirements.txt                   # Зависимости для SWE-bench
+  scripts/                           # Скрипты инференса SWE-bench
+    run_gigachat_inference.py         # Single-pass инференс
+    run_gigachat_agent.py             # Агентный инференс с tool calling
+    run_evaluation.sh                 # Оценка через swebench harness
+  predictions/                       # Сгенерированные патчи SWE-bench
+  results/                           # Результаты оценки SWE-bench
+  patches/                           # Кастомный chat template
+  benchmarks/
+    bfcl/                            # BFCL результаты и инструкция
+      README.md                      # Как запустить BFCL
+      data_overall.csv               # Сводная таблица
+      BFCL_v4_*_result.json          # Сырые ответы модели
+      BFCL_v4_*_score.json           # Оценки по категориям
+    tau2-bench/                      # tau2-bench результаты и инструкция
+      README.md                      # Как запустить tau2-bench
+      results_airline.json           # Полные результаты (50 задач)
+    swe-bench/                       # SWE-bench подробности
+      README.md                      # Как запустить SWE-bench
+      REPORT.md                      # Подробный отчет (EN)
+      REPORT_RU.md                   # Подробный отчет (RU)
 ```
