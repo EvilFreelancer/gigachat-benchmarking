@@ -1,0 +1,74 @@
+--- a/swebench/inference/run_api.py
++++ b/swebench/inference/run_api.py
+@@ -1,6 +1,7 @@
+ #!/usr/bin/env python3
+ 
+ import json
++import os
+ import os
+ import time
+ import dotenv
+@@ -29,6 +30,13 @@ MODEL_LIMITS = {
+     "gpt-4-1106-preview": 128_000,
+     "gpt-4-0125-preview": 128_000,
++    # OpenAI-compatible local/custom models
++    "ai-sage/GigaChat3.1-10B-A1.8B": 60_000,
++    "ai-sage/GigaChat3.1-72B": 60_000,
+ }
+ 
++# OpenAI-compatible custom API base URL (overrides OPENAI_API_BASE env var)
++OPENAI_API_BASE = os.environ.get("OPENAI_API_BASE", None)
++
+ # The cost per token for each model input.
+ MODEL_COST_PER_INPUT = {
+@@ -48,6 +56,10 @@ MODEL_COST_PER_INPUT = {
+     "gpt-4-0125-preview": 0.00001,
++    # Custom models - set cost to 0 for local inference
++    "ai-sage/GigaChat3.1-10B-A1.8B": 0.0,
++    "ai-sage/GigaChat3.1-72B": 0.0,
+ }
+ 
+ # The cost per token for each model output.
+@@ -62,6 +74,10 @@ MODEL_COST_PER_OUTPUT = {
+     "gpt-4-0125-preview": 0.00003,
++    # Custom models - set cost to 0 for local inference
++    "ai-sage/GigaChat3.1-10B-A1.8B": 0.0,
++    "ai-sage/GigaChat3.1-72B": 0.0,
+ }
+ 
+@@ -113,11 +129,17 @@ def call_chat(model_name_or_path, inputs, use_azure, temperature, top_p, **mode
+     system_messages = inputs.split("\n", 1)[0]
+     user_message = inputs.split("\n", 1)[1]
+     try:
+-        if use_azure:
++        if OPENAI_API_BASE:
++            client = openai.OpenAI(api_key="none", base_url=OPENAI_API_BASE)
++            response = client.chat.completions.create(
++                model=model_name_or_path,
++                messages=[
++                    {"role": "system", "content": system_messages},
++                    {"role": "user", "content": user_message},
++                ],
++                temperature=temperature,
++                top_p=top_p,
++                **model_args,
++            )
++        elif use_azure:
+             response = openai.chat.completions.create(
+@@ -499,10 +521,12 @@ def main(
+     if model_name_or_path.startswith("claude"):
+         anthropic_inference(**inference_args)
+-    elif model_name_or_path.startswith("gpt"):
++    elif model_name_or_path.startswith("gpt") or OPENAI_API_BASE:
+         openai_inference(**inference_args)
+     else:
+         raise ValueError(f"Invalid model name or path {model_name_or_path}")
+ 
+@@ -525,7 +549,7 @@ if __name__ == "__main__":
+     parser.add_argument(
+         "--model_name_or_path",
+         type=str,
+         help="Name of API model. Update MODEL* constants in this file to add new models.",
+-        choices=sorted(list(MODEL_LIMITS.keys())),
++        choices=None,
+     )
