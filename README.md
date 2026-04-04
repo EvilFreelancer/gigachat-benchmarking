@@ -9,9 +9,67 @@
 
 ## Final Results
 
-Two runs were conducted to investigate and partially fix a diff format problem.
+Four runs were conducted across two sessions: first establishing a baseline and fixing the diff format problem,
+then investigating whether chat template modifications and alternative prompting strategies could push the score above 0%.
 
-### Run 2 - Few-shot Prompt (final)
+### Summary Table
+
+| Run | Prompt Strategy | Score | Patches Applied | Apply Rate |
+|---|---|---|---|---|
+| Run 1 - Baseline | Simple instructions, no example | 0/300 (0%) | 14/300 | 4.7% |
+| Run 2 - Few-shot | One diff example in system prompt | 0/300 (0%) | 24/300 | **8.0%** |
+| Run 3 - CoT + `<|file|>` tokens | Chain-of-thought, native file markers | aborted (5 instances) | - | - |
+| Run 4 - DEVSYSTEM + improved prompt | Custom chat template + explicit anchoring | 0/300 (0%) | 16/300 | 5.3% |
+
+**Best result: Run 2 with 8.0% patch application rate. Score is 0% across all runs.**
+
+---
+
+### Run 4 - DEVSYSTEM + Improved System Prompt
+
+Modified the model's `chat_template.jinja` to add `<code_editing_guidelines>` inside the
+`developer system` role (highest priority, cannot be overridden by user instructions).
+Also improved the `system` role prompt with explicit line number anchoring.
+Served via vLLM with `--chat-template swe_bench_template.jinja`.
+
+| Metric | Value |
+|---|---|
+| **Score (resolved, tests passed)** | **0 / 300 (0.00%)** |
+| Patch applied successfully | 16 / 300 (5.33%) |
+| Patch apply error | 283 / 300 (94.33%) |
+| Valid `@@ -N,M +N,M @@` header | 292 / 300 (97.3%) |
+| Malformed patches (garbage after hunk) | 13 / 300 (4.3%) |
+| Empty patch | 1 / 300 (0.33%) |
+| Inference time | ~78 min total, median ~10s/instance |
+
+**Predictions:** `results/gigachat31_10b__swe-bench_lite__v4.jsonl`
+**Evaluation report:** `results/ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-v4.json`
+**Chat template:** `patches/swe_bench_template.jinja`
+
+**Key finding:** The DEVSYSTEM modification did not improve results vs Run 2 (5.3% vs 8.0% apply rate).
+The model occasionally included shell commands from the issue description as diff content,
+causing "malformed patch" errors (e.g. `% tests/runtests.py ...` appearing as a diff line).
+
+---
+
+### Run 3 - CoT + Native `<|file|>` Tokens (Aborted)
+
+Attempted to use the model's native file markers (`<|file|>...<|/file|>` special tokens,
+trained as part of the `added files` role) inside user messages,
+combined with chain-of-thought prompting ("Step 1: identify the bug, Step 2: write the patch").
+
+**Result:** Aborted after 5 instances.
+
+- 57% of instances produced "euclidean function" hallucinations - the model completely ignored
+  the actual issue and generated a generic GCD algorithm fix regardless of context.
+- Root cause: CoT forces the model to generate an analysis first. When the model cannot
+  understand the complex code context, it defaults to a memorized pattern.
+- The `<|file|>` tokens in user messages are designed for the `added files` role
+  (not inline in user messages) and caused the model to ignore the preceding issue text.
+
+---
+
+### Run 2 - Few-shot Prompt (best result)
 
 | Metric | Value |
 |---|---|
@@ -24,6 +82,8 @@ Two runs were conducted to investigate and partially fix a diff format problem.
 
 **Predictions:** `results/gigachat31_10b__swe-bench_lite__fewshot.jsonl`
 **Evaluation report:** `results/ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-fewshot2.json`
+
+---
 
 ### Run 1 - Baseline
 
@@ -38,16 +98,9 @@ Two runs were conducted to investigate and partially fix a diff format problem.
 **Predictions:** `results/gigachat31_10b__swe-bench_lite__test.jsonl`
 **Evaluation report:** `results/ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b.json`
 
-### Comparison
+---
 
-| Metric | Run 1 (baseline) | Run 2 (few-shot) | Delta |
-|---|---|---|---|
-| Score | 0% | 0% | - |
-| Patch applied | 14 (4.7%) | 24 (8.0%) | +10 (+71%) |
-| Patch error | 286 (95.3%) | 276 (92.0%) | -10 |
-| Valid `@@` header | ~0% | 99% | +99pp |
-
-### Why Score Is 0%
+### Why Score Is 0% Across All Runs
 
 The model's failure has two independent layers:
 
@@ -71,7 +124,8 @@ Example - `astropy__astropy-12907`:
 - Gold patch: 1-line change in `_cstack()` at line 242: `= 1` → `= right`
 - Model patch: targets `_separable()` at line 290 with invented context that does not exist in the file
 
-This requires an agent loop (read file, locate the bug, write the fix) rather than single-pass inference.
+Both Run 3 (CoT) and Run 4 (DEVSYSTEM) confirmed this is a model reasoning limitation,
+not a prompt formatting issue. This requires an agent loop rather than single-pass inference.
 
 ---
 
@@ -118,15 +172,18 @@ gigachat-bench/
   README.md
   requirements.txt
   results/
-    gigachat31_10b__swe-bench_lite__test.jsonl          - Run 1 predictions (300 instances)
-    gigachat31_10b__swe-bench_lite__fewshot.jsonl       - Run 2 predictions (300 instances)
+    gigachat31_10b__swe-bench_lite__test.jsonl            - Run 1 predictions (300 instances)
+    gigachat31_10b__swe-bench_lite__fewshot.jsonl         - Run 2 predictions (300 instances)
+    gigachat31_10b__swe-bench_lite__v4.jsonl              - Run 4 predictions (300 instances)
     ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b.json            - Run 1 evaluation report
     ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-fewshot2.json   - Run 2 evaluation report
+    ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-v4.json         - Run 4 evaluation report
   scripts/
-    run_gigachat_inference.py   - inference script (use this)
+    run_gigachat_inference.py   - inference script (v4, current best)
     run_evaluation.sh           - evaluation wrapper
   patches/
     run_api_openai_compat.patch - optional patch to swebench/inference/run_api.py
+    swe_bench_template.jinja    - modified chat template with code_editing_guidelines (Run 4)
 ```
 
 ---
@@ -147,6 +204,10 @@ Inference and evaluation can run on separate machines.
 # docker-compose.yaml
 gigachat31-10b:
   image: vllm/vllm-openai:v0.19.0
+  volumes:
+    - ./vllm_data:/root/.cache
+    # Optional: mount modified chat template for Run 4 (DEVSYSTEM variant)
+    # - ./swe_bench_template.jinja:/swe_bench_template.jinja
   command: >
     serve ai-sage/GigaChat3.1-10B-A1.8B
     --served-model-name ai-sage/GigaChat3.1-10B-A1.8B
@@ -160,6 +221,8 @@ gigachat31-10b:
     --no-enable-prefix-caching
     --enable-auto-tool-choice
     --tool-call-parser gigachat3
+    # Optional: use modified chat template
+    # --chat-template /swe_bench_template.jinja
   ports:
     - 8083:8000
   deploy:
@@ -302,7 +365,78 @@ when shutting down Docker connections. This is harmless - the report is written 
 
 ## System Prompt Details
 
-### Run 2 (current) - with few-shot example
+### Run 4 - DEVSYSTEM + Improved Prompt
+
+**Chat template modification** (`patches/swe_bench_template.jinja`):
+Added a `<code_editing_guidelines>` block to the `developer system` role (highest priority):
+
+```
+<code_editing_guidelines>
+When generating unified diff patches to fix code bugs, follow these rules with HIGHEST PRIORITY:
+
+1. The code context shows files with LINE NUMBERS (e.g. "42 def foo():"). Use ONLY these exact line numbers.
+2. @@ header format MUST be EXACTLY: @@ -START,COUNT +START,COUNT @@
+   where START is the line number of the FIRST context line in the hunk.
+3. Copy context lines EXACTLY as shown in the code (strip the leading line number, keep the rest verbatim).
+4. Never invent context lines that are not shown - use only what is provided.
+5. Wrap the complete patch in <patch>...</patch> tags.
+...
+</code_editing_guidelines>
+```
+
+**System prompt** (at `system` role level, lower priority than DEVSYSTEM):
+
+```
+You are an expert software engineer. Your task is to fix GitHub issues by generating unified diff patches.
+
+The code context shows files with LINE NUMBERS (e.g. '42 def foo():'). Use EXACTLY those line numbers
+in the @@ header. Copy context lines VERBATIM (without the number prefix).
+
+PROCESS:
+1. Read the issue and identify what is broken
+2. Find the exact lines in the file context that need to change
+3. Write a brief analysis (1-2 sentences)
+4. Generate the unified diff patch
+
+PATCH FORMAT:
+  diff --git a/FILE b/FILE
+  --- a/FILE
+  +++ b/FILE
+  @@ -START,COUNT +START,COUNT @@
+   <context line copied verbatim from file>
+  -<removed line copied verbatim from file>
+  +<added line with the fix>
+  Wrap in <patch>...</patch>
+
+EXAMPLE:
+[start of src/utils.py]
+10 def greet(name):
+11     msg = 'Hello ' + nam
+12     return msg
+[end of src/utils.py]
+
+Issue: NameError - 'nam' should be 'name'
+
+Analysis: The typo is on line 11 in src/utils.py: 'nam' should be 'name'.
+
+<patch>
+diff --git a/src/utils.py b/src/utils.py
+--- a/src/utils.py
++++ b/src/utils.py
+@@ -10,3 +10,3 @@
+ def greet(name):
+-    msg = 'Hello ' + nam
++    msg = 'Hello ' + name
+     return msg
+</patch>
+```
+
+**Result:** Patch apply rate dropped from 8% (Run 2) to 5.3%. The DEVSYSTEM modification
+did not improve over the simpler few-shot approach.
+
+---
+
+### Run 2 (best) - Few-shot in System Prompt
 
 ```
 You are an expert software engineer. Fix GitHub issues by generating unified diff patches.
@@ -335,7 +469,7 @@ diff --git a/utils.py b/utils.py
 </patch>
 ```
 
-### Run 1 (baseline) - no example
+### Run 1 (baseline) - No Example
 
 ```
 You are an expert software engineer tasked with resolving GitHub issues.

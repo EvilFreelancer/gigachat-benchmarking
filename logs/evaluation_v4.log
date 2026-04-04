@@ -1,0 +1,1105 @@
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-04-04 20:00:22,134 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-04 20:00:22,163 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Lite/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/README.md "HTTP/1.1 200 OK"
+2026-04-04 20:00:22,329 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-04 20:00:22,712 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Lite/princeton-nlp/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-04 20:00:22,918 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Lite/revision/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2 "HTTP/1.1 200 OK"
+2026-04-04 20:00:23,089 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-04-04 20:00:23,406 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Lite "HTTP/1.1 200 OK"
+2026-04-04 20:00:23,572 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Lite/tree/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-04 20:00:23,736 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Lite/tree/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-04-04 20:00:23,899 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-04-04 20:00:24,158 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-04 20:00:24,189 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Lite/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/README.md "HTTP/1.1 200 OK"
+2026-04-04 20:00:24,352 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-04 20:00:24,475 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Lite/princeton-nlp/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-04 20:00:24,632 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-04-04 20:00:24,791 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Lite "HTTP/1.1 200 OK"
+2026-04-04 20:00:24,966 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 4 existing instance images. Will reuse them.
+Running 299 instances...
+Evaluation:   0%|          | 0/299 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]Evaluation:   0%|          | 0/299 [00:50<?, ?it/s, ✓=0, ✖=0, error=1]Evaluation:   0%|          | 1/299 [00:50<4:11:14, 50.59s/it, ✓=0, ✖=0, error=1]Evaluation:   0%|          | 1/299 [00:50<4:11:14, 50.59s/it, ✓=0, ✖=0, error=2]Evaluation:   1%|          | 2/299 [00:50<1:43:29, 20.91s/it, ✓=0, ✖=0, error=2]Evaluation:   1%|          | 2/299 [00:51<1:43:29, 20.91s/it, ✓=0, ✖=0, error=3]Evaluation:   1%|          | 3/299 [00:51<57:26, 11.64s/it, ✓=0, ✖=0, error=3]  Evaluation:   1%|          | 3/299 [00:51<57:26, 11.64s/it, ✓=0, ✖=0, error=4]Evaluation:   1%|▏         | 4/299 [01:19<57:14, 11.64s/it, ✓=0, ✖=0, error=5]Evaluation:   2%|▏         | 5/299 [01:19<1:04:11, 13.10s/it, ✓=0, ✖=0, error=5]Evaluation:   2%|▏         | 5/299 [01:29<1:04:11, 13.10s/it, ✓=0, ✖=0, error=6]Evaluation:   2%|▏         | 6/299 [01:29<58:43, 12.03s/it, ✓=0, ✖=0, error=6]  Evaluation:   2%|▏         | 6/299 [01:35<58:43, 12.03s/it, ✓=0, ✖=0, error=7]Evaluation:   2%|▏         | 7/299 [01:35<50:28, 10.37s/it, ✓=0, ✖=0, error=7]Evaluation:   2%|▏         | 7/299 [01:36<50:28, 10.37s/it, ✓=0, ✖=0, error=8]Evaluation:   3%|▎         | 8/299 [01:36<36:15,  7.48s/it, ✓=0, ✖=0, error=8]Evaluation:   3%|▎         | 8/299 [01:51<36:15,  7.48s/it, ✓=0, ✖=0, error=9]Evaluation:   3%|▎         | 9/299 [01:51<47:32,  9.84s/it, ✓=0, ✖=0, error=9]Evaluation:   3%|▎         | 9/299 [02:03<47:32,  9.84s/it, ✓=0, ✖=0, error=10]Evaluation:   3%|▎         | 10/299 [02:03<50:57, 10.58s/it, ✓=0, ✖=0, error=10]Evaluation:   3%|▎         | 10/299 [02:05<50:57, 10.58s/it, ✓=0, ✖=0, error=11]Evaluation:   4%|▎         | 11/299 [02:05<38:26,  8.01s/it, ✓=0, ✖=0, error=11]Evaluation:   4%|▎         | 11/299 [02:06<38:26,  8.01s/it, ✓=0, ✖=0, error=12]Evaluation:   4%|▍         | 12/299 [02:06<28:02,  5.86s/it, ✓=0, ✖=0, error=12]Evaluation:   4%|▍         | 12/299 [02:07<28:02,  5.86s/it, ✓=0, ✖=0, error=13]Evaluation:   4%|▍         | 13/299 [02:07<20:39,  4.33s/it, ✓=0, ✖=0, error=13]Evaluation:   4%|▍         | 13/299 [02:21<20:39,  4.33s/it, ✓=0, ✖=0, error=14]Evaluation:   5%|▍         | 14/299 [02:21<34:42,  7.31s/it, ✓=0, ✖=0, error=14]Evaluation:   5%|▍         | 14/299 [02:30<34:42,  7.31s/it, ✓=0, ✖=1, error=14]Evaluation:   5%|▌         | 15/299 [02:30<36:28,  7.71s/it, ✓=0, ✖=1, error=14]Evaluation:   5%|▌         | 15/299 [02:33<36:28,  7.71s/it, ✓=0, ✖=2, error=14]Evaluation:   5%|▌         | 16/299 [02:33<29:41,  6.29s/it, ✓=0, ✖=2, error=14]Evaluation:   5%|▌         | 16/299 [02:36<29:41,  6.29s/it, ✓=0, ✖=2, error=15]Evaluation:   6%|▌         | 17/299 [02:36<24:47,  5.28s/it, ✓=0, ✖=2, error=15]Evaluation:   6%|▌         | 17/299 [03:05<24:47,  5.28s/it, ✓=0, ✖=2, error=16]Evaluation:   6%|▌         | 18/299 [03:05<58:00, 12.39s/it, ✓=0, ✖=2, error=16]Evaluation:   6%|▌         | 18/299 [03:05<58:00, 12.39s/it, ✓=0, ✖=2, error=17]Evaluation:   6%|▋         | 19/299 [03:05<40:48,  8.75s/it, ✓=0, ✖=2, error=17]Evaluation:   6%|▋         | 19/299 [03:08<40:48,  8.75s/it, ✓=0, ✖=2, error=18]Evaluation:   7%|▋         | 20/299 [03:08<32:42,  7.03s/it, ✓=0, ✖=2, error=18]Evaluation:   7%|▋         | 20/299 [03:17<32:42,  7.03s/it, ✓=0, ✖=3, error=18]Evaluation:   7%|▋         | 21/299 [03:17<35:58,  7.76s/it, ✓=0, ✖=3, error=18]Evaluation:   7%|▋         | 21/299 [03:35<35:58,  7.76s/it, ✓=0, ✖=3, error=19]Evaluation:   7%|▋         | 22/299 [03:35<49:04, 10.63s/it, ✓=0, ✖=3, error=19]Evaluation:   7%|▋         | 22/299 [03:42<49:04, 10.63s/it, ✓=0, ✖=3, error=20]Evaluation:   8%|▊         | 23/299 [03:42<44:43,  9.72s/it, ✓=0, ✖=3, error=20]Evaluation:   8%|▊         | 23/299 [03:43<44:43,  9.72s/it, ✓=0, ✖=3, error=21]Evaluation:   8%|▊         | 24/299 [03:43<31:33,  6.88s/it, ✓=0, ✖=3, error=21]Evaluation:   8%|▊         | 24/299 [03:47<31:33,  6.88s/it, ✓=0, ✖=3, error=22]Evaluation:   8%|▊         | 25/299 [03:47<28:05,  6.15s/it, ✓=0, ✖=3, error=22]Evaluation:   8%|▊         | 25/299 [04:07<28:05,  6.15s/it, ✓=0, ✖=3, error=23]Evaluation:   9%|▊         | 26/299 [04:07<46:41, 10.26s/it, ✓=0, ✖=3, error=23]Evaluation:   9%|▊         | 26/299 [04:10<46:41, 10.26s/it, ✓=0, ✖=3, error=24]Evaluation:   9%|▉         | 27/299 [04:10<37:11,  8.20s/it, ✓=0, ✖=3, error=24]Evaluation:   9%|▉         | 27/299 [04:11<37:11,  8.20s/it, ✓=0, ✖=3, error=25]Evaluation:   9%|▉         | 28/299 [04:11<26:46,  5.93s/it, ✓=0, ✖=3, error=25]Evaluation:   9%|▉         | 28/299 [04:17<26:46,  5.93s/it, ✓=0, ✖=4, error=25]Evaluation:  10%|▉         | 29/299 [04:17<26:28,  5.88s/it, ✓=0, ✖=4, error=25]astropy__astropy-14182: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 10: @@ -1730,6 +1731,7 @@ class Writer:
+
+patching file astropy/io/ascii/ui.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/astropy__astropy-14182/run_instance.log) for more information.
+astropy__astropy-12907: >>>>> Patch Apply Failed:
+patching file astropy/modeling/separable.py
+Hunk #1 FAILED at 304.
+1 out of 1 hunk FAILED -- saving rejects to file astropy/modeling/separable.py.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/astropy__astropy-12907/run_instance.log) for more information.
+astropy__astropy-14365: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 12:      def __init__(self, table_id=None, names=None, err_specs=None, sep=None):
+
+patching file astropy/io/ascii/qdp.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/astropy__astropy-14365/run_instance.log) for more information.
+astropy__astropy-14995: >>>>> Patch Apply Failed:
+patching file astropy/nddata/mixins/ndarithmetic.py
+patch: **** malformed patch at line 12: +                return None
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/astropy__astropy-14995/run_instance.log) for more information.
+django__django-10914: >>>>> Patch Apply Failed:
+patching file django/conf/global_settings.py
+patch: **** malformed patch at line 11: @@ -309,7 +309,7 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 2621440  # i.e. 2.5 MB
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-10914/run_instance.log) for more information.
+django__django-10924: >>>>> Patch Apply Failed:
+patching file django/db/migrations/writer.py
+patch: **** malformed patch at line 15: +        # Allow path to be a callable
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-10924/run_instance.log) for more information.
+astropy__astropy-7746: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 12: +
+
+patching file astropy/wcs/wcs.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/astropy__astropy-7746/run_instance.log) for more information.
+astropy__astropy-6938: >>>>> Patch Apply Failed:
+patching file astropy/io/fits/util.py
+Hunk #1 succeeded at 2 with fuzz 1 (offset 1 line).
+Hunk #2 FAILED at 151.
+1 out of 2 hunks FAILED -- saving rejects to file astropy/io/fits/util.py.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/astropy__astropy-6938/run_instance.log) for more information.
+django__django-11001: >>>>> Patch Apply Failed:
+patching file django/db/backends/base/operations.py
+patch: **** malformed patch at line 10:      performs ordering or calculates the ID of a recently-inserted row.
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11001/run_instance.log) for more information.
+django__django-11039: >>>>> Patch Apply Failed:
+patching file django/core/management/commands/sqlmigrate.py
+patch: **** malformed patch at line 12: +
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11039/run_instance.log) for more information.
+django__django-11019: >>>>> Patch Apply Failed:
+patching file django/forms/widgets.py
+patch: **** malformed patch at line 10:  
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11019/run_instance.log) for more information.
+django__django-11049: >>>>> Patch Apply Failed:
+patching file django/utils/dateparse.py
+patch: **** malformed patch at line 21:  iso8601_duration_re = re.compile(
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11049/run_instance.log) for more information.
+django__django-11099: >>>>> Patch Apply Failed:
+patching file django/contrib/auth/validators.py
+patch: **** malformed patch at line 18:  class UnicodeUsernameValidator(validators.RegexValidator):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11099/run_instance.log) for more information.
+django__django-11179: >>>>> Patch Apply Failed:
+patching file django/db/models/deletion.py
+patch: **** malformed patch at line 12: @@ -329,6 +330,7 @@ class Collector:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11179/run_instance.log) for more information.
+django__django-11422: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 10: @@ -366,7 +366,7 @@ class ManagementUtility:
+
+patching file django/core/management/__init__.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11422/run_instance.log) for more information.
+django__django-11564: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/sites.py
+patch: **** malformed patch at line 12:              'title': _('Log in'),
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11564/run_instance.log) for more information.
+django__django-11583: >>>>> Patch Apply Failed:
+patching file django/utils/autoreload.py
+patch: **** malformed patch at line 10: @@ -354,7 +354,7 @@ class StatReloader:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11583/run_instance.log) for more information.
+django__django-11630: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 36:          if cursor is None:
+
+patching file django/db/backends/base/introspection.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11630/run_instance.log) for more information.
+django__django-11815: >>>>> Patch Apply Failed:
+patching file django/db/models/enums.py
+patch: **** malformed patch at line 12:      @property
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11815/run_instance.log) for more information.
+django__django-11848: >>>>> Patch Apply Failed:
+patching file django/utils/http.py
+patch: **** malformed patch at line 15: @@ -177,7 +179,7 @@ def parse_http_date(date):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11848/run_instance.log) for more information.
+django__django-11742: >>>>> Patch Apply Failed:
+patching file django/db/models/fields/files.py
+patch: **** malformed patch at line 40:          return self.name == other
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11742/run_instance.log) for more information.
+django__django-11797: >>>>> Patch Apply Failed:
+patching file django/db/backends/oracle/operations.py
+patch: **** malformed patch at line 33: @@ -60,6 +63,7 @@ class DatabaseOperations(BaseDatabaseOperations):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11797/run_instance.log) for more information.
+django__django-11964: >>>>> Patch Apply Failed:
+patching file django/db/models/enums.py
+patch: **** malformed patch at line 15:      """Class for creating enumerated integer choices."""
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11964/run_instance.log) for more information.
+django__django-11999: >>>>> Patch Apply Failed:
+patching file django/db/migrations/writer.py
+patch: **** malformed patch at line 41: @@ -28,7 +36,7 @@
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11999/run_instance.log) for more information.
+django__django-11910: >>>>> Patch Apply Failed:
+patching file django/db/migrations/operations/fields.py
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-11910/run_instance.log) for more information.
+django__django-12125: >>>>> Patch Apply Failed:
+patching file django/core/management/commands/inspectdb.py
+patch: **** malformed patch at line 40: +
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12125/run_instance.log) for more information.
+django__django-12113: >>>>> Patch Apply Failed:
+patching file tests/test_sqlite.py
+patch: **** malformed patch at line 22:  % tests/runtests.py admin_views.test_multidb -v 3 --keepdb --parallel 1
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12113/run_instance.log) for more information.Evaluation:  10%|▉         | 29/299 [04:34<26:28,  5.88s/it, ✓=0, ✖=4, error=26]Evaluation:  10%|█         | 30/299 [04:34<41:20,  9.22s/it, ✓=0, ✖=4, error=26]Evaluation:  10%|█         | 30/299 [04:34<41:20,  9.22s/it, ✓=0, ✖=4, error=27]Evaluation:  10%|█         | 31/299 [04:34<29:25,  6.59s/it, ✓=0, ✖=4, error=27]Evaluation:  10%|█         | 31/299 [04:44<29:25,  6.59s/it, ✓=0, ✖=4, error=28]Evaluation:  11%|█         | 32/299 [04:44<33:18,  7.49s/it, ✓=0, ✖=4, error=28]Evaluation:  11%|█         | 32/299 [04:45<33:18,  7.49s/it, ✓=0, ✖=4, error=29]Evaluation:  11%|█         | 33/299 [04:45<25:05,  5.66s/it, ✓=0, ✖=4, error=29]Evaluation:  11%|█         | 33/299 [04:58<25:05,  5.66s/it, ✓=0, ✖=4, error=30]Evaluation:  11%|█▏        | 34/299 [04:58<34:10,  7.74s/it, ✓=0, ✖=4, error=30]Evaluation:  11%|█▏        | 34/299 [05:00<34:10,  7.74s/it, ✓=0, ✖=4, error=31]Evaluation:  12%|█▏        | 35/299 [05:00<27:31,  6.25s/it, ✓=0, ✖=4, error=31]Evaluation:  12%|█▏        | 35/299 [05:10<27:31,  6.25s/it, ✓=0, ✖=4, error=32]Evaluation:  12%|█▏        | 36/299 [05:10<31:15,  7.13s/it, ✓=0, ✖=4, error=32]Evaluation:  12%|█▏        | 36/299 [05:17<31:15,  7.13s/it, ✓=0, ✖=4, error=33]Evaluation:  12%|█▏        | 37/299 [05:17<30:48,  7.05s/it, ✓=0, ✖=4, error=33]Evaluation:  12%|█▏        | 37/299 [05:29<30:48,  7.05s/it, ✓=0, ✖=4, error=34]Evaluation:  13%|█▎        | 38/299 [05:29<38:18,  8.81s/it, ✓=0, ✖=4, error=34]Evaluation:  13%|█▎        | 38/299 [05:33<38:18,  8.81s/it, ✓=0, ✖=5, error=34]Evaluation:  13%|█▎        | 39/299 [05:33<31:24,  7.25s/it, ✓=0, ✖=5, error=34]Evaluation:  13%|█▎        | 39/299 [05:39<31:24,  7.25s/it, ✓=0, ✖=5, error=35]Evaluation:  13%|█▎        | 40/299 [05:39<29:00,  6.72s/it, ✓=0, ✖=5, error=35]Evaluation:  13%|█▎        | 40/299 [05:43<29:00,  6.72s/it, ✓=0, ✖=5, error=36]Evaluation:  14%|█▎        | 41/299 [05:43<26:18,  6.12s/it, ✓=0, ✖=5, error=36]Evaluation:  14%|█▎        | 41/299 [06:01<26:18,  6.12s/it, ✓=0, ✖=5, error=37]Evaluation:  14%|█▍        | 42/299 [06:01<41:49,  9.76s/it, ✓=0, ✖=5, error=37]Evaluation:  14%|█▍        | 42/299 [06:26<41:49,  9.76s/it, ✓=0, ✖=5, error=38]Evaluation:  14%|█▍        | 43/299 [06:26<1:01:04, 14.31s/it, ✓=0, ✖=5, error=38]Evaluation:  14%|█▍        | 43/299 [06:27<1:01:04, 14.31s/it, ✓=0, ✖=5, error=39]Evaluation:  15%|█▍        | 44/299 [06:27<42:54, 10.10s/it, ✓=0, ✖=5, error=39]  Evaluation:  15%|█▍        | 44/299 [06:32<42:54, 10.10s/it, ✓=0, ✖=5, error=40]Evaluation:  15%|█▌        | 45/299 [06:32<37:06,  8.76s/it, ✓=0, ✖=5, error=40]Evaluation:  15%|█▌        | 45/299 [06:37<37:06,  8.76s/it, ✓=0, ✖=6, error=40]Evaluation:  15%|█▌        | 46/299 [06:37<31:17,  7.42s/it, ✓=0, ✖=6, error=40]Evaluation:  15%|█▌        | 46/299 [07:09<31:17,  7.42s/it, ✓=0, ✖=6, error=41]Evaluation:  16%|█▌        | 47/299 [07:09<1:02:48, 14.96s/it, ✓=0, ✖=6, error=41]Evaluation:  16%|█▌        | 47/299 [07:19<1:02:48, 14.96s/it, ✓=0, ✖=6, error=42]Evaluation:  16%|█▌        | 48/299 [07:19<55:48, 13.34s/it, ✓=0, ✖=6, error=42]  Evaluation:  16%|█▌        | 48/299 [07:21<55:48, 13.34s/it, ✓=0, ✖=7, error=42]Evaluation:  16%|█▋        | 49/299 [07:21<42:00, 10.08s/it, ✓=0, ✖=7, error=42]Evaluation:  16%|█▋        | 49/299 [07:22<42:00, 10.08s/it, ✓=0, ✖=8, error=42]Evaluation:  17%|█▋        | 50/299 [07:22<30:44,  7.41s/it, ✓=0, ✖=8, error=42]Evaluation:  17%|█▋        | 50/299 [07:35<30:44,  7.41s/it, ✓=0, ✖=8, error=43]Evaluation:  17%|█▋        | 51/299 [07:35<36:40,  8.87s/it, ✓=0, ✖=8, error=43]Evaluation:  17%|█▋        | 51/299 [07:58<36:40,  8.87s/it, ✓=0, ✖=8, error=44]Evaluation:  17%|█▋        | 52/299 [07:58<54:56, 13.34s/it, ✓=0, ✖=8, error=44]Evaluation:  17%|█▋        | 52/299 [08:00<54:56, 13.34s/it, ✓=0, ✖=8, error=45]Evaluation:  18%|█▊        | 53/299 [08:00<39:49,  9.71s/it, ✓=0, ✖=8, error=45]Evaluation:  18%|█▊        | 53/299 [08:01<39:49,  9.71s/it, ✓=0, ✖=8, error=46]Evaluation:  18%|█▊        | 54/299 [08:01<29:48,  7.30s/it, ✓=0, ✖=8, error=46]Evaluation:  18%|█▊        | 54/299 [08:05<29:48,  7.30s/it, ✓=0, ✖=8, error=47]Evaluation:  18%|█▊        | 55/299 [08:05<24:51,  6.11s/it, ✓=0, ✖=8, error=47]Exception ignored in: <finalize object at 0x7f4c4a2e3a20; dead>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/weakref.py", line 590, in __call__
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "/storage/Repository/resurection/SWE-bench/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 1174, in _close_pool_connections
+    conn = pool.get(block=False)
+  File "/usr/lib/python3.13/queue.py", line 194, in get
+    with self.not_empty:
+RecursionError: maximum recursion depth exceeded
+Exception ignored in: <finalize object at 0x7f4c4a2e19e0; dead>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/weakref.py", line 590, in __call__
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "/storage/Repository/resurection/SWE-bench/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 1174, in _close_pool_connections
+    conn = pool.get(block=False)
+  File "/usr/lib/python3.13/queue.py", line 194, in get
+    with self.not_empty:
+RecursionError: maximum recursion depth exceeded
+Exception ignored in: <finalize object at 0x7f4c4856c8a0; dead>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/weakref.py", line 590, in __call__
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "/storage/Repository/resurection/SWE-bench/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 1174, in _close_pool_connections
+    conn = pool.get(block=False)
+  File "/usr/lib/python3.13/queue.py", line 194, in get
+    with self.not_empty:
+RecursionError: maximum recursion depth exceeded
+Exception ignored in: <http.client.HTTPResponse object at 0x7f4c4a2df1f0>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/http/client.py", line 435, in close
+    self._close_conn()
+  File "/usr/lib/python3.13/http/client.py", line 428, in _close_conn
+    fp.close()
+  File "/usr/lib/python3.13/socket.py", line 789, in close
+    self._sock._decref_socketios()
+RecursionError: maximum recursion depth exceeded
+Exception ignored in: <http.client.HTTPResponse object at 0x7f4c485936d0>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/http/client.py", line 435, in close
+    self._close_conn()
+  File "/usr/lib/python3.13/http/client.py", line 428, in _close_conn
+    fp.close()
+  File "/usr/lib/python3.13/socket.py", line 789, in close
+    self._sock._decref_socketios()
+RecursionError: maximum recursion depth exceeded
+Exception ignored in: <http.client.HTTPResponse object at 0x7f4c48592950>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/http/client.py", line 435, in close
+    self._close_conn()
+  File "/usr/lib/python3.13/http/client.py", line 428, in _close_conn
+    fp.close()
+  File "/usr/lib/python3.13/socket.py", line 789, in close
+    self._sock._decref_socketios()
+RecursionError: maximum recursion depth exceeded
+Evaluation:  18%|█▊        | 55/299 [08:34<24:51,  6.11s/it, ✓=0, ✖=8, error=48]Evaluation:  19%|█▊        | 56/299 [08:34<52:38, 13.00s/it, ✓=0, ✖=8, error=48]Evaluation:  19%|█▊        | 56/299 [08:37<52:38, 13.00s/it, ✓=0, ✖=8, error=49]Evaluation:  19%|█▉        | 57/299 [08:37<40:47, 10.11s/it, ✓=0, ✖=8, error=49]Evaluation:  19%|█▉        | 57/299 [08:50<40:47, 10.11s/it, ✓=0, ✖=8, error=50]Evaluation:  19%|█▉        | 58/299 [08:50<43:28, 10.82s/it, ✓=0, ✖=8, error=50]Evaluation:  19%|█▉        | 58/299 [08:54<43:28, 10.82s/it, ✓=0, ✖=8, error=51]Evaluation:  20%|█▉        | 59/299 [08:54<35:01,  8.76s/it, ✓=0, ✖=8, error=51]
+django__django-12184: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/sites.py
+patch: **** malformed patch at line 76: -    app_index_template = None
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12184/run_instance.log) for more information.
+django__django-12284: >>>>> Patch Apply Failed:
+patching file django/db/models/options.py
+patch: **** malformed patch at line 38: -    'verbose_name', 'verbose_name_plural', 'db_table', 'ordering',
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12284/run_instance.log) for more information.
+django__django-12308: >>>>> Patch Apply Failed:
+patching file django/forms/fields.py
+patch: **** malformed patch at line 12:          if self.disabled:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12308/run_instance.log) for more information.
+django__django-12286: >>>>> Patch Apply Failed:
+patching file django/core/checks/translation.py
+patch: **** malformed patch at line 12: @@ -60,6 +61,7 @@ class Error(Exception):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12286/run_instance.log) for more information.
+django__django-12453: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 14: @@ -132,6 +133,7 @@ class BaseDatabaseCreation(object):
+
+patching file django/db/backends/base/creation.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12453/run_instance.log) for more information.
+django__django-12470: >>>>> Patch Apply Failed:
+patching file django/db/models/options.py
+patch: **** malformed patch at line 23: EMPTY_RELATION_TREE = ()
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12470/run_instance.log) for more information.
+django__django-12589: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 41: -    The permissions system provides a way to assign permissions to specific
+
+patching file django/contrib/auth/models.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12589/run_instance.log) for more information.
+django__django-12708: >>>>> Patch Apply Failed:
+patching file django/db/backends/sqlite3/schema.py
+patch: **** malformed patch at line 12: @@ -385,7 +385,7 @@ class DatabaseSchemaEditor(BaseDatabaseSchemaEditor):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12708/run_instance.log) for more information.
+django__django-12700: >>>>> Patch Apply Failed:
+patching file django/views/debug.py
+Hunk #1 FAILED at 115.
+1 out of 1 hunk FAILED -- saving rejects to file django/views/debug.py.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12700/run_instance.log) for more information.
+django__django-12747: >>>>> Patch Apply Failed:
+patching file django/db/models/deletion.py
+patch: **** malformed patch at line 12:              if self.can_fast_delete(instance):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12747/run_instance.log) for more information.
+django__django-12908: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/views/main.py
+patch: **** malformed patch at line 12: @@ -476,7 +476,7 @@ class ChangeList:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12908/run_instance.log) for more information.
+django__django-12915: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 15:  
+
+patching file django/contrib/staticfiles/handlers.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12915/run_instance.log) for more information.
+django__django-12983: >>>>> Patch Apply Failed:
+patching file django/utils/text.py
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-12983/run_instance.log) for more information.
+django__django-13158: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 12: @@ -202,7 +202,7 @@ class PermissionManager(models.Manager):
+
+patching file django/contrib/auth/models.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13158/run_instance.log) for more information.
+django__django-13220: >>>>> Patch Apply Failed:
+patching file django/core/exceptions.py
+patch: **** malformed patch at line 14: @@ -112,6 +116,10 @@ class ValidationError(Exception):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13220/run_instance.log) for more information.
+django__django-13230: >>>>> Patch Apply Failed:
+patching file django/contrib/syndication/views.py
+patch: **** malformed patch at line 12: +
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13230/run_instance.log) for more information.
+django__django-13321: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 13: @@ -60,7 +60,7 @@ def set_language(request):
+
+patching file django/views/i18n.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13321/run_instance.log) for more information.
+django__django-13265: >>>>> Patch Apply Failed:
+patching file django/db/models/options.py
+patch: **** malformed patch at line 12: @@ -273,6 +277,7 @@ class Options:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13265/run_instance.log) for more information.
+django__django-13315: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/widgets.py
+patch: **** malformed patch at line 12: +
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13315/run_instance.log) for more information.
+django__django-13401: >>>>> Patch Apply Failed:
+patching file django/db/models/options.py
+patch: **** malformed patch at line 44:  )
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13401/run_instance.log) for more information.
+django__django-13551: >>>>> Patch Apply Failed:
+patching file django/contrib/auth/tokens.py
+patch: **** malformed patch at line 15:          # Truncate microseconds so that tokens are consistent even if the
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13551/run_instance.log) for more information.
+django__django-13590: >>>>> Patch Apply Failed:
+patching file django/template/base.py
+patch: **** malformed patch at line 40:  Sample code:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13590/run_instance.log) for more information.
+django__django-13448: >>>>> Patch Apply Failed:
+patching file django/core/management/commands/test.py
+patch: **** malformed patch at line 10:  
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13448/run_instance.log) for more information.
+django__django-13447: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 12: +         else:
+
+patching file django/contrib/admin/sites.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13447/run_instance.log) for more information.
+django__django-13658: >>>>> Patch Apply Failed:
+patching file django/core/management/__init__.py
+patch: **** malformed patch at line 12: @@ -356,7 +356,7 @@ class ManagementUtility:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13658/run_instance.log) for more information.
+django__django-13660: >>>>> Patch Apply Failed:
+patching file django/core/management/commands/shell.py
+Hunk #1 FAILED at 84.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/management/commands/shell.py.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13660/run_instance.log) for more information.
+django__django-13710: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 35: -    lookup_fields = lookup_path.split(LOOKUP_SEP)
+
+patching file django/contrib/admin/utils.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13710/run_instance.log) for more information.Evaluation:  20%|█▉        | 59/299 [09:04<35:01,  8.76s/it, ✓=0, ✖=8, error=52]Evaluation:  20%|██        | 60/299 [09:04<37:04,  9.31s/it, ✓=0, ✖=8, error=52]Evaluation:  20%|██        | 60/299 [09:04<37:04,  9.31s/it, ✓=0, ✖=8, error=53]Evaluation:  20%|██        | 61/299 [09:04<26:08,  6.59s/it, ✓=0, ✖=8, error=53]Evaluation:  20%|██        | 61/299 [09:20<26:08,  6.59s/it, ✓=0, ✖=8, error=54]Evaluation:  21%|██        | 62/299 [09:20<36:13,  9.17s/it, ✓=0, ✖=8, error=54]Evaluation:  21%|██        | 62/299 [09:24<36:13,  9.17s/it, ✓=0, ✖=8, error=55]Evaluation:  21%|██        | 63/299 [09:24<30:26,  7.74s/it, ✓=0, ✖=8, error=55]Evaluation:  21%|██        | 63/299 [09:37<30:26,  7.74s/it, ✓=0, ✖=8, error=56]Evaluation:  21%|██▏       | 64/299 [09:37<36:41,  9.37s/it, ✓=0, ✖=8, error=56]Evaluation:  21%|██▏       | 64/299 [09:51<36:41,  9.37s/it, ✓=0, ✖=8, error=57]Evaluation:  22%|██▏       | 65/299 [09:51<41:29, 10.64s/it, ✓=0, ✖=8, error=57]Evaluation:  22%|██▏       | 65/299 [09:54<41:29, 10.64s/it, ✓=0, ✖=8, error=58]Evaluation:  22%|██▏       | 66/299 [09:54<32:11,  8.29s/it, ✓=0, ✖=8, error=58]Evaluation:  22%|██▏       | 66/299 [09:57<32:11,  8.29s/it, ✓=0, ✖=8, error=59]Evaluation:  22%|██▏       | 67/299 [09:57<26:37,  6.89s/it, ✓=0, ✖=8, error=59]Evaluation:  22%|██▏       | 67/299 [10:15<26:37,  6.89s/it, ✓=0, ✖=8, error=60]Evaluation:  23%|██▎       | 68/299 [10:15<39:34, 10.28s/it, ✓=0, ✖=8, error=60]Evaluation:  23%|██▎       | 68/299 [10:16<39:34, 10.28s/it, ✓=0, ✖=8, error=61]Evaluation:  23%|██▎       | 69/299 [10:16<28:44,  7.50s/it, ✓=0, ✖=8, error=61]Evaluation:  23%|██▎       | 69/299 [10:18<28:44,  7.50s/it, ✓=0, ✖=8, error=62]Evaluation:  23%|██▎       | 70/299 [10:18<22:21,  5.86s/it, ✓=0, ✖=8, error=62]Evaluation:  23%|██▎       | 70/299 [10:21<22:21,  5.86s/it, ✓=0, ✖=8, error=63]Evaluation:  24%|██▎       | 71/299 [10:21<18:24,  4.84s/it, ✓=0, ✖=8, error=63]Evaluation:  24%|██▎       | 71/299 [10:47<18:24,  4.84s/it, ✓=0, ✖=8, error=64]Evaluation:  24%|██▍       | 72/299 [10:47<42:47, 11.31s/it, ✓=0, ✖=8, error=64]Evaluation:  24%|██▍       | 72/299 [10:48<42:47, 11.31s/it, ✓=0, ✖=8, error=65]Evaluation:  24%|██▍       | 73/299 [10:48<30:10,  8.01s/it, ✓=0, ✖=8, error=65]Evaluation:  24%|██▍       | 73/299 [10:48<30:10,  8.01s/it, ✓=0, ✖=8, error=66]Evaluation:  25%|██▍       | 74/299 [10:48<21:49,  5.82s/it, ✓=0, ✖=8, error=66]Evaluation:  25%|██▍       | 74/299 [10:52<21:49,  5.82s/it, ✓=0, ✖=8, error=67]Evaluation:  25%|██▌       | 75/299 [10:52<18:48,  5.04s/it, ✓=0, ✖=8, error=67]Evaluation:  25%|██▌       | 75/299 [11:31<18:48,  5.04s/it, ✓=0, ✖=8, error=68]Evaluation:  25%|██▌       | 76/299 [11:31<57:27, 15.46s/it, ✓=0, ✖=8, error=68]Evaluation:  25%|██▌       | 76/299 [11:32<57:27, 15.46s/it, ✓=0, ✖=8, error=69]Evaluation:  26%|██▌       | 77/299 [11:32<41:17, 11.16s/it, ✓=0, ✖=8, error=69]Evaluation:  26%|██▌       | 77/299 [11:45<41:17, 11.16s/it, ✓=0, ✖=8, error=70]Evaluation:  26%|██▌       | 78/299 [11:45<42:46, 11.61s/it, ✓=0, ✖=8, error=70]Evaluation:  26%|██▌       | 78/299 [11:46<42:46, 11.61s/it, ✓=0, ✖=8, error=71]Evaluation:  26%|██▋       | 79/299 [11:46<30:19,  8.27s/it, ✓=0, ✖=8, error=71]Evaluation:  26%|██▋       | 79/299 [11:57<30:19,  8.27s/it, ✓=0, ✖=8, error=72]Evaluation:  27%|██▋       | 80/299 [11:57<34:06,  9.35s/it, ✓=0, ✖=8, error=72]Evaluation:  27%|██▋       | 80/299 [12:31<34:06,  9.35s/it, ✓=0, ✖=8, error=73]Evaluation:  27%|██▋       | 81/299 [12:31<1:00:51, 16.75s/it, ✓=0, ✖=8, error=73]Evaluation:  27%|██▋       | 81/299 [12:45<1:00:51, 16.75s/it, ✓=0, ✖=9, error=73]Evaluation:  27%|██▋       | 82/299 [12:45<57:33, 15.92s/it, ✓=0, ✖=9, error=73]  Evaluation:  27%|██▋       | 82/299 [12:48<57:33, 15.92s/it, ✓=0, ✖=9, error=74]Evaluation:  28%|██▊       | 83/299 [12:48<42:29, 11.80s/it, ✓=0, ✖=9, error=74]Evaluation:  28%|██▊       | 83/299 [13:12<42:29, 11.80s/it, ✓=0, ✖=10, error=74]Evaluation:  28%|██▊       | 84/299 [13:12<55:28, 15.48s/it, ✓=0, ✖=10, error=74]Evaluation:  28%|██▊       | 84/299 [13:15<55:28, 15.48s/it, ✓=0, ✖=10, error=75]Evaluation:  28%|██▊       | 85/299 [13:15<41:54, 11.75s/it, ✓=0, ✖=10, error=75]Evaluation:  28%|██▊       | 85/299 [13:17<41:54, 11.75s/it, ✓=0, ✖=10, error=76]Evaluation:  29%|██▉       | 86/299 [13:17<31:47,  8.96s/it, ✓=0, ✖=10, error=76]Evaluation:  29%|██▉       | 86/299 [13:39<31:47,  8.96s/it, ✓=0, ✖=11, error=76]Evaluation:  29%|██▉       | 87/299 [13:39<45:10, 12.78s/it, ✓=0, ✖=11, error=76]Evaluation:  29%|██▉       | 87/299 [13:55<45:10, 12.78s/it, ✓=0, ✖=11, error=77]Evaluation:  29%|██▉       | 88/299 [13:55<48:10, 13.70s/it, ✓=0, ✖=11, error=77]Evaluation:  29%|██▉       | 88/299 [14:00<48:10, 13.70s/it, ✓=0, ✖=12, error=77]Evaluation:  30%|██▉       | 89/299 [14:00<39:05, 11.17s/it, ✓=0, ✖=12, error=77]Evaluation:  30%|██▉       | 89/299 [14:07<39:05, 11.17s/it, ✓=0, ✖=12, error=78]Evaluation:  30%|███       | 90/299 [14:07<34:53, 10.01s/it, ✓=0, ✖=12, error=78]Evaluation:  30%|███       | 90/299 [14:26<34:53, 10.01s/it, ✓=0, ✖=13, error=78]Evaluation:  30%|███       | 91/299 [14:26<44:08, 12.73s/it, ✓=0, ✖=13, error=78]Evaluation:  30%|███       | 91/299 [14:32<44:08, 12.73s/it, ✓=0, ✖=13, error=79]Evaluation:  31%|███       | 92/299 [14:32<36:53, 10.70s/it, ✓=0, ✖=13, error=79]Evaluation:  31%|███       | 92/299 [14:34<36:53, 10.70s/it, ✓=0, ✖=13, error=80]Evaluation:  31%|███       | 93/299 [14:34<27:06,  7.90s/it, ✓=0, ✖=13, error=80]Evaluation:  31%|███       | 93/299 [14:41<27:06,  7.90s/it, ✓=0, ✖=13, error=81]Evaluation:  31%|███▏      | 94/299 [14:41<26:22,  7.72s/it, ✓=0, ✖=13, error=81]
+django__django-13757: >>>>> Patch Apply Failed:
+patching file django/db/models/fields/json.py
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13757/run_instance.log) for more information.
+django__django-13768: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/sites.py
+patch: **** malformed patch at line 11:  
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13768/run_instance.log) for more information.
+django__django-13925: >>>>> Patch Apply Failed:
+patching file django/db/backends/base/operations.py
+patch: **** malformed patch at line 10: @@ -612,7 +612,7 @@ class BaseDatabaseOperations:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13925/run_instance.log) for more information.
+django__django-13933: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 9:  import math
+
+patching file django/forms/fields.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13933/run_instance.log) for more information.
+django__django-13964: >>>>> Patch Apply Failed:
+patching file django/db/models/deletion.py
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-13964/run_instance.log) for more information.
+django__django-14017: >>>>> Patch Apply Failed:
+patching file django/contrib/postgres/search.py
+patch: **** malformed patch at line 11: @@ -114,6 +115,7 @@ class SearchVectorExact(Lookup):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14017/run_instance.log) for more information.
+django__django-14155: >>>>> Patch Apply Failed:
+patching file django/urls/resolvers.py
+patch: **** malformed patch at line 12:      def __repr__(self):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14155/run_instance.log) for more information.
+django__django-14016: >>>>> Patch Apply Failed:
+patching file django/contrib/auth/backends.py
+patch: **** malformed patch at line 12: @@ -137,7 +137,7 @@ class ModelBackend(BaseBackend):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14016/run_instance.log) for more information.
+django__django-14238: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 12: +
+
+patching file django/db/models/options.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14238/run_instance.log) for more information.
+django__django-14534: >>>>> Patch Apply Failed:
+patching file django/forms/boundfield.py
+patch: **** malformed patch at line 12:  
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14534/run_instance.log) for more information.
+django__django-14382: >>>>> Patch Apply Failed:
+patching file django/core/management/templates.py
+Hunk #1 FAILED at 212.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/management/templates.py.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14382/run_instance.log) for more information.
+django__django-14580: >>>>> Patch Apply Failed:
+patching file django/db/migrations/writer.py
+patch: **** malformed patch at line 15:          items["imports"] = "\n".join(sorted_imports) + "\n" if imports else ""
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14580/run_instance.log) for more information.
+django__django-14411: >>>>> Patch Apply Failed:
+patching file django/forms/widgets.py
+patch: **** malformed patch at line 12:  from collections import defaultdict
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14411/run_instance.log) for more information.
+django__django-14730: >>>>> Patch Apply Failed:
+patching file django/db/migrations/state.py
+patch: **** malformed patch at line 40: +def get_related_models_tuples(model):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14730/run_instance.log) for more information.
+django__django-14667: >>>>> Patch Apply Failed:
+patching file django/db/backends/base/operations.py
+patch: **** malformed patch at line 13: @@ -179,7 +179,7 @@ class BaseDatabaseOperations:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14667/run_instance.log) for more information.
+django__django-14608: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 15: +
+
+patching file django/forms/formsets.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14608/run_instance.log) for more information.
+django__django-14672: >>>>> Patch Apply Failed:
+patch: **** unexpected end of file in patch
+patching file django/db/models/fields/reverse_related.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14672/run_instance.log) for more information.
+django__django-14752: >>>>> Patch Apply Failed:
+patching file django/contrib/admin/views/autocomplete.py
+patch: **** malformed patch at line 21: +            'pagination': {'more': context['page_obj'].has_next()},
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14752/run_instance.log) for more information.
+django__django-14915: >>>>> Patch Apply Failed:
+patching file django/forms/widgets.py
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14915/run_instance.log) for more information.
+django__django-14997: >>>>> Patch Apply Failed:
+patching file django/db/backends/sqlite3/schema.py
+patch: **** malformed patch at line 15:          super().remove_constraint(model, constraint)
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-14997/run_instance.log) for more information.
+django__django-15061: >>>>> Patch Apply Failed:
+patching file django/forms/widgets.py
+patch: **** malformed patch at line 14: +            widget.value_from_datadict(data, files, name + widget_name)
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15061/run_instance.log) for more information.
+django__django-15202: >>>>> Patch Apply Failed:
+patching file django/forms/fields.py
+Hunk #1 FAILED at 130.
+1 out of 1 hunk FAILED -- saving rejects to file django/forms/fields.py.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15202/run_instance.log) for more information.
+django__django-15320: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 55: +
+
+patching file django/db/backends/base/base.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15320/run_instance.log) for more information.
+django__django-15252: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 12: +
+
+patching file django/db/migrations/recorder.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15252/run_instance.log) for more information.
+django__django-15388: >>>>> Patch Apply Failed:
+patching file django/conf/global_settings.py
+patch: **** malformed patch at line 11: @@ -261,7 +261,7 @@ TEMPLATES = [
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15388/run_instance.log) for more information.
+django__django-15400: >>>>> Patch Apply Failed:
+patching file django/utils/functional.py
+patch: **** malformed patch at line 9:  
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15400/run_instance.log) for more information.
+django__django-15498: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 14: -        if_unmodified_since
+
+patching file django/utils/cache.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15498/run_instance.log) for more information.
+django__django-15789: >>>>> Patch Apply Failed:
+can't find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/django/utils/html/json_script.py b/django/utils/html/json_script.py
+|--- a/django/utils/html/json_script.py
+|+++ b/django/utils/html/json_script.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 10: @@ -10,6 +10,11 @@
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15789/run_instance.log) for more information.Evaluation:  31%|███▏      | 94/299 [15:49<26:22,  7.72s/it, ✓=0, ✖=13, error=82]Evaluation:  32%|███▏      | 95/299 [15:49<1:27:15, 25.66s/it, ✓=0, ✖=13, error=82]Evaluation:  32%|███▏      | 95/299 [15:50<1:27:15, 25.66s/it, ✓=0, ✖=13, error=83]Evaluation:  32%|███▏      | 96/299 [15:50<1:01:45, 18.25s/it, ✓=0, ✖=13, error=83]Evaluation:  32%|███▏      | 96/299 [15:51<1:01:45, 18.25s/it, ✓=0, ✖=13, error=84]Evaluation:  32%|███▏      | 97/299 [15:51<44:30, 13.22s/it, ✓=0, ✖=13, error=84]  Evaluation:  32%|███▏      | 97/299 [15:51<44:30, 13.22s/it, ✓=0, ✖=13, error=85]Evaluation:  33%|███▎      | 98/299 [17:09<44:17, 13.22s/it, ✓=0, ✖=13, error=86]Evaluation:  33%|███▎      | 99/299 [17:09<1:23:48, 25.14s/it, ✓=0, ✖=13, error=86]Evaluation:  33%|███▎      | 99/299 [17:09<1:23:48, 25.14s/it, ✓=0, ✖=13, error=87]Evaluation:  33%|███▎      | 100/299 [17:09<1:03:00, 19.00s/it, ✓=0, ✖=13, error=87]Evaluation:  33%|███▎      | 100/299 [17:11<1:03:00, 19.00s/it, ✓=0, ✖=13, error=88]Evaluation:  34%|███▍      | 101/299 [17:11<47:58, 14.54s/it, ✓=0, ✖=13, error=88]  Evaluation:  34%|███▍      | 101/299 [17:11<47:58, 14.54s/it, ✓=0, ✖=13, error=89]Evaluation:  34%|███▍      | 102/299 [18:30<47:43, 14.54s/it, ✓=0, ✖=13, error=90]Evaluation:  34%|███▍      | 103/299 [18:30<1:21:58, 25.09s/it, ✓=0, ✖=13, error=90]Evaluation:  34%|███▍      | 103/299 [18:30<1:21:58, 25.09s/it, ✓=0, ✖=13, error=91]Evaluation:  35%|███▍      | 104/299 [18:30<1:02:42, 19.29s/it, ✓=0, ✖=13, error=91]Evaluation:  35%|███▍      | 104/299 [18:40<1:02:42, 19.29s/it, ✓=0, ✖=14, error=91]Evaluation:  35%|███▌      | 105/299 [18:40<54:53, 16.98s/it, ✓=0, ✖=14, error=91]  Evaluation:  35%|███▌      | 105/299 [18:42<54:53, 16.98s/it, ✓=0, ✖=15, error=91]Evaluation:  35%|███▌      | 106/299 [18:42<41:22, 12.86s/it, ✓=0, ✖=15, error=91]Evaluation:  35%|███▌      | 106/299 [19:14<41:22, 12.86s/it, ✓=0, ✖=15, error=92]Evaluation:  36%|███▌      | 107/299 [19:14<58:18, 18.22s/it, ✓=0, ✖=15, error=92]Evaluation:  36%|███▌      | 107/299 [19:38<58:18, 18.22s/it, ✓=0, ✖=15, error=93]Evaluation:  36%|███▌      | 108/299 [19:38<1:03:25, 19.92s/it, ✓=0, ✖=15, error=93]Evaluation:  36%|███▌      | 108/299 [19:39<1:03:25, 19.92s/it, ✓=0, ✖=15, error=94]Evaluation:  36%|███▋      | 109/299 [19:39<45:52, 14.49s/it, ✓=0, ✖=15, error=94]  Evaluation:  36%|███▋      | 109/299 [19:44<45:52, 14.49s/it, ✓=0, ✖=15, error=95]Evaluation:  37%|███▋      | 110/299 [19:44<36:30, 11.59s/it, ✓=0, ✖=15, error=95]Evaluation:  37%|███▋      | 110/299 [19:44<36:30, 11.59s/it, ✓=0, ✖=15, error=96]Evaluation:  37%|███▋      | 111/299 [19:44<25:49,  8.24s/it, ✓=0, ✖=15, error=96]Evaluation:  37%|███▋      | 111/299 [19:47<25:49,  8.24s/it, ✓=0, ✖=15, error=97]Evaluation:  37%|███▋      | 112/299 [19:47<21:10,  6.79s/it, ✓=0, ✖=15, error=97]Evaluation:  37%|███▋      | 112/299 [19:49<21:10,  6.79s/it, ✓=0, ✖=15, error=98]Evaluation:  38%|███▊      | 113/299 [19:49<16:01,  5.17s/it, ✓=0, ✖=15, error=98]Evaluation:  38%|███▊      | 113/299 [19:50<16:01,  5.17s/it, ✓=0, ✖=15, error=99]Evaluation:  38%|███▊      | 114/299 [19:50<12:46,  4.14s/it, ✓=0, ✖=15, error=99]Evaluation:  38%|███▊      | 114/299 [19:52<12:46,  4.14s/it, ✓=0, ✖=15, error=100]Evaluation:  38%|███▊      | 115/299 [19:52<10:05,  3.29s/it, ✓=0, ✖=15, error=100]Evaluation:  38%|███▊      | 115/299 [19:53<10:05,  3.29s/it, ✓=0, ✖=15, error=101]Evaluation:  39%|███▉      | 116/299 [19:53<08:31,  2.80s/it, ✓=0, ✖=15, error=101]Evaluation:  39%|███▉      | 116/299 [19:54<08:31,  2.80s/it, ✓=0, ✖=15, error=102]Evaluation:  39%|███▉      | 117/299 [19:54<07:02,  2.32s/it, ✓=0, ✖=15, error=102]Evaluation:  39%|███▉      | 117/299 [19:56<07:02,  2.32s/it, ✓=0, ✖=15, error=103]Evaluation:  39%|███▉      | 118/299 [19:56<06:20,  2.10s/it, ✓=0, ✖=15, error=103]
+django__django-15695: >>>>> Patch Apply Failed:
+can't find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/django/db/migrations/operations.py b/django/db/migrations/operations.py
+|--- a/django/db/migrations/operations.py
+|+++ b/django/db/migrations/operations.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15695/run_instance.log) for more information.
+django__django-15738: >>>>> Patch Apply Failed:
+patching file django/db/migrations/state.py
+patch: **** malformed patch at line 41: -        for subclass in m.__subclasses__()
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15738/run_instance.log) for more information.
+django__django-15781: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 13: +    def add_arguments(self, parser):
+
+can't find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/django/core/management/commands/ogrinspect.py b/django/core/management/commands/ogrinspect.py
+|--- a/django/core/management/commands/ogrinspect.py
+|+++ b/django/core/management/commands/ogrinspect.py
+--------------------------
+No file to patch.  Skipping patch.
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15781/run_instance.log) for more information.
+django__django-15814: >>>>> Patch Apply Failed:
+patching file django/core/management/base.py
+patch: **** malformed patch at line 12:          )
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15814/run_instance.log) for more information.
+django__django-15819: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 12:      """
+
+patching file django/contrib/contenttypes/fields.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15819/run_instance.log) for more information.
+django__django-15851: >>>>> Patch Apply Failed:
+patching file django/core/management/base.py
+patch: **** malformed patch at line 13:              help=(
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15851/run_instance.log) for more information.
+django__django-15790: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 10: @@ -60,6 +60,10 @@ def check_for_template_tags_with_the_same_name(app_configs, **kwargs):
+
+patching file django/core/checks/templates.py
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15790/run_instance.log) for more information.
+django__django-15996: >>>>> Patch Apply Failed:
+patching file django/db/migrations/serializer.py
+patch: **** malformed patch at line 15: +        names = [member.name for member in enum_class._decompose(self.value)]
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15996/run_instance.log) for more information.
+django__django-15902: >>>>> Patch Apply Failed:
+patching file django/forms/utils.py
+patch: **** malformed patch at line 19: @@ -72,7 +74,7 @@ class RenderableFormMixin(RenderableMixin):
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-15902/run_instance.log) for more information.
+django__django-16229: >>>>> Patch Apply Failed:
+patching file django/forms/fields.py
+patch: **** malformed patch at line 28: @@ -82,10 +84,10 @@ class Field:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16229/run_instance.log) for more information.
+django__django-16139: >>>>> Patch Apply Failed:
+patching file django/contrib/auth/forms.py
+patch: **** unexpected end of file in patch
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16139/run_instance.log) for more information.
+django__django-16255: >>>>> Patch Apply Failed:
+patching file django/contrib/sitemaps/__init__.py
+patch: **** malformed patch at line 16:              return None
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16255/run_instance.log) for more information.
+django__django-16400: >>>>> Patch Apply Failed:
+patching file django/db/utils.py
+Hunk #1 FAILED at 197.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/utils.py.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16400/run_instance.log) for more information.
+Error building image django__django-16527: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-16527:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-16527:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16527/run_instance.log) for more information.
+Error building image django__django-16595: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-16595:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-16595:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16595/run_instance.log) for more information.
+Error building image django__django-16816: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-16816:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-16816:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16816/run_instance.log) for more information.
+Error building image django__django-16820: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-16820:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-16820:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16820/run_instance.log) for more information.
+Error building image django__django-16873: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-16873:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-16873:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16873/run_instance.log) for more information.
+Error building image django__django-16910: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-16910:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-16910:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16910/run_instance.log) for more information.
+Error building image django__django-17051: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-17051:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-17051:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-17051/run_instance.log) for more information.
+Error building image django__django-17087: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-17087:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-17087:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-17087/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-18869: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-18869:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-18869:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-18869/run_instance.log) for more information.Evaluation:  39%|███▉      | 118/299 [19:57<06:20,  2.10s/it, ✓=0, ✖=15, error=104]Evaluation:  40%|███▉      | 119/299 [19:57<05:34,  1.86s/it, ✓=0, ✖=15, error=104]Evaluation:  40%|███▉      | 119/299 [19:59<05:34,  1.86s/it, ✓=0, ✖=15, error=105]Evaluation:  40%|████      | 120/299 [19:59<05:14,  1.76s/it, ✓=0, ✖=15, error=105]Evaluation:  40%|████      | 120/299 [20:00<05:14,  1.76s/it, ✓=0, ✖=15, error=106]Evaluation:  40%|████      | 121/299 [20:00<04:48,  1.62s/it, ✓=0, ✖=15, error=106]Evaluation:  40%|████      | 121/299 [20:02<04:48,  1.62s/it, ✓=0, ✖=15, error=107]Evaluation:  41%|████      | 122/299 [20:02<04:39,  1.58s/it, ✓=0, ✖=15, error=107]Evaluation:  41%|████      | 122/299 [20:03<04:39,  1.58s/it, ✓=0, ✖=15, error=108]Evaluation:  41%|████      | 123/299 [20:03<04:25,  1.51s/it, ✓=0, ✖=15, error=108]Evaluation:  41%|████      | 123/299 [20:04<04:25,  1.51s/it, ✓=0, ✖=15, error=109]Evaluation:  41%|████▏     | 124/299 [20:04<04:20,  1.49s/it, ✓=0, ✖=15, error=109]Evaluation:  41%|████▏     | 124/299 [20:06<04:20,  1.49s/it, ✓=0, ✖=15, error=110]Evaluation:  42%|████▏     | 125/299 [20:06<04:25,  1.53s/it, ✓=0, ✖=15, error=110]Evaluation:  42%|████▏     | 125/299 [20:07<04:25,  1.53s/it, ✓=0, ✖=15, error=111]Evaluation:  42%|████▏     | 126/299 [20:07<04:09,  1.44s/it, ✓=0, ✖=15, error=111]Evaluation:  42%|████▏     | 126/299 [20:09<04:09,  1.44s/it, ✓=0, ✖=15, error=112]Evaluation:  42%|████▏     | 127/299 [20:09<04:16,  1.49s/it, ✓=0, ✖=15, error=112]Evaluation:  42%|████▏     | 127/299 [20:10<04:16,  1.49s/it, ✓=0, ✖=15, error=113]Evaluation:  43%|████▎     | 128/299 [20:10<04:02,  1.42s/it, ✓=0, ✖=15, error=113]Evaluation:  43%|████▎     | 128/299 [20:12<04:02,  1.42s/it, ✓=0, ✖=15, error=114]Evaluation:  43%|████▎     | 129/299 [20:12<04:07,  1.45s/it, ✓=0, ✖=15, error=114]Evaluation:  43%|████▎     | 129/299 [20:13<04:07,  1.45s/it, ✓=0, ✖=15, error=115]Evaluation:  43%|████▎     | 130/299 [20:13<04:00,  1.42s/it, ✓=0, ✖=15, error=115]Evaluation:  43%|████▎     | 130/299 [20:15<04:00,  1.42s/it, ✓=0, ✖=15, error=116]Evaluation:  44%|████▍     | 131/299 [20:15<04:07,  1.48s/it, ✓=0, ✖=15, error=116]Evaluation:  44%|████▍     | 131/299 [20:16<04:07,  1.48s/it, ✓=0, ✖=15, error=117]Evaluation:  44%|████▍     | 132/299 [20:16<03:51,  1.39s/it, ✓=0, ✖=15, error=117]Evaluation:  44%|████▍     | 132/299 [20:17<03:51,  1.39s/it, ✓=0, ✖=15, error=118]Evaluation:  44%|████▍     | 133/299 [20:17<04:02,  1.46s/it, ✓=0, ✖=15, error=118]Evaluation:  44%|████▍     | 133/299 [20:19<04:02,  1.46s/it, ✓=0, ✖=15, error=119]Evaluation:  45%|████▍     | 134/299 [20:19<03:47,  1.38s/it, ✓=0, ✖=15, error=119]Evaluation:  45%|████▍     | 134/299 [20:20<03:47,  1.38s/it, ✓=0, ✖=15, error=120]Evaluation:  45%|████▌     | 135/299 [20:20<03:58,  1.46s/it, ✓=0, ✖=15, error=120]Evaluation:  45%|████▌     | 135/299 [20:21<03:58,  1.46s/it, ✓=0, ✖=15, error=121]Evaluation:  45%|████▌     | 136/299 [20:21<03:42,  1.36s/it, ✓=0, ✖=15, error=121]Evaluation:  45%|████▌     | 136/299 [20:23<03:42,  1.36s/it, ✓=0, ✖=15, error=122]Evaluation:  46%|████▌     | 137/299 [20:23<03:57,  1.46s/it, ✓=0, ✖=15, error=122]
+Error building image matplotlib__matplotlib-22711: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22711:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22711:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-22711/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-22835: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22835:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22835:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-22835/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23299: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23299:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23299:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23299/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23314: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23314:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23314:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23314/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23476: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23476:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23476:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23476/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23562: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23562:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23562:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23562/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23563: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23563:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23563:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23563/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23913: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23913:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23913/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23964: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23964:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23964:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23964/run_instance.log) for more information.
+django__django-16408: >>>>> Patch Apply Failed:
+patching file django/template/base.py
+patch: **** malformed patch at line 40:  Sample code:
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/django__django-16408/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-23987: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23987:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23987:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-23987/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-24149: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24149:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24149:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-24149/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-24265: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24265:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24265:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-24265/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-24334: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24334:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24334:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-24334/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-24970: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24970:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-24970:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-24970/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-25079: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25079:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25079:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-25079/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-25311: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25311:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25311:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-25311/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-25332: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25332:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25332:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-25332/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-25433: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25433:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25433:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-25433/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-25442: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25442:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25442:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-25442/run_instance.log) for more information.Evaluation:  46%|████▌     | 137/299 [20:24<03:57,  1.46s/it, ✓=0, ✖=15, error=123]Evaluation:  46%|████▌     | 138/299 [20:24<03:39,  1.36s/it, ✓=0, ✖=15, error=123]Evaluation:  46%|████▌     | 138/299 [20:26<03:39,  1.36s/it, ✓=0, ✖=15, error=124]Evaluation:  46%|████▋     | 139/299 [20:26<03:55,  1.47s/it, ✓=0, ✖=15, error=124]Evaluation:  46%|████▋     | 139/299 [20:27<03:55,  1.47s/it, ✓=0, ✖=15, error=125]Evaluation:  47%|████▋     | 140/299 [20:27<03:39,  1.38s/it, ✓=0, ✖=15, error=125]Evaluation:  47%|████▋     | 140/299 [20:28<03:39,  1.38s/it, ✓=0, ✖=15, error=126]Evaluation:  47%|████▋     | 141/299 [20:28<03:13,  1.23s/it, ✓=0, ✖=15, error=126]Evaluation:  47%|████▋     | 141/299 [20:29<03:13,  1.23s/it, ✓=0, ✖=15, error=127]Evaluation:  47%|████▋     | 142/299 [20:29<02:51,  1.09s/it, ✓=0, ✖=15, error=127]Evaluation:  47%|████▋     | 142/299 [20:30<02:51,  1.09s/it, ✓=0, ✖=15, error=128]Evaluation:  48%|████▊     | 143/299 [20:30<02:52,  1.11s/it, ✓=0, ✖=15, error=128]Evaluation:  48%|████▊     | 143/299 [20:31<02:52,  1.11s/it, ✓=0, ✖=15, error=129]Evaluation:  48%|████▊     | 144/299 [20:31<02:40,  1.04s/it, ✓=0, ✖=15, error=129]Evaluation:  48%|████▊     | 144/299 [20:32<02:40,  1.04s/it, ✓=0, ✖=15, error=130]Evaluation:  48%|████▊     | 145/299 [20:32<02:29,  1.03it/s, ✓=0, ✖=15, error=130]Evaluation:  48%|████▊     | 145/299 [20:33<02:29,  1.03it/s, ✓=0, ✖=15, error=131]Evaluation:  49%|████▉     | 146/299 [20:33<02:34,  1.01s/it, ✓=0, ✖=15, error=131]Evaluation:  49%|████▉     | 146/299 [20:34<02:34,  1.01s/it, ✓=0, ✖=15, error=132]Evaluation:  49%|████▉     | 147/299 [20:34<02:30,  1.01it/s, ✓=0, ✖=15, error=132]Evaluation:  49%|████▉     | 147/299 [20:34<02:30,  1.01it/s, ✓=0, ✖=15, error=133]Evaluation:  49%|████▉     | 148/299 [20:34<02:19,  1.08it/s, ✓=0, ✖=15, error=133]Evaluation:  49%|████▉     | 148/299 [20:35<02:19,  1.08it/s, ✓=0, ✖=15, error=134]Evaluation:  50%|████▉     | 149/299 [20:35<02:25,  1.03it/s, ✓=0, ✖=15, error=134]Evaluation:  50%|████▉     | 149/299 [20:36<02:25,  1.03it/s, ✓=0, ✖=15, error=135]Evaluation:  50%|█████     | 150/299 [20:36<02:23,  1.04it/s, ✓=0, ✖=15, error=135]Evaluation:  50%|█████     | 150/299 [20:37<02:23,  1.04it/s, ✓=0, ✖=15, error=136]Evaluation:  51%|█████     | 151/299 [20:37<02:17,  1.08it/s, ✓=0, ✖=15, error=136]Evaluation:  51%|█████     | 151/299 [20:38<02:17,  1.08it/s, ✓=0, ✖=15, error=137]Evaluation:  51%|█████     | 152/299 [20:38<02:18,  1.06it/s, ✓=0, ✖=15, error=137]Evaluation:  51%|█████     | 152/299 [20:39<02:18,  1.06it/s, ✓=0, ✖=15, error=138]Evaluation:  51%|█████     | 153/299 [20:39<02:19,  1.04it/s, ✓=0, ✖=15, error=138]Evaluation:  51%|█████     | 153/299 [20:40<02:19,  1.04it/s, ✓=0, ✖=15, error=139]Evaluation:  52%|█████▏    | 154/299 [20:40<02:16,  1.06it/s, ✓=0, ✖=15, error=139]Evaluation:  52%|█████▏    | 154/299 [20:40<02:16,  1.06it/s, ✓=0, ✖=16, error=139]Evaluation:  52%|█████▏    | 155/299 [20:40<01:43,  1.40it/s, ✓=0, ✖=16, error=139]Evaluation:  52%|█████▏    | 155/299 [20:41<01:43,  1.40it/s, ✓=0, ✖=16, error=140]Evaluation:  52%|█████▏    | 156/299 [20:41<01:44,  1.37it/s, ✓=0, ✖=16, error=140]Evaluation:  52%|█████▏    | 156/299 [20:42<01:44,  1.37it/s, ✓=0, ✖=16, error=141]Evaluation:  53%|█████▎    | 157/299 [20:42<01:53,  1.25it/s, ✓=0, ✖=16, error=141]Evaluation:  53%|█████▎    | 157/299 [20:43<01:53,  1.25it/s, ✓=0, ✖=16, error=142]Evaluation:  53%|█████▎    | 158/299 [20:43<01:56,  1.21it/s, ✓=0, ✖=16, error=142]Evaluation:  53%|█████▎    | 158/299 [20:43<01:56,  1.21it/s, ✓=0, ✖=16, error=143]Evaluation:  53%|█████▎    | 159/299 [20:43<01:29,  1.57it/s, ✓=0, ✖=16, error=143]Evaluation:  53%|█████▎    | 159/299 [20:44<01:29,  1.57it/s, ✓=0, ✖=16, error=144]Evaluation:  54%|█████▎    | 160/299 [20:44<01:32,  1.51it/s, ✓=0, ✖=16, error=144]
+Error building image matplotlib__matplotlib-25498: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25498:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25498:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-25498/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-26011: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-26011:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-26011:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-26011/run_instance.log) for more information.
+Error building image matplotlib__matplotlib-26020: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-26020:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-26020:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/matplotlib__matplotlib-26020/run_instance.log) for more information.
+Error building image mwaskom__seaborn-2848: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-2848:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-2848:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/mwaskom__seaborn-2848/run_instance.log) for more information.
+Error building image mwaskom__seaborn-3010: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-3010:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-3010:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/mwaskom__seaborn-3010/run_instance.log) for more information.
+Error building image mwaskom__seaborn-3190: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-3190:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-3190:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/mwaskom__seaborn-3190/run_instance.log) for more information.
+Error building image mwaskom__seaborn-3407: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-3407:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.mwaskom_1776_seaborn-3407:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/mwaskom__seaborn-3407/run_instance.log) for more information.
+Error building image pallets__flask-4045: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pallets_1776_flask-4045:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pallets_1776_flask-4045:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pallets__flask-4045/run_instance.log) for more information.
+Error building image pallets__flask-4992: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pallets_1776_flask-4992:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pallets_1776_flask-4992:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pallets__flask-4992/run_instance.log) for more information.
+Error building image pallets__flask-5063: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pallets_1776_flask-5063:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pallets_1776_flask-5063:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pallets__flask-5063/run_instance.log) for more information.
+Error building image psf__requests-1963: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.psf_1776_requests-1963:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.psf_1776_requests-1963:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/psf__requests-1963/run_instance.log) for more information.
+Error building image psf__requests-2148: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.psf_1776_requests-2148:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.psf_1776_requests-2148:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/psf__requests-2148/run_instance.log) for more information.
+Error building image psf__requests-2317: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.psf_1776_requests-2317:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.psf_1776_requests-2317:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/psf__requests-2317/run_instance.log) for more information.
+Error building image psf__requests-2674: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.psf_1776_requests-2674:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.psf_1776_requests-2674:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/psf__requests-2674/run_instance.log) for more information.
+Error building image psf__requests-3362: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.psf_1776_requests-3362:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.psf_1776_requests-3362:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/psf__requests-3362/run_instance.log) for more information.
+Error building image psf__requests-863: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.psf_1776_requests-863:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.psf_1776_requests-863:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/psf__requests-863/run_instance.log) for more information.
+Error building image pydata__xarray-3364: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-3364:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-3364:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pydata__xarray-3364/run_instance.log) for more information.
+Error building image pydata__xarray-4094: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-4094:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-4094:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pydata__xarray-4094/run_instance.log) for more information.
+Error building image pydata__xarray-4248: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-4248:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-4248:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pydata__xarray-4248/run_instance.log) for more information.
+Error building image pydata__xarray-4493: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-4493:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-4493:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pydata__xarray-4493/run_instance.log) for more information.
+Error building image pydata__xarray-5131: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-5131:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-5131:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pydata__xarray-5131/run_instance.log) for more information.Evaluation:  54%|█████▎    | 160/299 [20:45<01:32,  1.51it/s, ✓=0, ✖=16, error=145]Evaluation:  54%|█████▍    | 161/299 [20:45<01:46,  1.29it/s, ✓=0, ✖=16, error=145]Evaluation:  54%|█████▍    | 161/299 [20:46<01:46,  1.29it/s, ✓=0, ✖=16, error=146]Evaluation:  54%|█████▍    | 162/299 [20:46<01:49,  1.25it/s, ✓=0, ✖=16, error=146]Evaluation:  54%|█████▍    | 162/299 [20:46<01:49,  1.25it/s, ✓=0, ✖=16, error=147]Evaluation:  55%|█████▍    | 163/299 [20:46<01:23,  1.63it/s, ✓=0, ✖=16, error=147]Evaluation:  55%|█████▍    | 163/299 [20:47<01:23,  1.63it/s, ✓=0, ✖=16, error=148]Evaluation:  55%|█████▍    | 164/299 [20:47<01:28,  1.53it/s, ✓=0, ✖=16, error=148]Evaluation:  55%|█████▍    | 164/299 [20:48<01:28,  1.53it/s, ✓=0, ✖=16, error=149]Evaluation:  55%|█████▌    | 165/299 [20:48<01:41,  1.32it/s, ✓=0, ✖=16, error=149]Evaluation:  55%|█████▌    | 165/299 [20:49<01:41,  1.32it/s, ✓=0, ✖=16, error=150]Evaluation:  56%|█████▌    | 166/299 [20:49<01:47,  1.24it/s, ✓=0, ✖=16, error=150]Evaluation:  56%|█████▌    | 166/299 [20:49<01:47,  1.24it/s, ✓=0, ✖=16, error=151]Evaluation:  56%|█████▌    | 167/299 [20:49<01:20,  1.65it/s, ✓=0, ✖=16, error=151]Evaluation:  56%|█████▌    | 167/299 [20:49<01:20,  1.65it/s, ✓=0, ✖=16, error=152]Evaluation:  56%|█████▌    | 168/299 [20:49<01:23,  1.56it/s, ✓=0, ✖=16, error=152]Evaluation:  56%|█████▌    | 168/299 [20:50<01:23,  1.56it/s, ✓=0, ✖=16, error=153]Evaluation:  57%|█████▋    | 169/299 [20:50<01:37,  1.33it/s, ✓=0, ✖=16, error=153]Evaluation:  57%|█████▋    | 169/299 [20:51<01:37,  1.33it/s, ✓=0, ✖=16, error=154]Evaluation:  57%|█████▋    | 170/299 [20:51<01:44,  1.24it/s, ✓=0, ✖=16, error=154]Evaluation:  57%|█████▋    | 170/299 [20:52<01:44,  1.24it/s, ✓=0, ✖=16, error=155]Evaluation:  57%|█████▋    | 171/299 [20:52<01:18,  1.64it/s, ✓=0, ✖=16, error=155]Evaluation:  57%|█████▋    | 171/299 [20:52<01:18,  1.64it/s, ✓=0, ✖=16, error=156]Evaluation:  58%|█████▊    | 172/299 [20:52<01:21,  1.56it/s, ✓=0, ✖=16, error=156]Evaluation:  58%|█████▊    | 172/299 [20:53<01:21,  1.56it/s, ✓=0, ✖=16, error=157]Evaluation:  58%|█████▊    | 173/299 [20:53<01:34,  1.34it/s, ✓=0, ✖=16, error=157]Evaluation:  58%|█████▊    | 173/299 [20:54<01:34,  1.34it/s, ✓=0, ✖=16, error=158]Evaluation:  58%|█████▊    | 174/299 [20:54<01:40,  1.24it/s, ✓=0, ✖=16, error=158]Evaluation:  58%|█████▊    | 174/299 [20:54<01:40,  1.24it/s, ✓=0, ✖=16, error=159]Evaluation:  59%|█████▊    | 175/299 [20:54<01:14,  1.67it/s, ✓=0, ✖=16, error=159]Evaluation:  59%|█████▊    | 175/299 [20:55<01:14,  1.67it/s, ✓=0, ✖=16, error=160]Evaluation:  59%|█████▉    | 176/299 [20:55<01:18,  1.57it/s, ✓=0, ✖=16, error=160]Evaluation:  59%|█████▉    | 176/299 [20:56<01:18,  1.57it/s, ✓=0, ✖=16, error=161]Evaluation:  59%|█████▉    | 177/299 [20:56<01:32,  1.32it/s, ✓=0, ✖=16, error=161]Evaluation:  59%|█████▉    | 177/299 [20:57<01:32,  1.32it/s, ✓=0, ✖=16, error=162]Evaluation:  60%|█████▉    | 178/299 [20:57<01:37,  1.24it/s, ✓=0, ✖=16, error=162]Evaluation:  60%|█████▉    | 178/299 [20:57<01:37,  1.24it/s, ✓=0, ✖=16, error=163]Evaluation:  60%|█████▉    | 179/299 [20:57<01:12,  1.66it/s, ✓=0, ✖=16, error=163]Evaluation:  60%|█████▉    | 179/299 [20:58<01:12,  1.66it/s, ✓=0, ✖=16, error=164]Evaluation:  60%|██████    | 180/299 [20:58<01:15,  1.57it/s, ✓=0, ✖=16, error=164]Evaluation:  60%|██████    | 180/299 [20:59<01:15,  1.57it/s, ✓=0, ✖=16, error=165]Evaluation:  61%|██████    | 181/299 [20:59<01:28,  1.33it/s, ✓=0, ✖=16, error=165]
+Error building image pylint-dev__pylint-5859: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-5859:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-5859:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pylint-dev__pylint-5859/run_instance.log) for more information.
+Error building image pylint-dev__pylint-6506: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6506:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6506:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pylint-dev__pylint-6506/run_instance.log) for more information.
+Error building image pylint-dev__pylint-7080: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7080:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7080:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pylint-dev__pylint-7080/run_instance.log) for more information.
+Error building image pylint-dev__pylint-7114: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7114:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7114:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pylint-dev__pylint-7114/run_instance.log) for more information.
+Error building image pylint-dev__pylint-7228: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7228:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7228:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pylint-dev__pylint-7228/run_instance.log) for more information.
+Error building image pylint-dev__pylint-7993: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7993:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7993:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pylint-dev__pylint-7993/run_instance.log) for more information.
+Error building image pytest-dev__pytest-11143: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-11143:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-11143:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-11143/run_instance.log) for more information.
+Error building image pytest-dev__pytest-11148: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-11148:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-11148:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-11148/run_instance.log) for more information.
+Error building image pytest-dev__pytest-5103: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5103:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5103:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-5103/run_instance.log) for more information.
+Error building image pytest-dev__pytest-5221: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5221:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5221:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-5221/run_instance.log) for more information.
+Error building image pytest-dev__pytest-5227: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5227:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5227:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-5227/run_instance.log) for more information.
+Error building image pytest-dev__pytest-5413: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5413:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5413:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-5413/run_instance.log) for more information.
+Error building image pytest-dev__pytest-5495: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5495:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5495:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-5495/run_instance.log) for more information.
+Error building image pytest-dev__pytest-5692: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5692:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-5692:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-5692/run_instance.log) for more information.
+Error building image pytest-dev__pytest-6116: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-6116:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-6116:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-6116/run_instance.log) for more information.
+Error building image pytest-dev__pytest-7168: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7168:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7168:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-7168/run_instance.log) for more information.
+Error building image pytest-dev__pytest-7220: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7220:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7220:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-7220/run_instance.log) for more information.
+Error building image pytest-dev__pytest-7373: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7373:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7373:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-7373/run_instance.log) for more information.
+Error building image pytest-dev__pytest-7432: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7432:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7432:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-7432/run_instance.log) for more information.
+Error building image pytest-dev__pytest-7490: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7490:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-7490:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-7490/run_instance.log) for more information.
+Error building image pytest-dev__pytest-8365: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-8365:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-8365:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-8365/run_instance.log) for more information.Evaluation:  61%|██████    | 181/299 [21:00<01:28,  1.33it/s, ✓=0, ✖=16, error=166]Evaluation:  61%|██████    | 182/299 [21:00<01:36,  1.22it/s, ✓=0, ✖=16, error=166]Evaluation:  61%|██████    | 182/299 [21:00<01:36,  1.22it/s, ✓=0, ✖=16, error=167]Evaluation:  61%|██████    | 183/299 [21:00<01:11,  1.61it/s, ✓=0, ✖=16, error=167]Evaluation:  61%|██████    | 183/299 [21:01<01:11,  1.61it/s, ✓=0, ✖=16, error=168]Evaluation:  62%|██████▏   | 184/299 [21:01<01:13,  1.57it/s, ✓=0, ✖=16, error=168]Evaluation:  62%|██████▏   | 184/299 [21:02<01:13,  1.57it/s, ✓=0, ✖=16, error=169]Evaluation:  62%|██████▏   | 185/299 [21:02<01:26,  1.32it/s, ✓=0, ✖=16, error=169]Evaluation:  62%|██████▏   | 185/299 [22:42<01:26,  1.32it/s, ✓=0, ✖=16, error=170]Evaluation:  62%|██████▏   | 186/299 [22:42<57:32, 30.55s/it, ✓=0, ✖=16, error=170]Evaluation:  62%|██████▏   | 186/299 [22:43<57:32, 30.55s/it, ✓=0, ✖=16, error=171]Evaluation:  63%|██████▎   | 187/299 [22:43<40:51, 21.89s/it, ✓=0, ✖=16, error=171]Evaluation:  63%|██████▎   | 187/299 [22:45<40:51, 21.89s/it, ✓=0, ✖=16, error=172]Evaluation:  63%|██████▎   | 188/299 [22:45<29:01, 15.69s/it, ✓=0, ✖=16, error=172]Evaluation:  63%|██████▎   | 188/299 [22:45<29:01, 15.69s/it, ✓=0, ✖=16, error=173]Evaluation:  63%|██████▎   | 189/299 [22:45<20:12, 11.02s/it, ✓=0, ✖=16, error=173]Evaluation:  63%|██████▎   | 189/299 [22:45<20:12, 11.02s/it, ✓=0, ✖=16, error=174]Evaluation:  64%|██████▎   | 190/299 [22:46<20:01, 11.02s/it, ✓=0, ✖=16, error=175]Evaluation:  64%|██████▍   | 191/299 [22:46<11:19,  6.29s/it, ✓=0, ✖=16, error=175]Evaluation:  64%|██████▍   | 191/299 [22:48<11:19,  6.29s/it, ✓=0, ✖=16, error=176]Evaluation:  64%|██████▍   | 192/299 [22:48<08:56,  5.01s/it, ✓=0, ✖=16, error=176]Evaluation:  64%|██████▍   | 192/299 [22:48<08:56,  5.01s/it, ✓=0, ✖=16, error=177]Evaluation:  65%|██████▍   | 193/299 [22:48<06:35,  3.73s/it, ✓=0, ✖=16, error=177]Evaluation:  65%|██████▍   | 193/299 [22:48<06:35,  3.73s/it, ✓=0, ✖=16, error=178]Evaluation:  65%|██████▍   | 194/299 [22:49<06:31,  3.73s/it, ✓=0, ✖=16, error=179]Evaluation:  65%|██████▌   | 195/299 [22:49<04:16,  2.47s/it, ✓=0, ✖=16, error=179]Evaluation:  65%|██████▌   | 195/299 [22:50<04:16,  2.47s/it, ✓=0, ✖=16, error=180]Evaluation:  66%|██████▌   | 196/299 [22:50<03:41,  2.15s/it, ✓=0, ✖=16, error=180]Evaluation:  66%|██████▌   | 196/299 [22:50<03:41,  2.15s/it, ✓=0, ✖=16, error=181]Evaluation:  66%|██████▌   | 197/299 [22:50<02:48,  1.65s/it, ✓=0, ✖=16, error=181]Evaluation:  66%|██████▌   | 197/299 [22:50<02:48,  1.65s/it, ✓=0, ✖=16, error=182]Evaluation:  66%|██████▌   | 198/299 [22:52<02:46,  1.65s/it, ✓=0, ✖=16, error=183]Evaluation:  67%|██████▋   | 199/299 [22:52<02:14,  1.34s/it, ✓=0, ✖=16, error=183]
+Error building image pytest-dev__pytest-8906: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-8906:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-8906:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-8906/run_instance.log) for more information.
+Error building image pytest-dev__pytest-9359: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-9359:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pytest-dev_1776_pytest-9359:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/pytest-dev__pytest-9359/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-10297: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-10297:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-10297:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-10297/run_instance.log) for more information.
+scikit-learn__scikit-learn-10508: >>>>> Patch Apply Failed:
+can't find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/src/utils/fixes.py b/src/utils/fixes.py
+|--- a/src/utils/fixes.py
+|+++ b/src/utils/fixes.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 36:      version = []
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-10508/run_instance.log) for more information.
+scikit-learn__scikit-learn-11040: >>>>> Patch Apply Failed:
+can't find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/src/utils.py b/src/utils.py
+|--- a/src/utils.py
+|+++ b/src/utils.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 55:  
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-11040/run_instance.log) for more information.
+scikit-learn__scikit-learn-10949: >>>>> Patch Apply Failed:
+can't find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/src/sklearn/utils/validation.py b/src/sklearn/utils/validation.py
+|--- a/src/sklearn/utils/validation.py
+|+++ b/src/sklearn/utils/validation.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 12:      By default, the input is converted to an at least 2D numpy array.
+
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-10949/run_instance.log) for more information.
+scikit-learn__scikit-learn-11281: >>>>> Patch Apply Failed:
+patching file README.rst
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file README.rst.rej
+
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-11281/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-12471: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-12471:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-12471:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-12471/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-13142: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13142:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13142:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-13142/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-13241: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13241:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13241:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-13241/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-13439: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13439:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13439:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-13439/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-13496: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13496:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13496:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-13496/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-13497: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13497:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13497:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-13497/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-13584: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13584:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13584:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-13584/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-13779: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13779:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13779:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-13779/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-14087: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14087:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14087:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-14087/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-14092: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14092:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14092:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-14092/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-14894: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14894:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14894:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-14894/run_instance.log) for more information.Evaluation:  67%|██████▋   | 199/299 [22:53<02:14,  1.34s/it, ✓=0, ✖=16, error=184]Evaluation:  67%|██████▋   | 200/299 [22:53<02:01,  1.22s/it, ✓=0, ✖=16, error=184]Evaluation:  67%|██████▋   | 200/299 [22:53<02:01,  1.22s/it, ✓=0, ✖=16, error=185]Evaluation:  67%|██████▋   | 201/299 [22:53<01:33,  1.04it/s, ✓=0, ✖=16, error=185]Evaluation:  67%|██████▋   | 201/299 [22:53<01:33,  1.04it/s, ✓=0, ✖=16, error=186]Evaluation:  68%|██████▊   | 202/299 [22:55<01:32,  1.04it/s, ✓=0, ✖=16, error=187]Evaluation:  68%|██████▊   | 203/299 [22:55<01:30,  1.06it/s, ✓=0, ✖=16, error=187]Evaluation:  68%|██████▊   | 203/299 [22:56<01:30,  1.06it/s, ✓=0, ✖=16, error=188]Evaluation:  68%|██████▊   | 204/299 [22:56<01:26,  1.10it/s, ✓=0, ✖=16, error=188]Evaluation:  68%|██████▊   | 204/299 [22:56<01:26,  1.10it/s, ✓=0, ✖=16, error=189]Evaluation:  69%|██████▊   | 205/299 [22:56<01:08,  1.37it/s, ✓=0, ✖=16, error=189]Evaluation:  69%|██████▊   | 205/299 [22:56<01:08,  1.37it/s, ✓=0, ✖=16, error=190]Evaluation:  69%|██████▉   | 206/299 [22:58<01:07,  1.37it/s, ✓=0, ✖=16, error=191]Evaluation:  69%|██████▉   | 207/299 [22:58<01:13,  1.25it/s, ✓=0, ✖=16, error=191]Evaluation:  69%|██████▉   | 207/299 [22:59<01:13,  1.25it/s, ✓=0, ✖=16, error=192]Evaluation:  70%|██████▉   | 208/299 [22:59<01:14,  1.22it/s, ✓=0, ✖=16, error=192]Evaluation:  70%|██████▉   | 208/299 [22:59<01:14,  1.22it/s, ✓=0, ✖=16, error=193]Evaluation:  70%|██████▉   | 209/299 [22:59<00:58,  1.55it/s, ✓=0, ✖=16, error=193]Evaluation:  70%|██████▉   | 209/299 [22:59<00:58,  1.55it/s, ✓=0, ✖=16, error=194]Evaluation:  70%|███████   | 210/299 [23:01<00:57,  1.55it/s, ✓=0, ✖=16, error=195]Evaluation:  71%|███████   | 211/299 [23:01<01:07,  1.30it/s, ✓=0, ✖=16, error=195]Evaluation:  71%|███████   | 211/299 [23:02<01:07,  1.30it/s, ✓=0, ✖=16, error=196]Evaluation:  71%|███████   | 212/299 [23:02<01:07,  1.28it/s, ✓=0, ✖=16, error=196]Evaluation:  71%|███████   | 212/299 [23:02<01:07,  1.28it/s, ✓=0, ✖=16, error=197]Evaluation:  71%|███████   | 213/299 [23:02<00:53,  1.62it/s, ✓=0, ✖=16, error=197]Evaluation:  71%|███████   | 213/299 [23:02<00:53,  1.62it/s, ✓=0, ✖=16, error=198]Evaluation:  72%|███████▏  | 214/299 [23:04<00:52,  1.62it/s, ✓=0, ✖=16, error=199]Evaluation:  72%|███████▏  | 215/299 [23:04<01:03,  1.32it/s, ✓=0, ✖=16, error=199]Evaluation:  72%|███████▏  | 215/299 [23:04<01:03,  1.32it/s, ✓=0, ✖=16, error=200]Evaluation:  72%|███████▏  | 216/299 [23:04<01:03,  1.32it/s, ✓=0, ✖=16, error=200]Evaluation:  72%|███████▏  | 216/299 [23:05<01:03,  1.32it/s, ✓=0, ✖=16, error=201]Evaluation:  73%|███████▎  | 217/299 [23:05<00:50,  1.63it/s, ✓=0, ✖=16, error=201]Evaluation:  73%|███████▎  | 217/299 [23:05<00:50,  1.63it/s, ✓=0, ✖=16, error=202]Evaluation:  73%|███████▎  | 218/299 [23:06<00:49,  1.63it/s, ✓=0, ✖=16, error=203]Evaluation:  73%|███████▎  | 219/299 [23:06<00:59,  1.34it/s, ✓=0, ✖=16, error=203]
+Error building image scikit-learn__scikit-learn-14983: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14983:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14983:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-14983/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-15512: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-15512:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-15512:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-15512/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-15535: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-15535:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-15535:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-15535/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-25500: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25500:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25500:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-25500/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-25570: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25570:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25570:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-25570/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-25638: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25638:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25638:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-25638/run_instance.log) for more information.
+Error building image scikit-learn__scikit-learn-25747: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25747:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-25747:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/scikit-learn__scikit-learn-25747/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-10325: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10325:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10325:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-10325/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-10451: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10451:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10451:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-10451/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-11445: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-11445:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-11445:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-11445/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-7686: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7686:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7686:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-7686/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-7738: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7738:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7738:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-7738/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-7975: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7975:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7975:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-7975/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8273: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8273:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8273:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8273/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8282: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8282:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8282:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8282/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8435: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8435:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8435:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8435/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8474: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8474:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8474:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8474/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8506: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8506:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8506:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8506/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8595: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8595:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8595:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8595/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8627: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8627:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8627:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8627/run_instance.log) for more information.Evaluation:  73%|███████▎  | 219/299 [23:07<00:59,  1.34it/s, ✓=0, ✖=16, error=204]Evaluation:  74%|███████▎  | 220/299 [23:07<01:00,  1.31it/s, ✓=0, ✖=16, error=204]Evaluation:  74%|███████▎  | 220/299 [23:07<01:00,  1.31it/s, ✓=0, ✖=16, error=205]Evaluation:  74%|███████▍  | 221/299 [23:07<00:46,  1.67it/s, ✓=0, ✖=16, error=205]Evaluation:  74%|███████▍  | 221/299 [23:07<00:46,  1.67it/s, ✓=0, ✖=16, error=206]Evaluation:  74%|███████▍  | 222/299 [23:09<00:46,  1.67it/s, ✓=0, ✖=16, error=207]Evaluation:  75%|███████▍  | 223/299 [23:09<00:57,  1.33it/s, ✓=0, ✖=16, error=207]Evaluation:  75%|███████▍  | 223/299 [23:10<00:57,  1.33it/s, ✓=0, ✖=16, error=208]Evaluation:  75%|███████▍  | 224/299 [23:10<00:56,  1.33it/s, ✓=0, ✖=16, error=208]Evaluation:  75%|███████▍  | 224/299 [23:10<00:56,  1.33it/s, ✓=0, ✖=16, error=209]Evaluation:  75%|███████▌  | 225/299 [23:10<00:44,  1.68it/s, ✓=0, ✖=16, error=209]Evaluation:  75%|███████▌  | 225/299 [23:10<00:44,  1.68it/s, ✓=0, ✖=16, error=210]Evaluation:  76%|███████▌  | 226/299 [23:10<00:34,  2.12it/s, ✓=0, ✖=16, error=210]Evaluation:  76%|███████▌  | 226/299 [23:12<00:34,  2.12it/s, ✓=0, ✖=16, error=211]Evaluation:  76%|███████▌  | 227/299 [23:12<01:00,  1.19it/s, ✓=0, ✖=16, error=211]Evaluation:  76%|███████▌  | 227/299 [23:13<01:00,  1.19it/s, ✓=0, ✖=16, error=212]Evaluation:  76%|███████▋  | 228/299 [23:13<00:57,  1.24it/s, ✓=0, ✖=16, error=212]Evaluation:  76%|███████▋  | 228/299 [23:13<00:57,  1.24it/s, ✓=0, ✖=16, error=213]Evaluation:  77%|███████▋  | 229/299 [23:13<00:43,  1.62it/s, ✓=0, ✖=16, error=213]Evaluation:  77%|███████▋  | 229/299 [23:13<00:43,  1.62it/s, ✓=0, ✖=16, error=214]Evaluation:  77%|███████▋  | 230/299 [23:13<00:34,  2.03it/s, ✓=0, ✖=16, error=214]Evaluation:  77%|███████▋  | 230/299 [23:15<00:34,  2.03it/s, ✓=0, ✖=16, error=215]Evaluation:  77%|███████▋  | 231/299 [23:15<00:58,  1.16it/s, ✓=0, ✖=16, error=215]Evaluation:  77%|███████▋  | 231/299 [23:16<00:58,  1.16it/s, ✓=0, ✖=16, error=216]Evaluation:  78%|███████▊  | 232/299 [23:16<00:54,  1.24it/s, ✓=0, ✖=16, error=216]Evaluation:  78%|███████▊  | 232/299 [23:16<00:54,  1.24it/s, ✓=0, ✖=16, error=217]Evaluation:  78%|███████▊  | 233/299 [23:16<00:41,  1.60it/s, ✓=0, ✖=16, error=217]Evaluation:  78%|███████▊  | 233/299 [23:16<00:41,  1.60it/s, ✓=0, ✖=16, error=218]Evaluation:  78%|███████▊  | 234/299 [23:16<00:32,  1.98it/s, ✓=0, ✖=16, error=218]Evaluation:  78%|███████▊  | 234/299 [23:18<00:32,  1.98it/s, ✓=0, ✖=16, error=219]Evaluation:  79%|███████▊  | 235/299 [23:18<00:54,  1.17it/s, ✓=0, ✖=16, error=219]Evaluation:  79%|███████▊  | 235/299 [23:18<00:54,  1.17it/s, ✓=0, ✖=16, error=220]Evaluation:  79%|███████▉  | 236/299 [23:18<00:51,  1.22it/s, ✓=0, ✖=16, error=220]Evaluation:  79%|███████▉  | 236/299 [23:19<00:51,  1.22it/s, ✓=0, ✖=16, error=221]Evaluation:  79%|███████▉  | 237/299 [23:19<00:38,  1.62it/s, ✓=0, ✖=16, error=221]Evaluation:  79%|███████▉  | 237/299 [23:19<00:38,  1.62it/s, ✓=0, ✖=16, error=222]Evaluation:  80%|███████▉  | 238/299 [23:19<00:30,  1.99it/s, ✓=0, ✖=16, error=222]Evaluation:  80%|███████▉  | 238/299 [23:21<00:30,  1.99it/s, ✓=0, ✖=16, error=223]Evaluation:  80%|███████▉  | 239/299 [23:21<00:52,  1.14it/s, ✓=0, ✖=16, error=223]Evaluation:  80%|███████▉  | 239/299 [23:21<00:52,  1.14it/s, ✓=0, ✖=16, error=224]Evaluation:  80%|████████  | 240/299 [23:21<00:49,  1.20it/s, ✓=0, ✖=16, error=224]Evaluation:  80%|████████  | 240/299 [23:21<00:49,  1.20it/s, ✓=0, ✖=16, error=225]
+Error building image sphinx-doc__sphinx-8713: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8713:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8713:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8713/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8721: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8721:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8721:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8721/run_instance.log) for more information.
+Error building image sphinx-doc__sphinx-8801: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8801:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8801:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sphinx-doc__sphinx-8801/run_instance.log) for more information.
+Error building image sympy__sympy-11400: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-11400:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-11400:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-11400/run_instance.log) for more information.
+Error building image sympy__sympy-11870: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-11870:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-11870:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-11870/run_instance.log) for more information.
+Error building image sympy__sympy-11897: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-11897:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-11897:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-11897/run_instance.log) for more information.
+Error building image sympy__sympy-12171: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-12171:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-12171:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-12171/run_instance.log) for more information.
+Error building image sympy__sympy-12236: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-12236:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-12236:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-12236/run_instance.log) for more information.
+Error building image sympy__sympy-12419: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-12419:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-12419:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-12419/run_instance.log) for more information.
+Error building image sympy__sympy-12454: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-12454:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-12454:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-12454/run_instance.log) for more information.
+Error building image sympy__sympy-12481: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-12481:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-12481:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-12481/run_instance.log) for more information.
+Error building image sympy__sympy-13031: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13031:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13031:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13031/run_instance.log) for more information.
+Error building image sympy__sympy-13043: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13043:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13043:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13043/run_instance.log) for more information.
+Error building image sympy__sympy-13146: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13146:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13146:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13146/run_instance.log) for more information.
+Error building image sympy__sympy-13177: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13177:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13177:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13177/run_instance.log) for more information.
+Error building image sympy__sympy-13437: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13437:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13437:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13437/run_instance.log) for more information.
+Error building image sympy__sympy-13471: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13471:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13471:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13471/run_instance.log) for more information.
+Error building image sympy__sympy-13480: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13480:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13480:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13480/run_instance.log) for more information.
+Error building image sympy__sympy-13647: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13647:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13647:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13647/run_instance.log) for more information.
+Error building image sympy__sympy-13773: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13773:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13773:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13773/run_instance.log) for more information.
+Error building image sympy__sympy-13895: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13895:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13895:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13895/run_instance.log) for more information.
+Error building image sympy__sympy-13915: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13915:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13915:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13915/run_instance.log) for more information.Evaluation:  81%|████████  | 241/299 [23:22<00:48,  1.20it/s, ✓=0, ✖=16, error=226]Evaluation:  81%|████████  | 242/299 [23:22<00:29,  1.92it/s, ✓=0, ✖=16, error=226]Evaluation:  81%|████████  | 242/299 [23:23<00:29,  1.92it/s, ✓=0, ✖=16, error=227]Evaluation:  81%|████████▏ | 243/299 [23:23<00:45,  1.22it/s, ✓=0, ✖=16, error=227]Evaluation:  81%|████████▏ | 243/299 [23:24<00:45,  1.22it/s, ✓=0, ✖=16, error=228]Evaluation:  82%|████████▏ | 244/299 [23:24<00:44,  1.24it/s, ✓=0, ✖=16, error=228]Evaluation:  82%|████████▏ | 244/299 [23:24<00:44,  1.24it/s, ✓=0, ✖=16, error=229]Evaluation:  82%|████████▏ | 245/299 [23:24<00:43,  1.24it/s, ✓=0, ✖=16, error=230]Evaluation:  82%|████████▏ | 246/299 [23:24<00:28,  1.88it/s, ✓=0, ✖=16, error=230]Evaluation:  82%|████████▏ | 246/299 [23:26<00:28,  1.88it/s, ✓=0, ✖=16, error=231]Evaluation:  83%|████████▎ | 247/299 [23:26<00:41,  1.24it/s, ✓=0, ✖=16, error=231]Evaluation:  83%|████████▎ | 247/299 [23:27<00:41,  1.24it/s, ✓=0, ✖=16, error=232]Evaluation:  83%|████████▎ | 248/299 [23:27<00:41,  1.24it/s, ✓=0, ✖=16, error=232]Evaluation:  83%|████████▎ | 248/299 [23:27<00:41,  1.24it/s, ✓=0, ✖=16, error=233]Evaluation:  83%|████████▎ | 249/299 [23:27<00:40,  1.24it/s, ✓=0, ✖=16, error=234]Evaluation:  84%|████████▎ | 250/299 [23:27<00:26,  1.87it/s, ✓=0, ✖=16, error=234]Evaluation:  84%|████████▎ | 250/299 [23:29<00:26,  1.87it/s, ✓=0, ✖=16, error=235]Evaluation:  84%|████████▍ | 251/299 [23:29<00:38,  1.24it/s, ✓=0, ✖=16, error=235]Evaluation:  84%|████████▍ | 251/299 [23:30<00:38,  1.24it/s, ✓=0, ✖=16, error=236]Evaluation:  84%|████████▍ | 252/299 [23:30<00:37,  1.25it/s, ✓=0, ✖=16, error=236]Evaluation:  84%|████████▍ | 252/299 [23:30<00:37,  1.25it/s, ✓=0, ✖=16, error=237]Evaluation:  85%|████████▍ | 253/299 [23:30<00:36,  1.25it/s, ✓=0, ✖=16, error=238]Evaluation:  85%|████████▍ | 254/299 [23:30<00:24,  1.87it/s, ✓=0, ✖=16, error=238]Evaluation:  85%|████████▍ | 254/299 [23:32<00:24,  1.87it/s, ✓=0, ✖=16, error=239]Evaluation:  85%|████████▌ | 255/299 [23:32<00:35,  1.24it/s, ✓=0, ✖=16, error=239]Evaluation:  85%|████████▌ | 255/299 [23:32<00:35,  1.24it/s, ✓=0, ✖=16, error=240]Evaluation:  86%|████████▌ | 256/299 [23:32<00:34,  1.26it/s, ✓=0, ✖=16, error=240]Evaluation:  86%|████████▌ | 256/299 [23:33<00:34,  1.26it/s, ✓=0, ✖=16, error=241]Evaluation:  86%|████████▌ | 257/299 [23:33<00:33,  1.26it/s, ✓=0, ✖=16, error=242]Evaluation:  86%|████████▋ | 258/299 [23:33<00:21,  1.87it/s, ✓=0, ✖=16, error=242]Evaluation:  86%|████████▋ | 258/299 [23:35<00:21,  1.87it/s, ✓=0, ✖=16, error=243]Evaluation:  87%|████████▋ | 259/299 [23:35<00:31,  1.25it/s, ✓=0, ✖=16, error=243]Evaluation:  87%|████████▋ | 259/299 [23:35<00:31,  1.25it/s, ✓=0, ✖=16, error=244]Evaluation:  87%|████████▋ | 260/299 [23:35<00:31,  1.26it/s, ✓=0, ✖=16, error=244]Evaluation:  87%|████████▋ | 260/299 [23:35<00:31,  1.26it/s, ✓=0, ✖=16, error=245]Evaluation:  87%|████████▋ | 261/299 [23:36<00:30,  1.26it/s, ✓=0, ✖=16, error=246]Evaluation:  88%|████████▊ | 262/299 [23:36<00:19,  1.89it/s, ✓=0, ✖=16, error=246]Evaluation:  88%|████████▊ | 262/299 [23:37<00:19,  1.89it/s, ✓=0, ✖=16, error=247]Evaluation:  88%|████████▊ | 263/299 [23:37<00:28,  1.25it/s, ✓=0, ✖=16, error=247]
+Error building image sympy__sympy-13971: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-13971:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-13971:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-13971/run_instance.log) for more information.
+Error building image sympy__sympy-14024: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-14024:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-14024:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-14024/run_instance.log) for more information.
+Error building image sympy__sympy-14308: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-14308:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-14308:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-14308/run_instance.log) for more information.
+Error building image sympy__sympy-14317: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-14317:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-14317:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-14317/run_instance.log) for more information.
+Error building image sympy__sympy-14396: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-14396:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-14396:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-14396/run_instance.log) for more information.
+Error building image sympy__sympy-14774: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-14774:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-14774:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-14774/run_instance.log) for more information.
+Error building image sympy__sympy-14817: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-14817:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-14817:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-14817/run_instance.log) for more information.
+Error building image sympy__sympy-15011: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-15011:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-15011:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-15011/run_instance.log) for more information.
+Error building image sympy__sympy-15308: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-15308:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-15308:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-15308/run_instance.log) for more information.
+Error building image sympy__sympy-15345: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-15345:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-15345:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-15345/run_instance.log) for more information.
+Error building image sympy__sympy-15346: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-15346:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-15346:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-15346/run_instance.log) for more information.
+Error building image sympy__sympy-15609: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-15609:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-15609:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-15609/run_instance.log) for more information.
+Error building image sympy__sympy-15678: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-15678:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-15678:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-15678/run_instance.log) for more information.
+Error building image sympy__sympy-16106: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-16106:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-16106:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-16106/run_instance.log) for more information.
+Error building image sympy__sympy-16281: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-16281:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-16281:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-16281/run_instance.log) for more information.
+Error building image sympy__sympy-16503: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-16503:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-16503:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-16503/run_instance.log) for more information.
+Error building image sympy__sympy-16792: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-16792:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-16792:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-16792/run_instance.log) for more information.
+Error building image sympy__sympy-16988: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-16988:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-16988:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-16988/run_instance.log) for more information.
+Error building image sympy__sympy-17022: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-17022:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-17022:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-17022/run_instance.log) for more information.
+Error building image sympy__sympy-17139: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-17139:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-17139:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-17139/run_instance.log) for more information.
+Error building image sympy__sympy-17630: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-17630:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-17630:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-17630/run_instance.log) for more information.
+Error building image sympy__sympy-17655: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-17655:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-17655:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-17655/run_instance.log) for more information.Evaluation:  88%|████████▊ | 263/299 [23:38<00:28,  1.25it/s, ✓=0, ✖=16, error=248]Evaluation:  88%|████████▊ | 264/299 [23:38<00:27,  1.26it/s, ✓=0, ✖=16, error=248]Evaluation:  88%|████████▊ | 264/299 [23:38<00:27,  1.26it/s, ✓=0, ✖=16, error=249]Evaluation:  89%|████████▊ | 265/299 [23:38<00:27,  1.26it/s, ✓=0, ✖=16, error=250]Evaluation:  89%|████████▉ | 266/299 [23:38<00:17,  1.89it/s, ✓=0, ✖=16, error=250]Evaluation:  89%|████████▉ | 266/299 [23:40<00:17,  1.89it/s, ✓=0, ✖=16, error=251]Evaluation:  89%|████████▉ | 267/299 [23:40<00:25,  1.25it/s, ✓=0, ✖=16, error=251]Evaluation:  89%|████████▉ | 267/299 [23:41<00:25,  1.25it/s, ✓=0, ✖=16, error=252]Evaluation:  90%|████████▉ | 268/299 [23:41<00:24,  1.26it/s, ✓=0, ✖=16, error=252]Evaluation:  90%|████████▉ | 268/299 [23:41<00:24,  1.26it/s, ✓=0, ✖=16, error=253]Evaluation:  90%|████████▉ | 269/299 [23:41<00:18,  1.59it/s, ✓=0, ✖=16, error=253]Evaluation:  90%|████████▉ | 269/299 [23:41<00:18,  1.59it/s, ✓=0, ✖=16, error=254]Evaluation:  90%|█████████ | 270/299 [23:41<00:14,  2.03it/s, ✓=0, ✖=16, error=254]Evaluation:  90%|█████████ | 270/299 [23:43<00:14,  2.03it/s, ✓=0, ✖=16, error=255]Evaluation:  91%|█████████ | 271/299 [23:43<00:23,  1.18it/s, ✓=0, ✖=16, error=255]Evaluation:  91%|█████████ | 271/299 [23:44<00:23,  1.18it/s, ✓=0, ✖=16, error=256]Evaluation:  91%|█████████ | 272/299 [23:44<00:22,  1.19it/s, ✓=0, ✖=16, error=256]Evaluation:  91%|█████████ | 272/299 [23:44<00:22,  1.19it/s, ✓=0, ✖=16, error=257]Evaluation:  91%|█████████▏| 273/299 [23:44<00:21,  1.19it/s, ✓=0, ✖=16, error=258]Evaluation:  92%|█████████▏| 274/299 [23:44<00:13,  1.90it/s, ✓=0, ✖=16, error=258]Evaluation:  92%|█████████▏| 274/299 [23:46<00:13,  1.90it/s, ✓=0, ✖=16, error=259]Evaluation:  92%|█████████▏| 275/299 [23:46<00:19,  1.20it/s, ✓=0, ✖=16, error=259]Evaluation:  92%|█████████▏| 275/299 [23:47<00:19,  1.20it/s, ✓=0, ✖=16, error=260]Evaluation:  92%|█████████▏| 276/299 [23:47<00:18,  1.23it/s, ✓=0, ✖=16, error=260]Evaluation:  92%|█████████▏| 276/299 [23:47<00:18,  1.23it/s, ✓=0, ✖=16, error=261]Evaluation:  93%|█████████▎| 277/299 [23:47<00:17,  1.23it/s, ✓=0, ✖=16, error=262]Evaluation:  93%|█████████▎| 278/299 [23:47<00:11,  1.90it/s, ✓=0, ✖=16, error=262]Evaluation:  93%|█████████▎| 278/299 [23:49<00:11,  1.90it/s, ✓=0, ✖=16, error=263]Evaluation:  93%|█████████▎| 279/299 [23:49<00:16,  1.22it/s, ✓=0, ✖=16, error=263]Evaluation:  93%|█████████▎| 279/299 [23:49<00:16,  1.22it/s, ✓=0, ✖=16, error=264]Evaluation:  94%|█████████▎| 280/299 [23:49<00:15,  1.25it/s, ✓=0, ✖=16, error=264]Evaluation:  94%|█████████▎| 280/299 [23:50<00:15,  1.25it/s, ✓=0, ✖=16, error=265]Evaluation:  94%|█████████▍| 281/299 [23:50<00:11,  1.62it/s, ✓=0, ✖=16, error=265]Evaluation:  94%|█████████▍| 281/299 [23:50<00:11,  1.62it/s, ✓=0, ✖=16, error=266]Evaluation:  94%|█████████▍| 282/299 [23:50<00:08,  2.00it/s, ✓=0, ✖=16, error=266]Evaluation:  94%|█████████▍| 282/299 [23:51<00:08,  2.00it/s, ✓=0, ✖=16, error=267]Evaluation:  95%|█████████▍| 283/299 [23:51<00:13,  1.17it/s, ✓=0, ✖=16, error=267]Evaluation:  95%|█████████▍| 283/299 [23:52<00:13,  1.17it/s, ✓=0, ✖=16, error=268]Evaluation:  95%|█████████▍| 284/299 [23:52<00:12,  1.19it/s, ✓=0, ✖=16, error=268]Evaluation:  95%|█████████▍| 284/299 [23:52<00:12,  1.19it/s, ✓=0, ✖=16, error=269]
+Error building image sympy__sympy-18057: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18057:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18057:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18057/run_instance.log) for more information.
+Error building image sympy__sympy-18087: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18087:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18087:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18087/run_instance.log) for more information.
+Error building image sympy__sympy-18189: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18189:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18189:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18189/run_instance.log) for more information.
+Error building image sympy__sympy-18199: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18199:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18199:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18199/run_instance.log) for more information.
+Error building image sympy__sympy-18532: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18532:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18532:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18532/run_instance.log) for more information.
+Error building image sympy__sympy-18621: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18621:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18621:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18621/run_instance.log) for more information.
+Error building image sympy__sympy-18698: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18698:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18698:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18698/run_instance.log) for more information.
+Error building image sympy__sympy-18835: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-18835:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-18835:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-18835/run_instance.log) for more information.
+Error building image sympy__sympy-19007: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-19007:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-19007:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-19007/run_instance.log) for more information.
+Error building image sympy__sympy-19254: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-19254:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-19254:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-19254/run_instance.log) for more information.
+Error building image sympy__sympy-19487: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-19487:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-19487:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-19487/run_instance.log) for more information.
+Error building image sympy__sympy-20049: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-20049:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20049:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-20049/run_instance.log) for more information.
+Error building image sympy__sympy-20154: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-20154:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20154:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-20154/run_instance.log) for more information.
+Error building image sympy__sympy-20212: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-20212:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20212:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-20212/run_instance.log) for more information.
+Error building image sympy__sympy-20322: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-20322:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20322:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-20322/run_instance.log) for more information.
+Error building image sympy__sympy-20442: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-20442:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20442:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-20442/run_instance.log) for more information.
+Error building image sympy__sympy-20590: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-20590/run_instance.log) for more information.
+Error building image sympy__sympy-20639: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-20639:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20639:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-20639/run_instance.log) for more information.
+Error building image sympy__sympy-21055: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-21055:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-21055:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-21055/run_instance.log) for more information.
+Error building image sympy__sympy-21171: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-21171:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-21171:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-21171/run_instance.log) for more information.
+Error building image sympy__sympy-21379: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-21379:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-21379:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-21379/run_instance.log) for more information.
+Error building image sympy__sympy-21612: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-21612:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-21612:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-21612/run_instance.log) for more information.Evaluation:  95%|█████████▌| 285/299 [23:53<00:11,  1.19it/s, ✓=0, ✖=16, error=270]Evaluation:  96%|█████████▌| 286/299 [23:53<00:06,  1.92it/s, ✓=0, ✖=16, error=270]Evaluation:  96%|█████████▌| 286/299 [23:54<00:06,  1.92it/s, ✓=0, ✖=16, error=271]Evaluation:  96%|█████████▌| 287/299 [23:54<00:10,  1.20it/s, ✓=0, ✖=16, error=271]Evaluation:  96%|█████████▌| 287/299 [23:55<00:10,  1.20it/s, ✓=0, ✖=16, error=272]Evaluation:  96%|█████████▋| 288/299 [23:55<00:08,  1.23it/s, ✓=0, ✖=16, error=272]Evaluation:  96%|█████████▋| 288/299 [23:55<00:08,  1.23it/s, ✓=0, ✖=16, error=273]Evaluation:  97%|█████████▋| 289/299 [23:55<00:08,  1.23it/s, ✓=0, ✖=16, error=274]Evaluation:  97%|█████████▋| 290/299 [23:55<00:04,  1.93it/s, ✓=0, ✖=16, error=274]Evaluation:  97%|█████████▋| 290/299 [23:57<00:04,  1.93it/s, ✓=0, ✖=16, error=275]Evaluation:  97%|█████████▋| 291/299 [23:57<00:06,  1.21it/s, ✓=0, ✖=16, error=275]Evaluation:  97%|█████████▋| 291/299 [23:58<00:06,  1.21it/s, ✓=0, ✖=16, error=276]Evaluation:  98%|█████████▊| 292/299 [23:58<00:05,  1.25it/s, ✓=0, ✖=16, error=276]Evaluation:  98%|█████████▊| 292/299 [23:58<00:05,  1.25it/s, ✓=0, ✖=16, error=277]Evaluation:  98%|█████████▊| 293/299 [23:58<00:03,  1.61it/s, ✓=0, ✖=16, error=277]Evaluation:  98%|█████████▊| 293/299 [23:58<00:03,  1.61it/s, ✓=0, ✖=16, error=278]Evaluation:  98%|█████████▊| 294/299 [23:58<00:02,  2.01it/s, ✓=0, ✖=16, error=278]Evaluation:  98%|█████████▊| 294/299 [24:00<00:02,  2.01it/s, ✓=0, ✖=16, error=279]Evaluation:  99%|█████████▊| 295/299 [24:00<00:03,  1.16it/s, ✓=0, ✖=16, error=279]Evaluation:  99%|█████████▊| 295/299 [24:01<00:03,  1.16it/s, ✓=0, ✖=16, error=280]Evaluation:  99%|█████████▉| 296/299 [24:01<00:02,  1.20it/s, ✓=0, ✖=16, error=280]Evaluation:  99%|█████████▉| 296/299 [24:01<00:02,  1.20it/s, ✓=0, ✖=16, error=281]Evaluation:  99%|█████████▉| 297/299 [24:01<00:01,  1.20it/s, ✓=0, ✖=16, error=282]Evaluation: 100%|█████████▉| 298/299 [24:01<00:00,  1.94it/s, ✓=0, ✖=16, error=282]Evaluation: 100%|█████████▉| 298/299 [24:03<00:00,  1.94it/s, ✓=0, ✖=16, error=283]Evaluation: 100%|██████████| 299/299 [24:03<00:00,  1.21it/s, ✓=0, ✖=16, error=283]Evaluation: 100%|██████████| 299/299 [24:03<00:00,  4.83s/it, ✓=0, ✖=16, error=283]
+
+Error building image sympy__sympy-21614: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-21614:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-21614:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-21614/run_instance.log) for more information.
+Error building image sympy__sympy-21847: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-21847:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-21847:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-21847/run_instance.log) for more information.
+Error building image sympy__sympy-21627: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-21627:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-21627:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-21627/run_instance.log) for more information.
+Error building image sympy__sympy-22005: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-22005:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-22005:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-22005/run_instance.log) for more information.
+Error building image sympy__sympy-22714: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-22714:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-22714:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-22714/run_instance.log) for more information.
+Error building image sympy__sympy-22840: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-22840:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-22840:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-22840/run_instance.log) for more information.
+Error building image sympy__sympy-23117: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-23117:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-23117:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-23117/run_instance.log) for more information.
+Error building image sympy__sympy-23262: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-23262:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-23262:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-23262/run_instance.log) for more information.
+Error building image sympy__sympy-24066: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-24066:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-24066:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-24066/run_instance.log) for more information.
+Error building image sympy__sympy-24102: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-24102:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-24102:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-24102/run_instance.log) for more information.
+Error building image sympy__sympy-24152: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-24152:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-24152:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-24152/run_instance.log) for more information.
+Error building image sympy__sympy-24213: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-24213:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-24213:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-24213/run_instance.log) for more information.
+Error building image sympy__sympy-24909: 404 Client Error for http+docker://localhost/v1.54/images/swebench/sweb.eval.x86_64.sympy_1776_sympy-24909:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.sympy_1776_sympy-24909:latest")
+Check (logs/run_evaluation/gigachat31-10b-v4/ai-sage__GigaChat3.1-10B-A1.8B/sympy__sympy-24909/run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 300
+Instances submitted: 300
+Instances completed: 16
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 16
+Instances with empty patches: 1
+Instances with errors: 283
+Unstopped containers: 0
+Unremoved images: 4
+Report written to ai-sage__GigaChat3.1-10B-A1.8B.gigachat31-10b-v4.json
+Exception ignored in: <urllib3.response.HTTPResponse object at 0x7f4c485b91b0>
+Traceback (most recent call last):
+  File "/storage/Repository/resurection/SWE-bench/.venv/lib/python3.13/site-packages/urllib3/response.py", line 1279, in close
+    self._fp.close()
+  File "/usr/lib/python3.13/http/client.py", line 432, in close
+    super().close() # set "closed" flag
+  File "/usr/lib/python3.13/http/client.py", line 445, in flush
+    self.fp.flush()
+ValueError: I/O operation on closed file.

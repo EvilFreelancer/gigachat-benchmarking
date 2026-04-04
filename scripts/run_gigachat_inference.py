@@ -2,6 +2,9 @@
 """
 Custom inference script for GigaChat 3.1 10B on SWE-bench Lite.
 Uses BM25 13K dataset for code context and calls a custom OpenAI-compatible endpoint.
+
+v4: improved system prompt (explicit line number anchoring) + modified DEVSYSTEM in chat_template.
+    CoT was removed - it triggered "euclidean function" hallucinations on 57% of instances.
 """
 
 import json
@@ -24,26 +27,39 @@ PATCH_PATTERN = re.compile(
     re.DOTALL,
 )
 
+# System prompt: highest-level instructions for the model.
+# The DEVSYSTEM in the chat template already embeds diff format rules,
+# this system prompt reinforces them at the `system` role level.
 SYSTEM_PROMPT = (
-    "You are an expert software engineer. Fix GitHub issues by generating unified diff patches.\n\n"
-    "RULES:\n"
-    "1. The code blocks show line numbers - use them for the @@ header\n"
-    "2. @@ header format is EXACTLY: @@ -OLD_LINE,OLD_COUNT +NEW_LINE,NEW_COUNT @@\n"
-    "3. Context lines (unchanged) start with a single space\n"
-    "4. Removed lines start with -\n"
-    "5. Added lines start with +\n"
-    "6. Wrap the entire patch in <patch>...</patch>\n\n"
+    "You are an expert software engineer. Your task is to fix GitHub issues by generating unified diff patches.\n\n"
+    "The code context shows files with LINE NUMBERS (e.g. '42 def foo():'). "
+    "Use EXACTLY those line numbers in the @@ header. Copy context lines VERBATIM (without the number prefix).\n\n"
+    "PROCESS:\n"
+    "1. Read the issue and identify what is broken\n"
+    "2. Find the exact lines in the file context that need to change\n"
+    "3. Write a brief analysis (1-2 sentences)\n"
+    "4. Generate the unified diff patch\n\n"
+    "PATCH FORMAT:\n"
+    "  diff --git a/FILE b/FILE\n"
+    "  --- a/FILE\n"
+    "  +++ b/FILE\n"
+    "  @@ -START,COUNT +START,COUNT @@\n"
+    "   <context line copied verbatim from file>\n"
+    "  -<removed line copied verbatim from file>\n"
+    "  +<added line with the fix>\n"
+    "  Wrap in <patch>...</patch>\n\n"
     "EXAMPLE:\n"
-    "[start of utils.py]\n"
+    "[start of src/utils.py]\n"
     "10 def greet(name):\n"
     "11     msg = 'Hello ' + nam\n"
     "12     return msg\n"
-    "[end of utils.py]\n\n"
-    "Correct patch:\n"
+    "[end of src/utils.py]\n\n"
+    "Issue: NameError - 'nam' should be 'name'\n\n"
+    "Analysis: The typo is on line 11 in src/utils.py: 'nam' should be 'name'.\n\n"
     "<patch>\n"
-    "diff --git a/utils.py b/utils.py\n"
-    "--- a/utils.py\n"
-    "+++ b/utils.py\n"
+    "diff --git a/src/utils.py b/src/utils.py\n"
+    "--- a/src/utils.py\n"
+    "+++ b/src/utils.py\n"
     "@@ -10,3 +10,3 @@\n"
     " def greet(name):\n"
     "-    msg = 'Hello ' + nam\n"
@@ -51,6 +67,7 @@ SYSTEM_PROMPT = (
     "     return msg\n"
     "</patch>"
 )
+
 
 
 def extract_patch(text: str) -> str:
@@ -83,12 +100,9 @@ def extract_patch(text: str) -> str:
 
 def call_model(client: OpenAI, model_name: str, text: str, max_tokens: int = 4096) -> str:
     """Call the OpenAI-compatible API with the given prompt."""
-    # Split system prompt from user content (first line is usually system in BM25 datasets)
+    # First line is the BM25 dataset preamble - strip it, we have our own system prompt
     lines = text.split("\n", 1)
-    if len(lines) == 2:
-        user_content = lines[1]
-    else:
-        user_content = text
+    user_content = lines[1] if len(lines) == 2 else text
 
     try:
         response = client.chat.completions.create(

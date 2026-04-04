@@ -1,0 +1,611 @@
+2026-04-04 17:27:13,349 INFO Loading SWE-bench Lite instance IDs...
+2026-04-04 17:27:15,332 INFO Loaded 300 Lite instance IDs
+2026-04-04 17:27:15,333 INFO Loading BM25 13K dataset (streaming)...
+2026-04-04 17:27:17,871 INFO Filtering BM25 instances to SWE-bench Lite...
+2026-04-04 17:27:20,818 INFO Found 300 matching instances in BM25 dataset
+Running inference:   0%|          | 0/300 [00:00<?, ?it/s]2026-04-04 17:27:25,222 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:27:25,232 INFO [1/300] astropy__astropy-12907 - patch_len=932, elapsed=4.4s
+Running inference:   0%|          | 1/300 [00:04<21:59,  4.41s/it]2026-04-04 17:27:35,545 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:27:35,546 INFO [2/300] astropy__astropy-14182 - patch_len=566, elapsed=10.3s
+Running inference:   1%|          | 2/300 [00:14<39:09,  7.88s/it]2026-04-04 17:27:38,565 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:27:38,566 INFO [3/300] astropy__astropy-14365 - patch_len=391, elapsed=3.0s
+Running inference:   1%|          | 3/300 [00:17<28:01,  5.66s/it]2026-04-04 17:27:41,704 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:27:41,704 INFO [4/300] astropy__astropy-14995 - patch_len=648, elapsed=3.1s
+Running inference:   1%|▏         | 4/300 [00:20<23:01,  4.67s/it]2026-04-04 17:28:40,944 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:28:40,945 INFO [5/300] astropy__astropy-6938 - patch_len=13005, elapsed=59.2s
+Running inference:   2%|▏         | 5/300 [01:20<1:59:42, 24.35s/it]2026-04-04 17:28:43,748 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:28:43,749 INFO [6/300] astropy__astropy-7746 - patch_len=594, elapsed=2.8s
+Running inference:   2%|▏         | 6/300 [01:22<1:23:24, 17.02s/it]2026-04-04 17:28:50,920 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:28:50,921 INFO [7/300] django__django-10914 - patch_len=1460, elapsed=7.2s
+Running inference:   2%|▏         | 7/300 [01:30<1:07:23, 13.80s/it]2026-04-04 17:28:55,304 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:28:55,305 INFO [8/300] django__django-10924 - patch_len=918, elapsed=4.4s
+Running inference:   3%|▎         | 8/300 [01:34<52:34, 10.80s/it]  2026-04-04 17:28:58,885 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:28:58,886 INFO [9/300] django__django-11001 - patch_len=800, elapsed=3.6s
+Running inference:   3%|▎         | 9/300 [01:38<41:26,  8.55s/it]2026-04-04 17:29:01,882 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:01,883 INFO [10/300] django__django-11019 - patch_len=432, elapsed=3.0s
+Running inference:   3%|▎         | 10/300 [01:41<33:01,  6.83s/it]2026-04-04 17:29:13,536 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:13,537 INFO [11/300] django__django-11039 - patch_len=2923, elapsed=11.7s
+Running inference:   4%|▎         | 11/300 [01:52<40:01,  8.31s/it]2026-04-04 17:29:19,691 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:19,692 INFO [12/300] django__django-11049 - patch_len=944, elapsed=6.2s
+Running inference:   4%|▍         | 12/300 [01:58<36:44,  7.65s/it]2026-04-04 17:29:25,664 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:25,665 INFO [13/300] django__django-11099 - patch_len=1100, elapsed=6.0s
+Running inference:   4%|▍         | 13/300 [02:04<34:10,  7.14s/it]2026-04-04 17:29:32,530 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:32,574 INFO [14/300] django__django-11133 - patch_len=1486, elapsed=6.9s
+Running inference:   5%|▍         | 14/300 [02:11<33:42,  7.07s/it]2026-04-04 17:29:41,242 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:41,242 INFO [15/300] django__django-11179 - patch_len=2078, elapsed=8.7s
+Running inference:   5%|▌         | 15/300 [02:20<35:52,  7.55s/it]2026-04-04 17:29:44,434 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:44,434 INFO [16/300] django__django-11283 - patch_len=606, elapsed=3.2s
+Running inference:   5%|▌         | 16/300 [02:23<29:32,  6.24s/it]2026-04-04 17:29:48,026 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:48,028 INFO [17/300] django__django-11422 - patch_len=605, elapsed=3.6s
+Running inference:   6%|▌         | 17/300 [02:27<25:40,  5.44s/it]2026-04-04 17:29:52,361 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:52,362 INFO [18/300] django__django-11564 - patch_len=973, elapsed=4.3s
+Running inference:   6%|▌         | 18/300 [02:31<24:01,  5.11s/it]2026-04-04 17:29:55,336 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:29:55,337 INFO [19/300] django__django-11583 - patch_len=445, elapsed=3.0s
+Running inference:   6%|▋         | 19/300 [02:34<20:55,  4.47s/it]2026-04-04 17:30:07,883 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:30:07,885 INFO [20/300] django__django-11620 - patch_len=3784, elapsed=12.5s
+Running inference:   7%|▋         | 20/300 [02:47<32:10,  6.90s/it]2026-04-04 17:30:22,609 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:30:22,610 INFO [21/300] django__django-11630 - patch_len=4161, elapsed=14.7s
+Running inference:   7%|▋         | 21/300 [03:01<42:59,  9.25s/it]2026-04-04 17:31:31,498 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:31:36,715 INFO [22/300] django__django-11742 - patch_len=17363, elapsed=74.1s
+Running inference:   7%|▋         | 22/300 [04:15<2:13:01, 28.71s/it]2026-04-04 17:31:49,988 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:31:49,988 INFO [23/300] django__django-11797 - patch_len=2198, elapsed=13.3s
+Running inference:   8%|▊         | 23/300 [04:29<1:51:09, 24.08s/it]2026-04-04 17:31:53,172 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:31:53,173 INFO [24/300] django__django-11815 - patch_len=537, elapsed=3.2s
+Running inference:   8%|▊         | 24/300 [04:32<1:21:55, 17.81s/it]2026-04-04 17:31:59,167 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:31:59,167 INFO [25/300] django__django-11848 - patch_len=1069, elapsed=6.0s
+Running inference:   8%|▊         | 25/300 [04:38<1:05:22, 14.26s/it]2026-04-04 17:32:02,615 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:32:02,615 INFO [26/300] django__django-11905 - patch_len=640, elapsed=3.4s
+Running inference:   9%|▊         | 26/300 [04:41<50:19, 11.02s/it]  2026-04-04 17:33:10,152 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:33:10,153 INFO [27/300] django__django-11910 - patch_len=18256, elapsed=67.5s
+Running inference:   9%|▉         | 27/300 [05:49<2:07:17, 27.98s/it]2026-04-04 17:33:14,019 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:33:14,019 INFO [28/300] django__django-11964 - patch_len=714, elapsed=3.9s
+Running inference:   9%|▉         | 28/300 [05:53<1:34:01, 20.74s/it]2026-04-04 17:33:30,702 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:33:30,703 INFO [29/300] django__django-11999 - patch_len=4300, elapsed=16.7s
+Running inference:  10%|▉         | 29/300 [06:09<1:28:11, 19.52s/it]2026-04-04 17:33:34,505 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:33:34,506 INFO [30/300] django__django-12113 - patch_len=531, elapsed=3.8s
+Running inference:  10%|█         | 30/300 [06:13<1:06:38, 14.81s/it]2026-04-04 17:34:38,042 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:34:38,043 INFO [31/300] django__django-12125 - patch_len=15815, elapsed=63.5s
+Running inference:  10%|█         | 31/300 [07:17<2:11:55, 29.43s/it]2026-04-04 17:35:41,052 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:35:41,053 INFO [32/300] django__django-12184 - patch_len=17308, elapsed=63.0s
+Running inference:  11%|█         | 32/300 [08:20<2:56:26, 39.50s/it]2026-04-04 17:36:52,971 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:36:53,015 INFO [33/300] django__django-12284 - patch_len=16941, elapsed=72.0s
+Running inference:  11%|█         | 33/300 [09:32<3:39:07, 49.24s/it]2026-04-04 17:36:59,211 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:36:59,212 INFO [34/300] django__django-12286 - patch_len=947, elapsed=6.2s
+Running inference:  11%|█▏        | 34/300 [09:38<2:41:03, 36.33s/it]2026-04-04 17:37:03,239 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:37:03,239 INFO [35/300] django__django-12308 - patch_len=746, elapsed=4.0s
+Running inference:  12%|█▏        | 35/300 [09:42<1:57:38, 26.64s/it]2026-04-04 17:37:16,363 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:37:16,364 INFO [36/300] django__django-12453 - patch_len=1372, elapsed=13.1s
+Running inference:  12%|█▏        | 36/300 [09:55<1:39:22, 22.58s/it]2026-04-04 17:38:23,914 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:38:23,915 INFO [37/300] django__django-12470 - patch_len=16291, elapsed=67.6s
+Running inference:  12%|█▏        | 37/300 [11:03<2:38:07, 36.07s/it]2026-04-04 17:38:27,847 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:38:27,847 INFO [38/300] django__django-12497 - patch_len=759, elapsed=3.9s
+Running inference:  13%|█▎        | 38/300 [11:07<1:55:25, 26.43s/it]2026-04-04 17:38:52,154 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:38:52,155 INFO [39/300] django__django-12589 - patch_len=6411, elapsed=24.3s
+Running inference:  13%|█▎        | 39/300 [11:31<1:52:12, 25.79s/it]2026-04-04 17:38:59,454 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:38:59,455 INFO [40/300] django__django-12700 - patch_len=1685, elapsed=7.3s
+Running inference:  13%|█▎        | 40/300 [11:38<1:27:43, 20.25s/it]2026-04-04 17:39:03,733 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:03,733 INFO [41/300] django__django-12708 - patch_len=881, elapsed=4.3s
+Running inference:  14%|█▎        | 41/300 [11:42<1:06:43, 15.46s/it]2026-04-04 17:39:07,507 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:07,508 INFO [42/300] django__django-12747 - patch_len=793, elapsed=3.8s
+Running inference:  14%|█▍        | 42/300 [11:46<51:23, 11.95s/it]  2026-04-04 17:39:12,264 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:12,264 INFO [43/300] django__django-12856 - patch_len=1116, elapsed=4.8s
+Running inference:  14%|█▍        | 43/300 [11:51<41:56,  9.79s/it]2026-04-04 17:39:16,051 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:16,052 INFO [44/300] django__django-12908 - patch_len=688, elapsed=3.8s
+Running inference:  15%|█▍        | 44/300 [11:55<34:05,  7.99s/it]2026-04-04 17:39:22,729 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:22,730 INFO [45/300] django__django-12915 - patch_len=1551, elapsed=6.7s
+Running inference:  15%|█▌        | 45/300 [12:01<32:17,  7.60s/it]2026-04-04 17:39:24,973 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:24,973 INFO [46/300] django__django-12983 - patch_len=264, elapsed=2.2s
+Running inference:  15%|█▌        | 46/300 [12:04<25:21,  5.99s/it]2026-04-04 17:39:36,170 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:36,171 INFO [47/300] django__django-13028 - patch_len=2670, elapsed=11.2s
+Running inference:  16%|█▌        | 47/300 [12:15<31:50,  7.55s/it]2026-04-04 17:39:41,873 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:39:41,874 INFO [48/300] django__django-13033 - patch_len=1518, elapsed=5.7s
+Running inference:  16%|█▌        | 48/300 [12:21<29:23,  7.00s/it]2026-04-04 17:40:50,130 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:40:50,131 INFO [49/300] django__django-13158 - patch_len=17863, elapsed=68.3s
+Running inference:  16%|█▋        | 49/300 [13:29<1:46:09, 25.38s/it]2026-04-04 17:40:54,681 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:40:54,682 INFO [50/300] django__django-13220 - patch_len=877, elapsed=4.6s
+Running inference:  17%|█▋        | 50/300 [13:33<1:19:42, 19.13s/it]2026-04-04 17:40:57,427 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:40:57,428 INFO [51/300] django__django-13230 - patch_len=400, elapsed=2.7s
+Running inference:  17%|█▋        | 51/300 [13:36<58:59, 14.21s/it]  2026-04-04 17:41:10,581 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:41:10,582 INFO [52/300] django__django-13265 - patch_len=3524, elapsed=13.2s
+Running inference:  17%|█▋        | 52/300 [13:49<57:26, 13.90s/it]2026-04-04 17:41:20,701 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:41:20,701 INFO [53/300] django__django-13315 - patch_len=2353, elapsed=10.1s
+Running inference:  18%|█▊        | 53/300 [13:59<52:32, 12.76s/it]2026-04-04 17:41:31,584 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:41:31,584 INFO [54/300] django__django-13321 - patch_len=2407, elapsed=10.9s
+Running inference:  18%|█▊        | 54/300 [14:10<50:00, 12.20s/it]2026-04-04 17:42:39,559 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:42:39,560 INFO [55/300] django__django-13401 - patch_len=16646, elapsed=68.0s
+Running inference:  18%|█▊        | 55/300 [15:18<1:58:08, 28.93s/it]2026-04-04 17:42:46,266 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:42:46,267 INFO [56/300] django__django-13447 - patch_len=1478, elapsed=6.7s
+Running inference:  19%|█▊        | 56/300 [15:25<1:30:32, 22.26s/it]2026-04-04 17:42:48,974 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:42:48,974 INFO [57/300] django__django-13448 - patch_len=467, elapsed=2.7s
+Running inference:  19%|█▉        | 57/300 [15:28<1:06:24, 16.40s/it]2026-04-04 17:42:53,844 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:42:53,845 INFO [58/300] django__django-13551 - patch_len=993, elapsed=4.9s
+Running inference:  19%|█▉        | 58/300 [15:33<52:11, 12.94s/it]  2026-04-04 17:43:08,980 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:43:08,997 INFO [59/300] django__django-13590 - patch_len=4437, elapsed=15.2s
+Running inference:  20%|█▉        | 59/300 [15:48<54:38, 13.60s/it]2026-04-04 17:43:16,822 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:43:16,822 INFO [60/300] django__django-13658 - patch_len=882, elapsed=7.8s
+Running inference:  20%|██        | 60/300 [15:56<47:28, 11.87s/it]2026-04-04 17:43:20,620 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:43:20,621 INFO [61/300] django__django-13660 - patch_len=666, elapsed=3.8s
+Running inference:  20%|██        | 61/300 [15:59<37:38,  9.45s/it]2026-04-04 17:44:10,148 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:10,150 INFO [62/300] django__django-13710 - patch_len=12346, elapsed=49.5s
+Running inference:  21%|██        | 62/300 [16:49<1:25:10, 21.47s/it]2026-04-04 17:44:12,884 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:12,884 INFO [63/300] django__django-13757 - patch_len=385, elapsed=2.7s
+Running inference:  21%|██        | 63/300 [16:52<1:02:36, 15.85s/it]2026-04-04 17:44:28,440 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:28,440 INFO [64/300] django__django-13768 - patch_len=380, elapsed=15.6s
+Running inference:  21%|██▏       | 64/300 [17:07<1:01:59, 15.76s/it]2026-04-04 17:44:34,841 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:34,841 INFO [65/300] django__django-13925 - patch_len=1550, elapsed=6.4s
+Running inference:  22%|██▏       | 65/300 [17:14<50:44, 12.95s/it]  2026-04-04 17:44:43,683 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:43,683 INFO [66/300] django__django-13933 - patch_len=2170, elapsed=8.8s
+Running inference:  22%|██▏       | 66/300 [17:22<45:42, 11.72s/it]2026-04-04 17:44:46,312 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:46,313 INFO [67/300] django__django-13964 - patch_len=454, elapsed=2.6s
+Running inference:  22%|██▏       | 67/300 [17:25<34:55,  8.99s/it]2026-04-04 17:44:52,561 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:52,561 INFO [68/300] django__django-14016 - patch_len=1319, elapsed=6.2s
+Running inference:  23%|██▎       | 68/300 [17:31<31:35,  8.17s/it]2026-04-04 17:44:56,666 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:44:56,667 INFO [69/300] django__django-14017 - patch_len=738, elapsed=4.1s
+Running inference:  23%|██▎       | 69/300 [17:35<26:45,  6.95s/it]2026-04-04 17:45:00,609 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:45:00,610 INFO [70/300] django__django-14155 - patch_len=672, elapsed=3.9s
+Running inference:  23%|██▎       | 70/300 [17:39<23:11,  6.05s/it]2026-04-04 17:45:03,602 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:45:03,602 INFO [71/300] django__django-14238 - patch_len=491, elapsed=3.0s
+Running inference:  24%|██▎       | 71/300 [17:42<19:35,  5.13s/it]2026-04-04 17:45:12,696 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:45:12,697 INFO [72/300] django__django-14382 - patch_len=2310, elapsed=9.1s
+Running inference:  24%|██▍       | 72/300 [17:51<24:01,  6.32s/it]2026-04-04 17:45:28,583 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:45:28,584 INFO [73/300] django__django-14411 - patch_len=3593, elapsed=15.9s
+Running inference:  24%|██▍       | 73/300 [18:07<34:46,  9.19s/it]2026-04-04 17:45:31,370 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:45:31,371 INFO [74/300] django__django-14534 - patch_len=373, elapsed=2.8s
+Running inference:  25%|██▍       | 74/300 [18:10<27:22,  7.27s/it]2026-04-04 17:45:35,704 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:45:35,705 INFO [75/300] django__django-14580 - patch_len=814, elapsed=4.3s
+Running inference:  25%|██▌       | 75/300 [18:14<23:57,  6.39s/it]2026-04-04 17:45:55,022 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:45:55,023 INFO [76/300] django__django-14608 - patch_len=4335, elapsed=19.3s
+Running inference:  25%|██▌       | 76/300 [18:34<38:19, 10.27s/it]2026-04-04 17:47:16,356 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:47:16,362 INFO [77/300] django__django-14667 - patch_len=14362, elapsed=81.3s
+Running inference:  26%|██▌       | 77/300 [19:55<1:57:24, 31.59s/it]2026-04-04 17:47:20,539 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:47:20,540 INFO [78/300] django__django-14672 - patch_len=875, elapsed=4.2s
+Running inference:  26%|██▌       | 78/300 [19:59<1:26:27, 23.37s/it]2026-04-04 17:48:21,648 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:48:21,650 INFO [79/300] django__django-14730 - patch_len=16075, elapsed=61.1s
+Running inference:  26%|██▋       | 79/300 [21:00<2:07:46, 34.69s/it]2026-04-04 17:48:31,923 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:48:31,923 INFO [80/300] django__django-14752 - patch_len=2908, elapsed=10.3s
+Running inference:  27%|██▋       | 80/300 [21:11<1:40:20, 27.36s/it]2026-04-04 17:48:39,264 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:48:39,265 INFO [81/300] django__django-14787 - patch_len=1580, elapsed=7.3s
+Running inference:  27%|██▋       | 81/300 [21:18<1:17:57, 21.36s/it]2026-04-04 17:48:42,999 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:48:42,999 INFO [82/300] django__django-14855 - patch_len=794, elapsed=3.7s
+Running inference:  27%|██▋       | 82/300 [21:22<58:23, 16.07s/it]  2026-04-04 17:48:50,430 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:48:50,430 INFO [83/300] django__django-14915 - patch_len=1084, elapsed=7.4s
+Running inference:  28%|██▊       | 83/300 [21:29<48:44, 13.48s/it]2026-04-04 17:48:54,222 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:48:54,223 INFO [84/300] django__django-14997 - patch_len=791, elapsed=3.8s
+Running inference:  28%|██▊       | 84/300 [21:33<38:03, 10.57s/it]2026-04-04 17:48:57,301 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:48:57,302 INFO [85/300] django__django-14999 - patch_len=514, elapsed=3.1s
+Running inference:  28%|██▊       | 85/300 [21:36<29:49,  8.32s/it]2026-04-04 17:49:04,630 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:04,631 INFO [86/300] django__django-15061 - patch_len=1525, elapsed=7.3s
+Running inference:  29%|██▊       | 86/300 [21:43<28:37,  8.03s/it]2026-04-04 17:49:14,495 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:14,495 INFO [87/300] django__django-15202 - patch_len=579, elapsed=9.9s
+Running inference:  29%|██▉       | 87/300 [21:53<30:27,  8.58s/it]2026-04-04 17:49:28,211 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:28,211 INFO [88/300] django__django-15213 - patch_len=2455, elapsed=13.7s
+Running inference:  29%|██▉       | 88/300 [22:07<35:45, 10.12s/it]2026-04-04 17:49:31,375 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:31,376 INFO [89/300] django__django-15252 - patch_len=593, elapsed=3.2s
+Running inference:  30%|██▉       | 89/300 [22:10<28:14,  8.03s/it]2026-04-04 17:49:39,849 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:39,849 INFO [90/300] django__django-15320 - patch_len=1331, elapsed=8.5s
+Running inference:  30%|███       | 90/300 [22:19<28:34,  8.16s/it]2026-04-04 17:49:43,817 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:43,817 INFO [91/300] django__django-15347 - patch_len=893, elapsed=4.0s
+Running inference:  30%|███       | 91/300 [22:22<24:03,  6.91s/it]2026-04-04 17:49:49,254 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:49,255 INFO [92/300] django__django-15388 - patch_len=1039, elapsed=5.4s
+Running inference:  31%|███       | 92/300 [22:28<22:24,  6.47s/it]2026-04-04 17:49:51,424 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:51,424 INFO [93/300] django__django-15400 - patch_len=326, elapsed=2.2s
+Running inference:  31%|███       | 93/300 [22:30<17:51,  5.18s/it]2026-04-04 17:49:57,039 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:49:57,039 INFO [94/300] django__django-15498 - patch_len=1217, elapsed=5.6s
+Running inference:  31%|███▏      | 94/300 [22:36<18:13,  5.31s/it]2026-04-04 17:50:05,155 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:50:05,155 INFO [95/300] django__django-15695 - patch_len=1784, elapsed=8.1s
+Running inference:  32%|███▏      | 95/300 [22:44<21:00,  6.15s/it]2026-04-04 17:50:19,360 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:50:19,360 INFO [96/300] django__django-15738 - patch_len=3985, elapsed=14.2s
+Running inference:  32%|███▏      | 96/300 [22:58<29:07,  8.57s/it]2026-04-04 17:50:35,967 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:50:35,968 INFO [97/300] django__django-15781 - patch_len=4149, elapsed=16.6s
+Running inference:  32%|███▏      | 97/300 [23:15<37:08, 10.98s/it]2026-04-04 17:50:41,337 INFO Retrying request to /chat/completions in 0.439050 seconds
+2026-04-04 17:50:48,152 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:50:48,153 INFO [98/300] django__django-15789 - patch_len=905, elapsed=12.2s
+Running inference:  33%|███▎      | 98/300 [23:27<38:10, 11.34s/it]2026-04-04 17:50:52,697 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:50:52,697 INFO [99/300] django__django-15790 - patch_len=949, elapsed=4.5s
+Running inference:  33%|███▎      | 99/300 [23:31<31:09,  9.30s/it]2026-04-04 17:50:55,898 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:50:55,899 INFO [100/300] django__django-15814 - patch_len=690, elapsed=3.2s
+Running inference:  33%|███▎      | 100/300 [23:35<24:54,  7.47s/it]2026-04-04 17:50:59,841 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:50:59,842 INFO [101/300] django__django-15819 - patch_len=803, elapsed=3.9s
+Running inference:  34%|███▎      | 101/300 [23:39<21:16,  6.41s/it]2026-04-04 17:51:06,530 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:06,530 INFO [102/300] django__django-15851 - patch_len=1683, elapsed=6.7s
+Running inference:  34%|███▍      | 102/300 [23:45<21:26,  6.50s/it]2026-04-04 17:51:12,259 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:12,260 INFO [103/300] django__django-15902 - patch_len=1245, elapsed=5.7s
+Running inference:  34%|███▍      | 103/300 [23:51<20:34,  6.27s/it]2026-04-04 17:51:16,297 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:16,298 INFO [104/300] django__django-15996 - patch_len=845, elapsed=4.0s
+Running inference:  35%|███▍      | 104/300 [23:55<18:17,  5.60s/it]2026-04-04 17:51:20,258 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:20,258 INFO [105/300] django__django-16041 - patch_len=754, elapsed=4.0s
+Running inference:  35%|███▌      | 105/300 [23:59<16:35,  5.11s/it]2026-04-04 17:51:28,671 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:28,672 INFO [106/300] django__django-16046 - patch_len=1742, elapsed=8.4s
+Running inference:  35%|███▌      | 106/300 [24:07<19:43,  6.10s/it]2026-04-04 17:51:32,893 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:32,894 INFO [107/300] django__django-16139 - patch_len=921, elapsed=4.2s
+Running inference:  36%|███▌      | 107/300 [24:12<17:48,  5.54s/it]2026-04-04 17:51:50,037 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:50,037 INFO [108/300] django__django-16229 - patch_len=4376, elapsed=17.1s
+Running inference:  36%|███▌      | 108/300 [24:29<28:51,  9.02s/it]2026-04-04 17:51:53,371 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:53,371 INFO [109/300] django__django-16255 - patch_len=599, elapsed=3.3s
+Running inference:  36%|███▋      | 109/300 [24:32<23:16,  7.31s/it]2026-04-04 17:51:56,391 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:51:56,391 INFO [110/300] django__django-16379 - patch_len=497, elapsed=3.0s
+Running inference:  37%|███▋      | 110/300 [24:35<19:04,  6.02s/it]2026-04-04 17:52:07,881 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:52:07,882 INFO [111/300] django__django-16400 - patch_len=956, elapsed=11.5s
+Running inference:  37%|███▋      | 111/300 [24:47<24:08,  7.66s/it]2026-04-04 17:53:11,903 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:11,904 INFO [112/300] django__django-16408 - patch_len=18083, elapsed=64.0s
+Running inference:  37%|███▋      | 112/300 [25:51<1:16:59, 24.57s/it]2026-04-04 17:53:19,188 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:19,189 INFO [113/300] django__django-16527 - patch_len=1614, elapsed=7.3s
+Running inference:  38%|███▊      | 113/300 [25:58<1:00:25, 19.39s/it]2026-04-04 17:53:22,262 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:22,263 INFO [114/300] django__django-16595 - patch_len=501, elapsed=3.1s
+Running inference:  38%|███▊      | 114/300 [26:01<44:55, 14.49s/it]  2026-04-04 17:53:37,009 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:37,009 INFO [115/300] django__django-16816 - patch_len=1301, elapsed=14.7s
+Running inference:  38%|███▊      | 115/300 [26:16<44:55, 14.57s/it]2026-04-04 17:53:40,214 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:40,215 INFO [116/300] django__django-16820 - patch_len=498, elapsed=3.2s
+Running inference:  39%|███▊      | 116/300 [26:19<34:13, 11.16s/it]2026-04-04 17:53:43,169 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:43,169 INFO [117/300] django__django-16873 - patch_len=595, elapsed=3.0s
+Running inference:  39%|███▉      | 117/300 [26:22<26:31,  8.70s/it]2026-04-04 17:53:47,839 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:47,840 INFO [118/300] django__django-16910 - patch_len=1024, elapsed=4.7s
+Running inference:  39%|███▉      | 118/300 [26:27<22:43,  7.49s/it]2026-04-04 17:53:53,359 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:53,360 INFO [119/300] django__django-17051 - patch_len=1163, elapsed=5.5s
+Running inference:  40%|███▉      | 119/300 [26:32<20:48,  6.90s/it]2026-04-04 17:53:58,344 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:53:58,344 INFO [120/300] django__django-17087 - patch_len=1130, elapsed=5.0s
+Running inference:  40%|████      | 120/300 [26:37<18:58,  6.32s/it]2026-04-04 17:54:35,066 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:54:35,068 INFO [121/300] matplotlib__matplotlib-18869 - patch_len=8818, elapsed=36.7s
+Running inference:  40%|████      | 121/300 [27:14<46:04, 15.44s/it]2026-04-04 17:55:02,295 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:02,296 INFO [122/300] matplotlib__matplotlib-22711 - patch_len=1248, elapsed=27.2s
+Running inference:  41%|████      | 122/300 [27:41<56:18, 18.98s/it]2026-04-04 17:55:04,924 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:04,925 INFO [123/300] matplotlib__matplotlib-22835 - patch_len=468, elapsed=2.6s
+Running inference:  41%|████      | 123/300 [27:44<41:31, 14.07s/it]2026-04-04 17:55:07,522 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:07,523 INFO [124/300] matplotlib__matplotlib-23299 - patch_len=524, elapsed=2.6s
+Running inference:  41%|████▏     | 124/300 [27:46<31:11, 10.63s/it]2026-04-04 17:55:14,787 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:14,788 INFO [125/300] matplotlib__matplotlib-23314 - patch_len=1221, elapsed=7.3s
+Running inference:  42%|████▏     | 125/300 [27:53<28:03,  9.62s/it]2026-04-04 17:55:18,211 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:18,211 INFO [126/300] matplotlib__matplotlib-23476 - patch_len=681, elapsed=3.4s
+Running inference:  42%|████▏     | 126/300 [27:57<22:30,  7.76s/it]2026-04-04 17:55:23,207 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:23,208 INFO [127/300] matplotlib__matplotlib-23562 - patch_len=710, elapsed=5.0s
+Running inference:  42%|████▏     | 127/300 [28:02<19:59,  6.93s/it]2026-04-04 17:55:28,586 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:28,587 INFO [128/300] matplotlib__matplotlib-23563 - patch_len=895, elapsed=5.4s
+Running inference:  43%|████▎     | 128/300 [28:07<18:32,  6.47s/it]2026-04-04 17:55:36,452 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:36,453 INFO [129/300] matplotlib__matplotlib-23913 - patch_len=1198, elapsed=7.9s
+Running inference:  43%|████▎     | 129/300 [28:15<19:37,  6.89s/it]2026-04-04 17:55:44,126 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:55:44,126 INFO [130/300] matplotlib__matplotlib-23964 - patch_len=1946, elapsed=7.7s
+Running inference:  43%|████▎     | 130/300 [28:23<20:10,  7.12s/it]2026-04-04 17:56:51,473 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:56:51,474 INFO [131/300] matplotlib__matplotlib-23987 - patch_len=17085, elapsed=67.3s
+Running inference:  44%|████▎     | 131/300 [29:30<1:10:57, 25.19s/it]2026-04-04 17:56:56,634 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:56:56,635 INFO [132/300] matplotlib__matplotlib-24149 - patch_len=1073, elapsed=5.2s
+Running inference:  44%|████▍     | 132/300 [29:35<53:42, 19.18s/it]  2026-04-04 17:57:00,625 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:57:00,625 INFO [133/300] matplotlib__matplotlib-24265 - patch_len=676, elapsed=4.0s
+Running inference:  44%|████▍     | 133/300 [29:39<40:42, 14.62s/it]2026-04-04 17:57:04,459 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:57:04,459 INFO [134/300] matplotlib__matplotlib-24334 - patch_len=1001, elapsed=3.8s
+Running inference:  45%|████▍     | 134/300 [29:43<31:30, 11.39s/it]2026-04-04 17:57:38,741 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:57:38,742 INFO [135/300] matplotlib__matplotlib-24970 - patch_len=7548, elapsed=34.3s
+Running inference:  45%|████▌     | 135/300 [30:17<50:12, 18.26s/it]2026-04-04 17:58:20,337 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:58:20,338 INFO [136/300] matplotlib__matplotlib-25079 - patch_len=10101, elapsed=41.6s
+Running inference:  45%|████▌     | 136/300 [30:59<1:09:02, 25.26s/it]2026-04-04 17:58:25,336 INFO Retrying request to /chat/completions in 0.468471 seconds
+2026-04-04 17:58:28,110 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:58:28,111 INFO [137/300] matplotlib__matplotlib-25311 - patch_len=330, elapsed=7.8s
+Running inference:  46%|████▌     | 137/300 [31:07<54:22, 20.01s/it]  2026-04-04 17:58:36,396 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:58:36,396 INFO [138/300] matplotlib__matplotlib-25332 - patch_len=1337, elapsed=8.3s
+Running inference:  46%|████▌     | 138/300 [31:15<44:32, 16.49s/it]2026-04-04 17:58:41,440 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:58:41,441 INFO [139/300] matplotlib__matplotlib-25433 - patch_len=911, elapsed=5.0s
+Running inference:  46%|████▋     | 139/300 [31:20<35:02, 13.06s/it]2026-04-04 17:58:57,419 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:58:57,419 INFO [140/300] matplotlib__matplotlib-25442 - patch_len=3906, elapsed=16.0s
+Running inference:  47%|████▋     | 140/300 [31:36<37:09, 13.94s/it]2026-04-04 17:59:25,707 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 17:59:25,708 INFO [141/300] matplotlib__matplotlib-25498 - patch_len=3795, elapsed=28.3s
+Running inference:  47%|████▋     | 141/300 [32:04<48:20, 18.24s/it]2026-04-04 18:00:24,449 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:00:29,451 INFO [142/300] matplotlib__matplotlib-26011 - patch_len=13465, elapsed=63.7s
+Running inference:  47%|████▋     | 142/300 [33:08<1:23:58, 31.89s/it]2026-04-04 18:00:33,332 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:00:33,332 INFO [143/300] matplotlib__matplotlib-26020 - patch_len=705, elapsed=3.9s
+Running inference:  48%|████▊     | 143/300 [33:12<1:01:27, 23.49s/it]2026-04-04 18:01:40,097 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:01:40,098 INFO [144/300] mwaskom__seaborn-2848 - patch_len=12657, elapsed=66.8s
+Running inference:  48%|████▊     | 144/300 [34:19<1:34:49, 36.47s/it]2026-04-04 18:01:49,258 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:01:49,258 INFO [145/300] mwaskom__seaborn-3010 - patch_len=1785, elapsed=9.2s
+Running inference:  48%|████▊     | 145/300 [34:28<1:13:03, 28.28s/it]2026-04-04 18:01:52,312 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:01:52,312 INFO [146/300] mwaskom__seaborn-3190 - patch_len=403, elapsed=3.1s
+Running inference:  49%|████▊     | 146/300 [34:31<53:09, 20.71s/it]  2026-04-04 18:01:55,995 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:01:55,995 INFO [147/300] mwaskom__seaborn-3407 - patch_len=632, elapsed=3.7s
+Running inference:  49%|████▉     | 147/300 [34:35<39:47, 15.60s/it]2026-04-04 18:01:59,489 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:01:59,489 INFO [148/300] pallets__flask-4045 - patch_len=602, elapsed=3.5s
+Running inference:  49%|████▉     | 148/300 [34:38<30:19, 11.97s/it]2026-04-04 18:02:02,863 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:02:02,864 INFO [149/300] pallets__flask-4992 - patch_len=554, elapsed=3.4s
+Running inference:  50%|████▉     | 149/300 [34:42<23:38,  9.39s/it]2026-04-04 18:02:10,181 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:02:10,181 INFO [150/300] pallets__flask-5063 - patch_len=1395, elapsed=7.3s
+Running inference:  50%|█████     | 150/300 [34:49<21:55,  8.77s/it]2026-04-04 18:02:21,439 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:02:21,440 INFO [151/300] psf__requests-1963 - patch_len=2476, elapsed=11.3s
+Running inference:  50%|█████     | 151/300 [35:00<23:37,  9.52s/it]2026-04-04 18:02:28,455 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:02:28,455 INFO [152/300] psf__requests-2148 - patch_len=1438, elapsed=7.0s
+Running inference:  51%|█████     | 152/300 [35:07<21:37,  8.77s/it]2026-04-04 18:02:34,494 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:02:34,494 INFO [153/300] psf__requests-2317 - patch_len=1006, elapsed=6.0s
+Running inference:  51%|█████     | 153/300 [35:13<19:28,  7.95s/it]2026-04-04 18:02:55,270 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:02:55,271 INFO [154/300] psf__requests-2674 - patch_len=3372, elapsed=20.8s
+Running inference:  51%|█████▏    | 154/300 [35:34<28:42, 11.80s/it]2026-04-04 18:03:03,682 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:03:03,682 INFO [155/300] psf__requests-3362 - patch_len=2223, elapsed=8.4s
+Running inference:  52%|█████▏    | 155/300 [35:42<26:03, 10.78s/it]2026-04-04 18:03:07,010 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:03:07,011 INFO [156/300] psf__requests-863 - patch_len=532, elapsed=3.3s
+Running inference:  52%|█████▏    | 156/300 [35:46<20:30,  8.55s/it]2026-04-04 18:03:11,951 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:03:11,951 INFO [157/300] pydata__xarray-3364 - patch_len=976, elapsed=4.9s
+Running inference:  52%|█████▏    | 157/300 [35:51<17:47,  7.46s/it]2026-04-04 18:03:17,512 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:03:17,513 INFO [158/300] pydata__xarray-4094 - patch_len=1105, elapsed=5.6s
+Running inference:  53%|█████▎    | 158/300 [35:56<16:18,  6.89s/it]2026-04-04 18:03:51,663 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:03:51,663 INFO [159/300] pydata__xarray-4248 - patch_len=7827, elapsed=34.1s
+Running inference:  53%|█████▎    | 159/300 [36:30<35:24, 15.07s/it]2026-04-04 18:04:05,133 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:04:05,134 INFO [160/300] pydata__xarray-4493 - patch_len=1713, elapsed=13.5s
+Running inference:  53%|█████▎    | 160/300 [36:44<34:02, 14.59s/it]2026-04-04 18:04:10,010 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:04:10,011 INFO [161/300] pydata__xarray-5131 - patch_len=1048, elapsed=4.9s
+Running inference:  54%|█████▎    | 161/300 [36:49<27:03, 11.68s/it]2026-04-04 18:04:19,032 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:04:19,034 INFO [162/300] pylint-dev__pylint-5859 - patch_len=2190, elapsed=9.0s
+Running inference:  54%|█████▍    | 162/300 [36:58<25:01, 10.88s/it]2026-04-04 18:04:21,592 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:04:21,592 INFO [163/300] pylint-dev__pylint-6506 - patch_len=298, elapsed=2.6s
+Running inference:  54%|█████▍    | 163/300 [37:00<19:08,  8.38s/it]2026-04-04 18:04:28,804 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:04:28,804 INFO [164/300] pylint-dev__pylint-7080 - patch_len=1123, elapsed=7.2s
+Running inference:  55%|█████▍    | 164/300 [37:07<18:12,  8.03s/it]2026-04-04 18:04:36,060 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:04:36,060 INFO [165/300] pylint-dev__pylint-7114 - patch_len=1416, elapsed=7.3s
+Running inference:  55%|█████▌    | 165/300 [37:15<17:32,  7.80s/it]2026-04-04 18:04:41,267 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:04:41,269 INFO [166/300] pylint-dev__pylint-7228 - patch_len=1149, elapsed=5.2s
+Running inference:  55%|█████▌    | 166/300 [37:20<15:40,  7.02s/it]2026-04-04 18:05:02,064 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:05:02,065 INFO [167/300] pylint-dev__pylint-7993 - patch_len=4699, elapsed=20.8s
+Running inference:  56%|█████▌    | 167/300 [37:41<24:43, 11.15s/it]2026-04-04 18:05:05,715 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:05:05,715 INFO [168/300] pytest-dev__pytest-11143 - patch_len=683, elapsed=3.7s
+Running inference:  56%|█████▌    | 168/300 [37:44<19:35,  8.90s/it]2026-04-04 18:05:18,523 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:05:18,523 INFO [169/300] pytest-dev__pytest-11148 - patch_len=1473, elapsed=12.8s
+Running inference:  56%|█████▋    | 169/300 [37:57<21:59, 10.07s/it]2026-04-04 18:07:07,844 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:07:07,845 INFO [170/300] pytest-dev__pytest-5103 - patch_len=14393, elapsed=109.3s
+Running inference:  57%|█████▋    | 170/300 [39:47<1:26:20, 39.85s/it]2026-04-04 18:07:17,279 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:07:17,280 INFO [171/300] pytest-dev__pytest-5221 - patch_len=1038, elapsed=9.4s
+Running inference:  57%|█████▋    | 171/300 [39:56<1:06:03, 30.72s/it]2026-04-04 18:07:19,935 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:07:19,936 INFO [172/300] pytest-dev__pytest-5227 - patch_len=403, elapsed=2.7s
+Running inference:  57%|█████▋    | 172/300 [39:59<47:34, 22.30s/it]  2026-04-04 18:07:29,519 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:07:29,519 INFO [173/300] pytest-dev__pytest-5413 - patch_len=2301, elapsed=9.6s
+Running inference:  58%|█████▊    | 173/300 [40:08<39:07, 18.49s/it]2026-04-04 18:08:38,171 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:08:38,172 INFO [174/300] pytest-dev__pytest-5495 - patch_len=15888, elapsed=68.7s
+Running inference:  58%|█████▊    | 174/300 [41:17<1:10:25, 33.54s/it]2026-04-04 18:08:44,279 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:08:44,279 INFO [175/300] pytest-dev__pytest-5692 - patch_len=1482, elapsed=6.1s
+Running inference:  58%|█████▊    | 175/300 [41:23<52:43, 25.31s/it]  2026-04-04 18:08:51,593 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:08:51,593 INFO [176/300] pytest-dev__pytest-6116 - patch_len=1268, elapsed=7.3s
+Running inference:  59%|█████▊    | 176/300 [41:30<41:08, 19.91s/it]2026-04-04 18:08:55,540 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:08:55,540 INFO [177/300] pytest-dev__pytest-7168 - patch_len=713, elapsed=3.9s
+Running inference:  59%|█████▉    | 177/300 [41:34<30:59, 15.12s/it]2026-04-04 18:09:00,612 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:09:00,612 INFO [178/300] pytest-dev__pytest-7220 - patch_len=1122, elapsed=5.1s
+Running inference:  59%|█████▉    | 178/300 [41:39<24:36, 12.11s/it]2026-04-04 18:09:04,779 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:09:04,780 INFO [179/300] pytest-dev__pytest-7373 - patch_len=675, elapsed=4.2s
+Running inference:  60%|█████▉    | 179/300 [41:43<19:36,  9.72s/it]2026-04-04 18:09:16,313 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:09:16,313 INFO [180/300] pytest-dev__pytest-7432 - patch_len=2479, elapsed=11.5s
+Running inference:  60%|██████    | 180/300 [41:55<20:32, 10.27s/it]2026-04-04 18:09:21,672 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:09:21,673 INFO [181/300] pytest-dev__pytest-7490 - patch_len=1089, elapsed=5.4s
+Running inference:  60%|██████    | 181/300 [42:00<17:26,  8.79s/it]2026-04-04 18:09:24,141 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:09:24,142 INFO [182/300] pytest-dev__pytest-8365 - patch_len=323, elapsed=2.5s
+Running inference:  61%|██████    | 182/300 [42:03<13:33,  6.90s/it]2026-04-04 18:09:38,756 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:09:38,757 INFO [183/300] pytest-dev__pytest-8906 - patch_len=3931, elapsed=14.6s
+Running inference:  61%|██████    | 183/300 [42:17<17:57,  9.21s/it]2026-04-04 18:09:46,737 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:09:46,738 INFO [184/300] pytest-dev__pytest-9359 - patch_len=1273, elapsed=8.0s
+Running inference:  61%|██████▏   | 184/300 [42:25<17:05,  8.84s/it]2026-04-04 18:10:15,876 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:10:15,877 INFO [185/300] scikit-learn__scikit-learn-10297 - patch_len=5213, elapsed=29.1s
+Running inference:  62%|██████▏   | 185/300 [42:55<28:37, 14.93s/it]2026-04-04 18:10:45,188 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:10:45,189 INFO [186/300] scikit-learn__scikit-learn-10508 - patch_len=6750, elapsed=29.3s
+Running inference:  62%|██████▏   | 186/300 [43:24<36:34, 19.25s/it]2026-04-04 18:10:48,948 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:10:48,949 INFO [187/300] scikit-learn__scikit-learn-10949 - patch_len=797, elapsed=3.8s
+Running inference:  62%|██████▏   | 187/300 [43:28<27:29, 14.60s/it]2026-04-04 18:10:56,604 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:10:56,605 INFO [188/300] scikit-learn__scikit-learn-11040 - patch_len=1203, elapsed=7.7s
+Running inference:  63%|██████▎   | 188/300 [43:35<23:21, 12.52s/it]2026-04-04 18:11:37,868 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:11:37,869 INFO [189/300] scikit-learn__scikit-learn-11281 - patch_len=6050, elapsed=41.3s
+Running inference:  63%|██████▎   | 189/300 [44:17<39:06, 21.14s/it]2026-04-04 18:11:46,699 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:11:46,700 INFO [190/300] scikit-learn__scikit-learn-12471 - patch_len=2148, elapsed=8.8s
+Running inference:  63%|██████▎   | 190/300 [44:25<31:59, 17.45s/it]2026-04-04 18:11:49,015 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:11:49,016 INFO [191/300] scikit-learn__scikit-learn-13142 - patch_len=221, elapsed=2.3s
+Running inference:  64%|██████▎   | 191/300 [44:28<23:27, 12.91s/it]2026-04-04 18:12:12,918 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:12:12,918 INFO [192/300] scikit-learn__scikit-learn-13241 - patch_len=5402, elapsed=23.9s
+Running inference:  64%|██████▍   | 192/300 [44:52<29:10, 16.21s/it]2026-04-04 18:12:20,456 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:12:20,456 INFO [193/300] scikit-learn__scikit-learn-13439 - patch_len=1599, elapsed=7.5s
+Running inference:  64%|██████▍   | 193/300 [44:59<24:15, 13.61s/it]2026-04-04 18:12:26,754 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:12:26,755 INFO [194/300] scikit-learn__scikit-learn-13496 - patch_len=1337, elapsed=6.3s
+Running inference:  65%|██████▍   | 194/300 [45:05<20:09, 11.41s/it]2026-04-04 18:12:34,299 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:12:34,300 INFO [195/300] scikit-learn__scikit-learn-13497 - patch_len=1765, elapsed=7.5s
+Running inference:  65%|██████▌   | 195/300 [45:13<17:56, 10.25s/it]2026-04-04 18:12:44,181 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:12:44,182 INFO [196/300] scikit-learn__scikit-learn-13584 - patch_len=1947, elapsed=9.9s
+Running inference:  65%|██████▌   | 196/300 [45:23<17:34, 10.14s/it]2026-04-04 18:12:52,109 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:12:52,109 INFO [197/300] scikit-learn__scikit-learn-13779 - patch_len=1221, elapsed=7.9s
+Running inference:  66%|██████▌   | 197/300 [45:31<16:16,  9.48s/it]2026-04-04 18:12:58,662 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:12:58,663 INFO [198/300] scikit-learn__scikit-learn-14087 - patch_len=1463, elapsed=6.6s
+Running inference:  66%|██████▌   | 198/300 [45:37<14:37,  8.60s/it]2026-04-04 18:13:22,854 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:13:22,854 INFO [199/300] scikit-learn__scikit-learn-14092 - patch_len=5980, elapsed=24.2s
+Running inference:  66%|██████▋   | 199/300 [46:02<22:21, 13.28s/it]2026-04-04 18:13:35,780 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:13:35,780 INFO [200/300] scikit-learn__scikit-learn-14894 - patch_len=2353, elapsed=12.9s
+Running inference:  67%|██████▋   | 200/300 [46:14<21:57, 13.17s/it]2026-04-04 18:13:43,545 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:13:43,546 INFO [201/300] scikit-learn__scikit-learn-14983 - patch_len=1614, elapsed=7.8s
+Running inference:  67%|██████▋   | 201/300 [46:22<19:03, 11.55s/it]2026-04-04 18:13:47,108 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:13:47,108 INFO [202/300] scikit-learn__scikit-learn-15512 - patch_len=639, elapsed=3.6s
+Running inference:  67%|██████▋   | 202/300 [46:26<14:57,  9.15s/it]2026-04-04 18:14:05,617 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:14:05,618 INFO [203/300] scikit-learn__scikit-learn-15535 - patch_len=2287, elapsed=18.5s
+Running inference:  68%|██████▊   | 203/300 [46:44<19:20, 11.96s/it]2026-04-04 18:15:13,667 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:15:13,668 INFO [204/300] scikit-learn__scikit-learn-25500 - patch_len=17278, elapsed=68.0s
+Running inference:  68%|██████▊   | 204/300 [47:52<46:03, 28.79s/it]2026-04-04 18:15:18,668 INFO Retrying request to /chat/completions in 0.489629 seconds
+2026-04-04 18:16:28,169 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:16:28,170 INFO [205/300] scikit-learn__scikit-learn-25570 - patch_len=19604, elapsed=74.5s
+Running inference:  68%|██████▊   | 205/300 [49:07<1:07:17, 42.50s/it]2026-04-04 18:16:36,594 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:16:36,595 INFO [206/300] scikit-learn__scikit-learn-25638 - patch_len=2195, elapsed=8.4s
+Running inference:  69%|██████▊   | 206/300 [49:15<50:34, 32.28s/it]  2026-04-04 18:16:57,857 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:16:57,857 INFO [207/300] scikit-learn__scikit-learn-25747 - patch_len=1973, elapsed=21.3s
+Running inference:  69%|██████▉   | 207/300 [49:37<44:54, 28.97s/it]2026-04-04 18:17:05,269 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:17:05,269 INFO [208/300] sphinx-doc__sphinx-10325 - patch_len=1287, elapsed=7.4s
+Running inference:  69%|██████▉   | 208/300 [49:44<34:30, 22.51s/it]2026-04-04 18:17:13,269 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:17:13,270 INFO [209/300] sphinx-doc__sphinx-10451 - patch_len=1261, elapsed=8.0s
+Running inference:  70%|██████▉   | 209/300 [49:52<27:32, 18.15s/it]2026-04-04 18:17:25,268 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:17:25,268 INFO [210/300] sphinx-doc__sphinx-11445 - patch_len=2602, elapsed=12.0s
+Running inference:  70%|███████   | 210/300 [50:04<24:27, 16.31s/it]2026-04-04 18:17:29,603 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:17:29,603 INFO [211/300] sphinx-doc__sphinx-7686 - patch_len=724, elapsed=4.3s
+Running inference:  70%|███████   | 211/300 [50:08<18:51, 12.72s/it]2026-04-04 18:17:38,708 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:17:38,708 INFO [212/300] sphinx-doc__sphinx-7738 - patch_len=1782, elapsed=9.1s
+Running inference:  71%|███████   | 212/300 [50:17<17:03, 11.63s/it]2026-04-04 18:17:45,572 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:17:45,573 INFO [213/300] sphinx-doc__sphinx-7975 - patch_len=1380, elapsed=6.9s
+Running inference:  71%|███████   | 213/300 [50:24<14:47, 10.20s/it]2026-04-04 18:18:13,733 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:18:13,734 INFO [214/300] sphinx-doc__sphinx-8273 - patch_len=1269, elapsed=28.2s
+Running inference:  71%|███████▏  | 214/300 [50:52<22:20, 15.59s/it]2026-04-04 18:18:21,050 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:18:21,050 INFO [215/300] sphinx-doc__sphinx-8282 - patch_len=1075, elapsed=7.3s
+Running inference:  72%|███████▏  | 215/300 [51:00<18:34, 13.11s/it]2026-04-04 18:19:35,228 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:19:35,228 INFO [216/300] sphinx-doc__sphinx-8435 - patch_len=16642, elapsed=74.2s
+Running inference:  72%|███████▏  | 216/300 [52:14<44:00, 31.43s/it]2026-04-04 18:19:39,667 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:19:39,667 INFO [217/300] sphinx-doc__sphinx-8474 - patch_len=771, elapsed=4.4s
+Running inference:  72%|███████▏  | 217/300 [52:18<32:16, 23.33s/it]2026-04-04 18:19:54,096 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:19:54,097 INFO [218/300] sphinx-doc__sphinx-8506 - patch_len=1270, elapsed=14.4s
+Running inference:  73%|███████▎  | 218/300 [52:33<28:14, 20.66s/it]2026-04-04 18:19:57,369 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:19:57,370 INFO [219/300] sphinx-doc__sphinx-8595 - patch_len=480, elapsed=3.3s
+Running inference:  73%|███████▎  | 219/300 [52:36<20:51, 15.44s/it]2026-04-04 18:20:05,497 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:05,498 INFO [220/300] sphinx-doc__sphinx-8627 - patch_len=1333, elapsed=8.1s
+Running inference:  73%|███████▎  | 220/300 [52:44<17:39, 13.25s/it]2026-04-04 18:20:11,596 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:11,596 INFO [221/300] sphinx-doc__sphinx-8713 - patch_len=1245, elapsed=6.1s
+Running inference:  74%|███████▎  | 221/300 [52:50<14:37, 11.10s/it]2026-04-04 18:20:21,080 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:21,081 INFO [222/300] sphinx-doc__sphinx-8721 - patch_len=1978, elapsed=9.5s
+Running inference:  74%|███████▍  | 222/300 [53:00<13:48, 10.62s/it]2026-04-04 18:20:25,640 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:25,640 INFO [223/300] sphinx-doc__sphinx-8801 - patch_len=868, elapsed=4.6s
+Running inference:  74%|███████▍  | 223/300 [53:04<11:17,  8.80s/it]2026-04-04 18:20:36,509 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:36,509 INFO [224/300] sympy__sympy-11400 - patch_len=2337, elapsed=10.9s
+Running inference:  75%|███████▍  | 224/300 [53:15<11:56,  9.42s/it]2026-04-04 18:20:46,176 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:46,176 INFO [225/300] sympy__sympy-11870 - patch_len=1496, elapsed=9.7s
+Running inference:  75%|███████▌  | 225/300 [53:25<11:52,  9.49s/it]2026-04-04 18:20:51,061 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:51,062 INFO [226/300] sympy__sympy-11897 - patch_len=925, elapsed=4.9s
+Running inference:  75%|███████▌  | 226/300 [53:30<10:00,  8.11s/it]2026-04-04 18:20:57,161 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:20:57,161 INFO [227/300] sympy__sympy-12171 - patch_len=1054, elapsed=6.1s
+Running inference:  76%|███████▌  | 227/300 [53:36<09:08,  7.51s/it]2026-04-04 18:21:33,182 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:21:33,188 INFO [228/300] sympy__sympy-12236 - patch_len=9690, elapsed=36.0s
+Running inference:  76%|███████▌  | 228/300 [54:12<19:16, 16.06s/it]2026-04-04 18:21:38,390 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:21:38,392 INFO [229/300] sympy__sympy-12419 - patch_len=1253, elapsed=5.2s
+Running inference:  76%|███████▋  | 229/300 [54:17<15:09, 12.81s/it]2026-04-04 18:21:41,164 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:21:41,164 INFO [230/300] sympy__sympy-12454 - patch_len=389, elapsed=2.8s
+Running inference:  77%|███████▋  | 230/300 [54:20<11:25,  9.80s/it]2026-04-04 18:22:38,451 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:22:44,225 INFO [231/300] sympy__sympy-12481 - patch_len=12772, elapsed=63.1s
+Running inference:  77%|███████▋  | 231/300 [55:23<29:38, 25.78s/it]2026-04-04 18:23:20,350 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:23:20,350 INFO [232/300] sympy__sympy-13031 - patch_len=7413, elapsed=36.1s
+Running inference:  77%|███████▋  | 232/300 [55:59<32:43, 28.88s/it]2026-04-04 18:24:25,996 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:24:25,997 INFO [233/300] sympy__sympy-13043 - patch_len=16425, elapsed=65.6s
+Running inference:  78%|███████▊  | 233/300 [57:05<44:33, 39.91s/it]2026-04-04 18:24:30,995 INFO Retrying request to /chat/completions in 0.416034 seconds
+2026-04-04 18:25:23,105 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:25:23,106 INFO [234/300] sympy__sympy-13146 - patch_len=10307, elapsed=57.1s
+Running inference:  78%|███████▊  | 234/300 [58:02<49:34, 45.07s/it]2026-04-04 18:25:40,302 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:25:40,303 INFO [235/300] sympy__sympy-13177 - patch_len=3477, elapsed=17.2s
+Running inference:  78%|███████▊  | 235/300 [58:19<39:46, 36.71s/it]2026-04-04 18:25:42,232 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:25:42,234 INFO [236/300] sympy__sympy-13437 - patch_len=243, elapsed=1.9s
+Running inference:  79%|███████▊  | 236/300 [58:21<28:01, 26.27s/it]2026-04-04 18:26:05,041 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:26:05,042 INFO [237/300] sympy__sympy-13471 - patch_len=5112, elapsed=22.8s
+Running inference:  79%|███████▉  | 237/300 [58:44<26:29, 25.23s/it]2026-04-04 18:26:13,956 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:26:13,956 INFO [238/300] sympy__sympy-13480 - patch_len=368, elapsed=8.9s
+Running inference:  79%|███████▉  | 238/300 [58:53<21:01, 20.34s/it]2026-04-04 18:26:51,117 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:26:51,118 INFO [239/300] sympy__sympy-13647 - patch_len=8676, elapsed=37.2s
+Running inference:  80%|███████▉  | 239/300 [59:30<25:48, 25.39s/it]2026-04-04 18:27:46,495 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:27:46,497 INFO [240/300] sympy__sympy-13773 - patch_len=17127, elapsed=55.4s
+Running inference:  80%|████████  | 240/300 [1:00:25<34:23, 34.38s/it]2026-04-04 18:27:56,629 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:27:56,630 INFO [241/300] sympy__sympy-13895 - patch_len=2186, elapsed=10.1s
+Running inference:  80%|████████  | 241/300 [1:00:35<26:39, 27.11s/it]2026-04-04 18:28:22,046 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:28:22,047 INFO [242/300] sympy__sympy-13915 - patch_len=5452, elapsed=25.4s
+Running inference:  81%|████████  | 242/300 [1:01:01<25:42, 26.60s/it]2026-04-04 18:28:26,412 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:28:26,413 INFO [243/300] sympy__sympy-13971 - patch_len=972, elapsed=4.4s
+Running inference:  81%|████████  | 243/300 [1:01:05<18:56, 19.93s/it]2026-04-04 18:28:37,666 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:28:37,667 INFO [244/300] sympy__sympy-14024 - patch_len=2378, elapsed=11.3s
+Running inference:  81%|████████▏ | 244/300 [1:01:16<16:10, 17.33s/it]2026-04-04 18:29:42,531 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:29:42,533 INFO [245/300] sympy__sympy-14308 - patch_len=11242, elapsed=64.9s
+Running inference:  82%|████████▏ | 245/300 [1:02:21<28:57, 31.59s/it]2026-04-04 18:29:45,090 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:29:45,090 INFO [246/300] sympy__sympy-14317 - patch_len=653, elapsed=2.6s
+Running inference:  82%|████████▏ | 246/300 [1:02:24<20:35, 22.88s/it]2026-04-04 18:29:48,349 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:29:48,350 INFO [247/300] sympy__sympy-14396 - patch_len=467, elapsed=3.3s
+Running inference:  82%|████████▏ | 247/300 [1:02:27<15:00, 16.99s/it]2026-04-04 18:29:50,975 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:29:50,975 INFO [248/300] sympy__sympy-14774 - patch_len=279, elapsed=2.6s
+Running inference:  83%|████████▎ | 248/300 [1:02:30<10:59, 12.68s/it]2026-04-04 18:29:53,941 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:29:53,942 INFO [249/300] sympy__sympy-14817 - patch_len=409, elapsed=3.0s
+Running inference:  83%|████████▎ | 249/300 [1:02:33<08:18,  9.77s/it]2026-04-04 18:30:01,940 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:30:01,941 INFO [250/300] sympy__sympy-15011 - patch_len=1624, elapsed=8.0s
+Running inference:  83%|████████▎ | 250/300 [1:02:41<07:41,  9.24s/it]2026-04-04 18:30:06,498 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:30:06,499 INFO [251/300] sympy__sympy-15308 - patch_len=958, elapsed=4.6s
+Running inference:  84%|████████▎ | 251/300 [1:02:45<06:23,  7.83s/it]2026-04-04 18:30:09,671 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:30:09,672 INFO [252/300] sympy__sympy-15345 - patch_len=530, elapsed=3.2s
+Running inference:  84%|████████▍ | 252/300 [1:02:48<05:08,  6.44s/it]2026-04-04 18:30:52,577 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:30:52,577 INFO [253/300] sympy__sympy-15346 - patch_len=3905, elapsed=42.9s
+Running inference:  84%|████████▍ | 253/300 [1:03:31<13:36, 17.38s/it]2026-04-04 18:31:47,045 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:31:47,046 INFO [254/300] sympy__sympy-15609 - patch_len=12788, elapsed=54.5s
+Running inference:  85%|████████▍ | 254/300 [1:04:26<21:51, 28.50s/it]2026-04-04 18:31:51,749 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:31:51,750 INFO [255/300] sympy__sympy-15678 - patch_len=852, elapsed=4.7s
+Running inference:  85%|████████▌ | 255/300 [1:04:30<16:01, 21.36s/it]2026-04-04 18:31:56,039 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:31:56,040 INFO [256/300] sympy__sympy-16106 - patch_len=414, elapsed=4.3s
+Running inference:  85%|████████▌ | 256/300 [1:04:35<11:54, 16.24s/it]2026-04-04 18:32:21,806 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:32:21,807 INFO [257/300] sympy__sympy-16281 - patch_len=4403, elapsed=25.8s
+Running inference:  86%|████████▌ | 257/300 [1:05:00<13:41, 19.10s/it]2026-04-04 18:32:56,902 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:32:56,903 INFO [258/300] sympy__sympy-16503 - patch_len=9494, elapsed=35.1s
+Running inference:  86%|████████▌ | 258/300 [1:05:36<16:43, 23.90s/it]2026-04-04 18:34:00,958 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:34:00,960 INFO [259/300] sympy__sympy-16792 - patch_len=20031, elapsed=64.1s
+Running inference:  86%|████████▋ | 259/300 [1:06:40<24:33, 35.95s/it]2026-04-04 18:34:34,479 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:34:34,480 INFO [260/300] sympy__sympy-16988 - patch_len=7027, elapsed=33.5s
+Running inference:  87%|████████▋ | 260/300 [1:07:13<23:28, 35.22s/it]2026-04-04 18:35:38,742 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:35:38,742 INFO [261/300] sympy__sympy-17022 - patch_len=13382, elapsed=64.3s
+Running inference:  87%|████████▋ | 261/300 [1:08:17<28:33, 43.93s/it]2026-04-04 18:35:48,806 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:35:48,806 INFO [262/300] sympy__sympy-17139 - patch_len=2530, elapsed=10.1s
+Running inference:  87%|████████▋ | 262/300 [1:08:27<21:23, 33.77s/it]2026-04-04 18:35:58,757 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:35:58,758 INFO [263/300] sympy__sympy-17630 - patch_len=568, elapsed=10.0s
+Running inference:  88%|████████▊ | 263/300 [1:08:37<16:25, 26.63s/it]2026-04-04 18:37:00,290 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:00,290 INFO [264/300] sympy__sympy-17655 - patch_len=13193, elapsed=61.5s
+Running inference:  88%|████████▊ | 264/300 [1:09:39<22:15, 37.10s/it]2026-04-04 18:37:02,544 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:02,545 INFO [265/300] sympy__sympy-18057 - patch_len=361, elapsed=2.3s
+Running inference:  88%|████████▊ | 265/300 [1:09:41<15:32, 26.64s/it]2026-04-04 18:37:08,139 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:08,140 INFO [266/300] sympy__sympy-18087 - patch_len=1186, elapsed=5.6s
+Running inference:  89%|████████▊ | 266/300 [1:09:47<11:31, 20.33s/it]2026-04-04 18:37:14,059 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:14,060 INFO [267/300] sympy__sympy-18189 - patch_len=1361, elapsed=5.9s
+Running inference:  89%|████████▉ | 267/300 [1:09:53<08:48, 16.01s/it]2026-04-04 18:37:28,819 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:28,820 INFO [268/300] sympy__sympy-18199 - patch_len=1263, elapsed=14.8s
+Running inference:  89%|████████▉ | 268/300 [1:10:08<08:20, 15.63s/it]2026-04-04 18:37:35,066 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:35,067 INFO [269/300] sympy__sympy-18532 - patch_len=1433, elapsed=6.2s
+Running inference:  90%|████████▉ | 269/300 [1:10:14<06:37, 12.82s/it]2026-04-04 18:37:45,530 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:45,532 INFO [270/300] sympy__sympy-18621 - patch_len=2328, elapsed=10.5s
+Running inference:  90%|█████████ | 270/300 [1:10:24<06:03, 12.11s/it]2026-04-04 18:37:50,957 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:50,958 INFO [271/300] sympy__sympy-18698 - patch_len=1152, elapsed=5.4s
+Running inference:  90%|█████████ | 271/300 [1:10:30<04:53, 10.11s/it]2026-04-04 18:37:59,121 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:37:59,122 INFO [272/300] sympy__sympy-18835 - patch_len=1281, elapsed=8.2s
+Running inference:  91%|█████████ | 272/300 [1:10:38<04:26,  9.52s/it]2026-04-04 18:38:05,450 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:05,450 INFO [273/300] sympy__sympy-19007 - patch_len=1358, elapsed=6.3s
+Running inference:  91%|█████████ | 273/300 [1:10:44<03:51,  8.56s/it]2026-04-04 18:38:13,653 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:13,653 INFO [274/300] sympy__sympy-19254 - patch_len=1409, elapsed=8.2s
+Running inference:  91%|█████████▏| 274/300 [1:10:52<03:39,  8.46s/it]2026-04-04 18:38:17,148 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:17,149 INFO [275/300] sympy__sympy-19487 - patch_len=528, elapsed=3.5s
+Running inference:  92%|█████████▏| 275/300 [1:10:56<02:54,  6.97s/it]2026-04-04 18:38:20,389 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:20,390 INFO [276/300] sympy__sympy-20049 - patch_len=475, elapsed=3.2s
+Running inference:  92%|█████████▏| 276/300 [1:10:59<02:20,  5.85s/it]2026-04-04 18:38:34,659 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:34,660 INFO [277/300] sympy__sympy-20154 - patch_len=1316, elapsed=14.3s
+Running inference:  92%|█████████▏| 277/300 [1:11:13<03:12,  8.38s/it]2026-04-04 18:38:39,495 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:39,496 INFO [278/300] sympy__sympy-20212 - patch_len=1151, elapsed=4.8s
+Running inference:  93%|█████████▎| 278/300 [1:11:18<02:40,  7.31s/it]2026-04-04 18:38:49,671 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:49,671 INFO [279/300] sympy__sympy-20322 - patch_len=2834, elapsed=10.2s
+Running inference:  93%|█████████▎| 279/300 [1:11:28<02:51,  8.17s/it]2026-04-04 18:38:52,754 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:38:52,754 INFO [280/300] sympy__sympy-20442 - patch_len=420, elapsed=3.1s
+Running inference:  93%|█████████▎| 280/300 [1:11:31<02:12,  6.65s/it]2026-04-04 18:39:28,410 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:39:28,411 INFO [281/300] sympy__sympy-20590 - patch_len=7338, elapsed=35.7s
+Running inference:  94%|█████████▎| 281/300 [1:12:07<04:51, 15.35s/it]2026-04-04 18:40:16,418 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:40:16,462 INFO [282/300] sympy__sympy-20639 - patch_len=10197, elapsed=48.1s
+Running inference:  94%|█████████▍| 282/300 [1:12:55<07:32, 25.16s/it]2026-04-04 18:41:06,882 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:41:06,927 INFO [283/300] sympy__sympy-21055 - patch_len=12182, elapsed=50.5s
+Running inference:  94%|█████████▍| 283/300 [1:13:46<09:16, 32.75s/it]2026-04-04 18:41:10,931 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:41:10,932 INFO [284/300] sympy__sympy-21171 - patch_len=768, elapsed=4.0s
+Running inference:  95%|█████████▍| 284/300 [1:13:50<06:26, 24.13s/it]2026-04-04 18:41:21,591 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:41:21,591 INFO [285/300] sympy__sympy-21379 - patch_len=2692, elapsed=10.7s
+Running inference:  95%|█████████▌| 285/300 [1:14:00<05:01, 20.09s/it]2026-04-04 18:41:52,425 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:41:52,426 INFO [286/300] sympy__sympy-21612 - patch_len=7281, elapsed=30.8s
+Running inference:  95%|█████████▌| 286/300 [1:14:31<05:26, 23.31s/it]2026-04-04 18:41:57,117 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:41:57,117 INFO [287/300] sympy__sympy-21614 - patch_len=783, elapsed=4.7s
+Running inference:  96%|█████████▌| 287/300 [1:14:36<03:50, 17.73s/it]2026-04-04 18:42:03,312 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:42:03,313 INFO [288/300] sympy__sympy-21627 - patch_len=1439, elapsed=6.2s
+Running inference:  96%|█████████▌| 288/300 [1:14:42<02:51, 14.27s/it]2026-04-04 18:42:22,539 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:42:22,540 INFO [289/300] sympy__sympy-21847 - patch_len=3846, elapsed=19.2s
+Running inference:  96%|█████████▋| 289/300 [1:15:01<02:53, 15.75s/it]2026-04-04 18:42:27,287 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:42:27,288 INFO [290/300] sympy__sympy-22005 - patch_len=739, elapsed=4.7s
+Running inference:  97%|█████████▋| 290/300 [1:15:06<02:04, 12.45s/it]2026-04-04 18:42:31,131 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:42:31,132 INFO [291/300] sympy__sympy-22714 - patch_len=688, elapsed=3.8s
+Running inference:  97%|█████████▋| 291/300 [1:15:10<01:28,  9.87s/it]2026-04-04 18:43:38,481 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:43:38,482 INFO [292/300] sympy__sympy-22840 - patch_len=14823, elapsed=67.3s
+Running inference:  97%|█████████▋| 292/300 [1:16:17<03:36, 27.11s/it]2026-04-04 18:43:48,171 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:43:48,172 INFO [293/300] sympy__sympy-23117 - patch_len=445, elapsed=9.7s
+Running inference:  98%|█████████▊| 293/300 [1:16:27<02:33, 21.89s/it]2026-04-04 18:43:50,407 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:43:50,407 INFO [294/300] sympy__sympy-23191 - patch_len=0, elapsed=2.2s
+Running inference:  98%|█████████▊| 294/300 [1:16:29<01:35, 15.99s/it]2026-04-04 18:44:51,971 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:44:51,972 INFO [295/300] sympy__sympy-23262 - patch_len=15472, elapsed=61.6s
+Running inference:  98%|█████████▊| 295/300 [1:17:31<02:28, 29.66s/it]2026-04-04 18:45:03,704 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:45:03,705 INFO [296/300] sympy__sympy-24066 - patch_len=2863, elapsed=11.7s
+Running inference:  99%|█████████▊| 296/300 [1:17:42<01:37, 24.28s/it]2026-04-04 18:45:12,334 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:45:12,335 INFO [297/300] sympy__sympy-24102 - patch_len=2046, elapsed=8.6s
+Running inference:  99%|█████████▉| 297/300 [1:17:51<00:58, 19.59s/it]2026-04-04 18:45:16,630 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:45:16,630 INFO [298/300] sympy__sympy-24152 - patch_len=948, elapsed=4.3s
+Running inference:  99%|█████████▉| 298/300 [1:17:55<00:30, 15.00s/it]2026-04-04 18:45:23,113 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:45:23,113 INFO [299/300] sympy__sympy-24213 - patch_len=1738, elapsed=6.5s
+Running inference: 100%|█████████▉| 299/300 [1:18:02<00:12, 12.45s/it]2026-04-04 18:45:28,056 INFO HTTP Request: POST http://gpu02:8083/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-04 18:45:28,057 INFO [300/300] sympy__sympy-24909 - patch_len=960, elapsed=4.9s
+Running inference: 100%|██████████| 300/300 [1:18:07<00:00, 10.19s/it]Running inference: 100%|██████████| 300/300 [1:18:07<00:00, 15.62s/it]
+2026-04-04 18:45:28,057 INFO Done! Processed 300 instances, skipped 0 (already done). Results saved to gigachat-bench/predictions/gigachat31_10b__swe-bench_lite__v4.jsonl

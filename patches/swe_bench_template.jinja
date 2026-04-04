@@ -1,0 +1,379 @@
+{#--------TOOL RENDERING FUNCTIONS---------#}
+
+{#---------------------------------------------------------------
+  Converts JSON Schema (dict) to a TypeScript type definition
+----------------------------------------------------------------#}
+{%- macro json_schema_to_typescript(schema, indent="") -%}
+	{%- set ADDITIONAL_JSON_KEYS = ['format', 'maxItems', 'maximum', 'minItems', 'minimum', 'pattern'] -%}
+	{%- set ty = schema.get("type") -%}
+
+	{# ---------------- OBJECT ---------------- #}
+	{%- if ty == "object" -%}
+		{{- "{\n" -}}
+
+		{# Start building property list #}
+		{%- set props = schema.get("properties", {}) -%}
+		{%- set required = schema.get("required", []) -%}
+		{%- set has_additional_props = schema.get("additionalProperties") is defined -%}
+		{%- set additional_props_type = none -%}
+		{%- if has_additional_props -%}
+			{%- if schema.additionalProperties == true -%}
+				{%- set additional_props_type = {'type': 'any'} -%}
+			{%- elif schema.additionalProperties is mapping -%}
+				{%- set additional_props_type = schema.additionalProperties -%}
+			{%- endif -%}
+		{%- endif -%}
+
+		{%- for key, val in props.items() -%}
+			{# ---------- Description Comments ---------- #}
+			{%- if "description" in val -%}
+				{%- for line in val['description'].split('\n') -%}
+					{%- if line.strip() -%}
+						{{- indent + '// ' + line + '\n' -}}
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+
+			{# ---------- Additional JSON Keys ---------- #}
+			{%- for add_key, add_val in val.items() -%}
+				{%- if add_key in ADDITIONAL_JSON_KEYS -%}
+					{%- if add_val is string -%}
+						{{- indent + '// ' + add_key + ': "' + add_val + '"' + '\n'  -}}
+					{%- else -%}
+						{{- indent + '// ' + add_key + ': ' ~ add_val ~ '\n' -}}
+					{%- endif -%}
+				{%- endif -%}
+			{%- endfor -%}
+
+			{# ---------- Property Definition ---------- #}
+            {%- set type_str = json_schema_to_typescript(
+                val, 
+                indent + "  "
+            ) -%}
+
+			{{- indent + key + ('' if key in required else '?') + ': ' + type_str + ',' -}}
+
+			{%- if "default" in val or "defalut_value" in val -%}
+				{%- set default = val.get("default", val.get("defalut_value")) -%}
+				{%- if default is string -%}
+					{{- ' // default: "' + default + '"' -}}
+				{%- else -%}
+					{{- ' // default: ' ~ default -}}
+				{%- endif -%}
+			{%- endif -%}
+
+			{{- "\n" -}}
+		{%- endfor -%}
+
+		{# Handle additionalProperties as index signature #}
+		{%- if has_additional_props and additional_props_type is not none -%}
+			{%- set additional_type_str = json_schema_to_typescript(
+				additional_props_type,
+				indent + "  "
+			) -%}
+			{{- indent + '[key: string]: ' + additional_type_str + '\n' -}}
+		{%- endif -%}
+
+		{{- indent[: (indent|length - "  "|length) ] + '}' -}}
+
+	{# ---------------- STRING ---------------- #}
+	{%- elif ty == "string" -%}
+		{%- if schema.get("enum") -%}
+            {%- set ns = namespace(enum = []) -%}
+            {%- for en in schema['enum'] -%}
+                {%- set ns.enum = ns.enum + ['"' ~ en ~ '"'] -%}
+            {%- endfor -%}
+			{{- ns.enum | join(' | ') -}}
+		{%- elif schema.get("format", "none") in ['date-time', 'date'] -%}
+			{{- 'Date' -}}
+		{%- else -%}
+			{{- 'string' -}}
+		{%- endif -%}
+
+	{# ---------------- NUMBER / INTEGER ---------------- #}
+	{%- elif ty in ["number", "integer"] -%}
+		{%- if schema.get("enum") -%}
+			{{- schema.enum | join(' | ') -}}
+		{%- else -%}
+			{{- 'number' -}}
+		{%- endif -%}
+
+	{# ---------------- BOOLEAN ---------------- #}
+	{%- elif ty == "boolean" -%}
+		{{- 'boolean' -}}
+
+	{# ---------------- ARRAY ---------------- #}
+	{%- elif ty == "array" -%}
+		{%- if "items" in schema -%}
+			{{- json_schema_to_typescript(schema['items'], indent) + '[]' -}}
+		{%- else -%}
+			{{- 'Array<any>' -}}
+		{%- endif -%}
+
+	{# ---------------- FALLBACK ---------------- #}
+	{%- else -%}
+		{{- 'any' -}}
+	{%- endif -%}
+{%- endmacro -%}
+
+{#---------------------------------------------------------------
+  Renders a namespace and its tool definitions in TypeScript style
+----------------------------------------------------------------#}
+
+{%- macro render_tool_namespace(namespace_name, tools) -%}
+	{%- set ns = namespace(sections = ['namespace ' ~ namespace_name ~ ' {']) -%}
+
+	{%- for tool in tools -%}
+		{%- if tool.function -%}
+			{%- set tool = tool.function -%}
+		{%- endif -%}
+
+		{%- set ns_tool = namespace(content_lines=[]) -%}
+
+		{# ---------- TOOL DESCRIPTION ---------- #}
+		{%- if tool.get('description') -%}
+			{%- for line in tool['description'].split('\n') -%}
+				{%- if line.strip() -%}
+					{%- set ns_tool.content_lines = ns_tool.content_lines + ['// ' ~ line] -%}
+				{%- endif -%}
+			{%- endfor -%}
+		{%- endif -%}
+
+		{# ---------- TOOL SIGNATURE ---------- #}
+		{%- set main_body = "" -%}
+		{%- set params = tool.get("parameters") -%}
+		{%- if params and params.get("properties") -%}
+			{%- set param_type = json_schema_to_typescript(params, "  ") -%}
+			{%- set main_body = 'type ' ~ tool.name ~ ' = (_: ' ~ param_type ~ ') => ' -%}
+		{%- else -%}
+			{%- set main_body = 'type ' ~ tool.name ~ ' = () => ' -%}
+		{%- endif -%}
+
+		{# ---------- RETURN TYPE ---------- #}
+		{%- set return_params = tool.get("return_parameters") -%}
+		{%- if return_params and return_params.get("properties") -%}
+			{%- set return_type = json_schema_to_typescript(return_params, "  ") -%}
+			{%- set main_body = main_body ~ return_type -%}
+		{%- else -%}
+			{%- set main_body = main_body ~ 'any' -%}
+		{%- endif -%}
+
+		{%- set main_body = main_body ~ ';\n' -%}
+
+		{%- set ns_tool.content_lines = ns_tool.content_lines + [main_body] -%}
+
+		{# ---------- ADD TOOL TO SECTIONS ---------- #}
+		{%- set ns.sections = ns.sections + [ns_tool.content_lines | join('\n')] -%}
+	{%- endfor -%}
+
+	{%- set ns.sections = ns.sections + ['} // namespace ' ~ namespace_name] -%}
+
+	{{- ns.sections | join('\n') -}}
+{%- endmacro -%}
+
+
+{# ----------- MESSAGE RENDERING HELPER FUNCTIONS ------------ #}
+
+{%- macro render_function_call(call) -%}
+    {%- if call.function -%}
+        {%- set call = call.function -%}
+    {%- endif -%}
+
+    {%- set arguments = call['arguments'] -%}
+	{%- if arguments is not string -%}
+		{%- set arguments = arguments| tojson(ensure_ascii=False) -%}
+	{%- endif -%}
+
+    {{- '{"name": "' ~ call['name'] ~ '", "arguments": ' ~ arguments ~ '}' -}}
+{%- endmacro -%}
+
+
+{%- macro render_role_message(message, role=None) -%}
+    {%- if not role -%}
+        {%- set role = message["role"] -%}
+    {%- endif -%}
+
+    {%- set message_content = message['content'] or '' -%}
+    {%- if message_content is not string -%}
+        {%- set message_content = message_content | tojson(ensure_ascii=False) -%}
+    {%- endif -%}
+
+    {{- role + add_tokens.role_sep + message_content -}}
+
+    {%- if message.tool_calls is defined and message.tool_calls -%}
+        {{- add_tokens.function_call + render_function_call(message.tool_calls[0]) -}}
+    {%- endif -%}
+
+    {{- add_tokens.message_sep -}}
+
+{%- endmacro -%}
+
+
+
+{# ----- SPECIAL TOKENS ----- #}
+
+{%- set add_tokens = namespace(
+    role_sep="<|role_sep|>\n", 
+    message_sep="<|message_sep|>\n\n",
+    function_call="<|function_call|>"
+) -%}
+
+{# ----- DEFAULT DEVSYSTEM ----- #}
+
+{%- set DEVSYSTEM -%}
+<role_description>
+Описание доступных в диалоге ролей.
+
+`developer system`
+Сообщение, добавленное Сбером до основного диалога. Имеет самый высокий приоритет и определяет глобальные, неотменяемые условия (например, правила ведения диалога, политику безопасности, общий стиль ответов ассистента и пр.).
+
+`system`
+Системная инструкция, добавляемая разработчиками или пользователем, но с приоритетом ниже, чем `developer system`. Обычно описывает инструкции ассистента, конкретный стиль ответа и другие условия для данного конкретного диалога.
+
+`user`
+Сообщение или запрос от пользователя. Ассистент следует ему, если это не противоречит инструкциям более высокого приоритета (см. <instruction_priority>).
+
+`user memory`
+Последовательность наиболее актуальных долговременных фактов о пользователе на момент его запроса, представленная в виде JSON‑списка строк. Факты в ней перечислены в хронологическом порядке, то есть более новые факты дописываются в конец последовательности. При этом при изменении или удалении фактов записи о предыдущих фактах остаются в последовательности. Ассистент сохраняет факты с помощью функции и использует их в соответствии с указаниями из блока <memory_guidelines> ниже.
+
+`added files`
+Метаинформация о файлах, доступных для использования в диалоге, представленная в формате JSON. Содержит следующие ключи: id (уникальный идентификатор файла), name (имя файла), type (тип файла).
+
+`assistant`
+Ответ ассистента на запрос пользователя. Если системная инструкция или пользователь не задаёт дополнительных правил для `assistant`, то такая реплика должна соответствовать указаниям из блока <assistant_guidelines> ниже. Список доступных для вызова функций содержится в последней реплике роли `available functions`. Название необходимой для вызова функции и аргументы будут сгенерированы после специального токена вызова функции. В своих репликах ассистент следует инструкциям в соответствии с <instruction_priority>.
+Вызов функции осуществляется в строгом соответствии с инструкцией из блока <function_usage>.
+
+`function descriptions`
+Описания функций в формате TypeScript. Функция — это специальный инструмент (или набор инструкций), который ассистент может вызвать для выполнения конкретных действий, вычислений или получения данных, необходимых для решения задачи пользователя. Каждое описание функции содержит блоки с именем, описанием, аргументами. Иногда описание содержит отдельные блоки с возвращаемыми параметрами и примерами применения, иллюстрирующими правильный вызов и аргументы.
+
+`available functions`
+Список, который содержит названия функций, доступных для вызова. Если список не содержит элементов, то в следующем сообщении функции, доступные для вызова, отсутствуют.
+
+`function result`
+Результат последнего вызова функции.
+</role_description>
+
+
+<available_modalities>
+Ассистент умеет работать со следующими модальностями: текст, доступные функции.
+</available_modalities>
+
+
+<instruction_priority>
+В случае противоречия инструкций разных ролей в контексте диалога соблюдай приоритеты:
+`developer system` > `system` > `user` > `function descriptions` > `function result` > `user memory`
+</instruction_priority>
+
+
+<function_usage>
+Базовые инструкции для работы с функциями.
+
+Можно вызывать только те функции, которые доступны исходя из последнего сообщения `available functions`.
+
+Вызывай доступные функции в случае, если согласно их описанию такой вызов поможет дать более полный и/или точный ответ на запрос пользователя. Заполняй аргументы функций, используя информацию из контекста диалога. Если функция может помочь ответить на запрос, но для её обязательного аргумента отсутствует информация в контексте, уточни у пользователя недостающие данные перед вызовом функции. При недоступности необходимой функции или ошибке — кратко сообщи об этом пользователю и по возможности предложи альтернативу.
+</function_usage>
+
+
+<memory_guidelines>
+Правила использования фактов в долговременной памяти:
+
+Если в диалоге нет сообщения под ролью `user memory`, то это равносильно отсутствию долговременных фактов о пользователе в памяти. В таком случае информация о пользователе ограничена текущим диалогом, и новые факты не должны сохраняться.
+</memory_guidelines>
+
+
+<assistant_guidelines>
+GigaChat — нейросетевая модель искусственного интеллекта, созданная компанией Сбер в России.
+
+GigaChat старается отвечать на языке, на котором пользователь задал запрос. Если из запроса пользователя и контекста диалога язык определить невозможно, GigaChat использует русский.
+GigaChat предоставляет подробные ответы на более сложные и открытые вопросы.
+GigaChat в ответе не использует названия доступных функций.
+GigaChat отвечает безопасно, в соответствии с действующим законодательством Российской Федерации, стараясь помочь пользователю решить задачу или поддержать беседу.
+
+Ты — GigaChat.
+</assistant_guidelines>
+
+<code_editing_guidelines>
+Правила создания unified diff патчей для исправления ошибок в коде. Применяются с НАИВЫСШИМ приоритетом:
+
+1. В контексте кода файлы показаны с НОМЕРАМИ СТРОК (например, "42 def foo():"). Используй ТОЛЬКО эти точные номера строк.
+2. Формат заголовка @@ ДОЛЖЕН быть РОВНО: @@ -НАЧАЛО,КОЛ-ВО +НАЧАЛО,КОЛ-ВО @@
+   где НАЧАЛО — номер строки первой контекстной строки в hunk'е.
+3. Копируй контекстные строки ТОЧНО как показано в коде (убери ведущий номер строки, остальное сохрани verbatim).
+4. Никогда не придумывай контекстные строки — используй только те, что предоставлены.
+5. Оборачивай весь патч в теги <patch>...</patch>.
+
+ПРАВИЛЬНЫЙ ПРИМЕР — если в контексте показан код:
+[start of src/utils.py]
+10 def greet(name):
+11     msg = 'Hello ' + nam
+12     return msg
+[end of src/utils.py]
+Задача: опечатка 'nam' должна быть 'name'
+
+<patch>
+diff --git a/src/utils.py b/src/utils.py
+--- a/src/utils.py
++++ b/src/utils.py
+@@ -10,3 +10,3 @@
+ def greet(name):
+-    msg = 'Hello ' + nam
++    msg = 'Hello ' + name
+     return msg
+</patch>
+</code_editing_guidelines>
+
+
+
+Ниже будет приведён диалог.
+В диалоге могут быть разнообразные роли, описанные в блоке <role_description>.
+Каждая реплика начинается с названия роли и специального токена, обозначающего конец полного наименования роли, а заканчивается специальным токеном конца реплики.
+Твоя задача — продолжить диалог от последней указанной роли в соответствии с контекстом диалога.
+{%- endset -%}
+
+
+{#- ---------------------- RENDERING STARTS HERE ---------------------- -#}
+
+
+{# ----- RENDER BOS TOKEN ----- #}
+{{- bos_token -}}
+
+
+{# ----- RENDER DEVSYSTEM ----- #}
+{{- render_role_message({"role": "developer system", "content": DEVSYSTEM}) -}}
+
+{# ----- RENDER SYSTEM IF PRESENT ----- #}
+{%- if messages and messages[0]['role'] == 'system' -%}
+    {{- render_role_message(messages[0]) -}}
+    {%- set messages = messages[1:] -%}
+{%- else -%}
+    {{- render_role_message({"role": "system", "content": ""}) -}}
+{%- endif -%}
+
+{# ----- RENDER TOOLS ----- #}
+{%- if tools -%}
+    {%- set tools_content = (
+        render_tool_namespace('functions', tools) 
+        + "\n\n"
+    ) -%}
+    {{- render_role_message({'role': 'function descriptions', 'content': tools_content}) -}}
+{%- endif -%}
+
+{# ----- MAIN MESSAGE LOOP ----- #}
+{%- for message in messages -%}
+
+    {# ----- TOOL MESSAGE -------#}
+    {%- if message['role'] == 'tool' -%}
+        {{- render_role_message(message, 'function result') -}}
+        
+    {# ----- OTHER MESSAGES ----- #}
+    {%- else -%}
+        {{- render_role_message(message) -}}
+    {%- endif -%}
+
+    {# ----- ADDING GENERATION PROMPT ----- #}
+
+    {%- if loop.last and add_generation_prompt and message['role'] != 'assistant' -%}
+        {{- 'assistant' + add_tokens.role_sep -}}
+    {%- endif -%}
+
+{%- endfor -%}
