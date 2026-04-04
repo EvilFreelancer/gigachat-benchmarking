@@ -31,7 +31,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger(__name__)
 
 MAX_TURNS = 8
-MAX_TOKENS_PER_TURN = 2048
+MAX_TOKENS_PER_TURN = 1024
+# Max chars returned by view_file (prevents blowing up context on multi-turn conversations)
+VIEW_FILE_MAX_CHARS = 4000
 
 SYSTEM_PROMPT = (
     "You are an expert software engineer fixing GitHub issues.\n\n"
@@ -144,37 +146,65 @@ def add_line_numbers(content: str) -> str:
     return "\n".join(f"{str(i + 1).rjust(width)} {line}" for i, line in enumerate(lines))
 
 
+def normalize_whitespace(s: str) -> str:
+    """Normalize tabs to 4 spaces and strip trailing whitespace per line."""
+    return "\n".join(line.replace("\t", "    ").rstrip() for line in s.split("\n"))
+
+
 def apply_str_replace(files: dict, path: str, old_str: str, new_str: str) -> tuple[bool, str]:
-    """Apply a str_replace operation. Returns (success, message)."""
+    """Apply a str_replace operation. Returns (success, message).
+
+    Tries multiple matching strategies:
+    1. Exact match
+    2. After normalizing tabs -> spaces and trailing whitespace
+    """
+    # Resolve path (exact or suffix match)
     content = files.get(path)
+    resolved_path = path
     if content is None:
-        # Try fuzzy path match (e.g. model omits leading directory)
         matches = [p for p in files if p.endswith(path) or path.endswith(p.split("/")[-1])]
         if len(matches) == 1:
-            path = matches[0]
-            content = files[path]
+            resolved_path = matches[0]
+            content = files[resolved_path]
+        elif len(matches) > 1:
+            return False, f"Ambiguous path '{path}'. Matches: {matches}"
         else:
-            return False, f"File '{path}' not found in context. Available: {list(files.keys())[:5]}"
+            return False, f"File '{path}' not in context. Available: {sorted(files.keys())[:8]}"
 
-    if old_str not in content:
-        # Check if it's a whitespace mismatch (common error)
-        normalized_content = re.sub(r"\t", "    ", content)
-        normalized_old = re.sub(r"\t", "    ", old_str)
-        if normalized_old in normalized_content:
-            content = normalized_content
-            old_str = normalized_old
-            files[path] = content
-        else:
-            return False, (
-                f"old_str not found in {path}. "
-                f"Make sure it matches exactly (use view_file to check the exact content)."
-            )
+    # Strategy 1: exact match
+    if old_str in content:
+        if content.count(old_str) > 1:
+            return False, f"old_str appears {content.count(old_str)} times in {resolved_path}. Be more specific."
+        files[resolved_path] = content.replace(old_str, new_str, 1)
+        return True, f"OK: replaced in {resolved_path}"
 
-    if content.count(old_str) > 1:
-        return False, f"old_str appears {content.count(old_str)} times in {path}. Make it more specific."
+    # Strategy 2: normalize whitespace in both content and old_str
+    norm_content = normalize_whitespace(content)
+    norm_old = normalize_whitespace(old_str)
+    if norm_old and norm_old in norm_content:
+        if norm_content.count(norm_old) > 1:
+            return False, f"old_str appears {norm_content.count(norm_old)} times after normalization. Be more specific."
+        files[resolved_path] = norm_content.replace(norm_old, normalize_whitespace(new_str), 1)
+        return True, f"OK: replaced in {resolved_path} (whitespace normalized)"
 
-    files[path] = content.replace(old_str, new_str, 1)
-    return True, f"Replaced in {path}: {len(old_str)} chars -> {len(new_str)} chars"
+    # Provide a helpful snippet from the file to help the model fix old_str
+    # Find the closest match by looking for the first line of old_str
+    first_line = norm_old.split("\n")[0].strip()
+    hint = ""
+    if first_line:
+        for i, line in enumerate(content.split("\n")):
+            if first_line in line:
+                start = max(0, i - 1)
+                end = min(len(content.split("\n")), i + len(old_str.split("\n")) + 2)
+                hint = "\nNearest match in file:\n" + "\n".join(
+                    f"{start+j+1} {l}" for j, l in enumerate(content.split("\n")[start:end])
+                )
+                break
+
+    return False, (
+        f"old_str not found in {resolved_path}. "
+        f"Call view_file('{resolved_path}') to see exact content, then retry.{hint}"
+    )
 
 
 def generate_patch(original_files: dict, modified_files: dict) -> str:
@@ -208,15 +238,38 @@ def generate_patch(original_files: dict, modified_files: dict) -> str:
     return "\n".join(parts)
 
 
+def extract_issue(text: str) -> str:
+    """Extract just the <issue>...</issue> block from BM25 text."""
+    m = re.search(r"<issue>(.*?)</issue>", text, re.DOTALL)
+    if m:
+        return f"<issue>{m.group(1)}</issue>"
+    # Fallback: first 2000 chars of the text (without code blocks)
+    stripped = re.sub(r"\[start of [^\]]+\].*?\[end of [^\]]+\]", "", text, flags=re.DOTALL)
+    return stripped[:2000].strip()
+
+
 def run_agent(client: OpenAI, model_name: str, instance_id: str, text: str) -> dict:
-    """Run the agentic loop for one SWE-bench instance."""
+    """Run the agentic loop for one SWE-bench instance.
+
+    Key design: we do NOT send all the BM25 code context in the initial message.
+    Instead, the model sees only the issue description and calls view_file() to
+    explore files from our local BM25 cache. This prevents CUDA OOM from long contexts.
+    """
     # Strip BM25 preamble
     lines = text.split("\n", 1)
-    user_content = lines[1] if len(lines) == 2 else text
+    full_text = lines[1] if len(lines) == 2 else text
 
-    # Parse file state from BM25 context
-    original_files = parse_bm25_files(user_content)
+    # Parse file state from BM25 context (local cache - not sent to model initially)
+    original_files = parse_bm25_files(full_text)
     current_files = {k: v for k, v in original_files.items()}
+
+    # Initial user message: just the issue + list of available files
+    issue_text = extract_issue(full_text)
+    available_files = "\n".join(f"  - {p}" for p in sorted(original_files.keys()))
+    user_content = (
+        f"{issue_text}\n\n"
+        f"Available files (use view_file to read them):\n{available_files}"
+    )
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
@@ -224,6 +277,7 @@ def run_agent(client: OpenAI, model_name: str, instance_id: str, text: str) -> d
     ]
 
     turns = 0
+    consecutive_views = 0
     tool_calls_log = []
     finish_called = False
     finish_summary = ""
@@ -240,8 +294,20 @@ def run_agent(client: OpenAI, model_name: str, instance_id: str, text: str) -> d
                 max_tokens=MAX_TOKENS_PER_TURN,
             )
         except Exception as e:
-            logger.error(f"[{instance_id}] API error on turn {turns}: {e}")
-            break
+            logger.warning(f"[{instance_id}] API error on turn {turns}: {e}. Waiting 10s for recovery...")
+            time.sleep(10)
+            try:
+                response = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    tools=TOOLS,
+                    tool_choice="auto",
+                    temperature=0,
+                    max_tokens=MAX_TOKENS_PER_TURN,
+                )
+            except Exception as e2:
+                logger.error(f"[{instance_id}] Retry failed: {e2}")
+                break
 
         msg = response.choices[0].message
         finish_reason = response.choices[0].finish_reason
@@ -253,6 +319,25 @@ def run_agent(client: OpenAI, model_name: str, instance_id: str, text: str) -> d
             # No tool calls - model finished without calling finish()
             logger.info(f"[{instance_id}] Turn {turns}: no tool calls, stopping (finish_reason={finish_reason})")
             break
+
+        # Detect loop: too many consecutive view_file without edits
+        turn_fns = [tc.function.name for tc in msg.tool_calls]
+        if all(fn == "view_file" for fn in turn_fns):
+            consecutive_views += 1
+        else:
+            consecutive_views = 0
+
+        if consecutive_views >= 4:
+            # Inject nudge as extra user message
+            messages.append({
+                "role": "user",
+                "content": (
+                    "You have been reading files for a while. "
+                    "Please now call str_replace() to make the fix, "
+                    "or call finish() if the issue is already resolved or cannot be fixed."
+                ),
+            })
+            consecutive_views = 0
 
         # Process tool calls
         for tc in msg.tool_calls:
@@ -274,7 +359,11 @@ def run_agent(client: OpenAI, model_name: str, instance_id: str, text: str) -> d
                         path = matches[0]
                         content = current_files[path]
                 if content is not None:
-                    result = f"[File: {path}]\n{add_line_numbers(content)}"
+                    numbered = add_line_numbers(content)
+                    # Truncate to avoid OOM on very large files
+                    if len(numbered) > VIEW_FILE_MAX_CHARS:
+                        numbered = numbered[:VIEW_FILE_MAX_CHARS] + f"\n... (truncated, {len(numbered)} total chars)"
+                    result = f"[File: {path}]\n{numbered}"
                 else:
                     result = f"File '{path}' not in context. Available files: {list(current_files.keys())}"
 
@@ -284,6 +373,8 @@ def run_agent(client: OpenAI, model_name: str, instance_id: str, text: str) -> d
                 new_str = args.get("new_str", "")
                 success, msg_text = apply_str_replace(current_files, path, old_str, new_str)
                 result = msg_text
+                if success:
+                    logger.info(f"[{instance_id}] str_replace succeeded: {path}")
 
             elif fn_name == "finish":
                 finish_called = True
