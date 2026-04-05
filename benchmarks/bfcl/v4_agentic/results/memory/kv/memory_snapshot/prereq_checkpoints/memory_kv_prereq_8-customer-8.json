@@ -1,0 +1,17 @@
+{
+    "core_memory": {
+        "user_payment_conflict_preference": "avoid credit card dispute, prefer direct resolution",
+        "user_name": "Michael",
+        "user_location": "Seattle",
+        "user_social_media": "Instagram: @coffee_creations_1237",
+        "user_intention": "Open to providing more specific examples or answering questions about feedback; enthusiastic about coffee gear.",
+        "user_current_satisfaction": "Enjoying espresso machine and accessories, excited to see brand evolve, looking forward to perfecting daily latte routine. Appreciative of quality, design, and customer service."
+    },
+    "archival_memory": {
+        "new_customer_promo_code": "ESPRESSO17",
+        "payment_options": "credit card, PayPal, Apple Pay, financing(including 0% intro APR for 6 months on some purchases)",
+        "shipping_times": "Standard shipping: 5\u20137 business days for in\u2011stock items; 10\u201314 business days if shipped from out of state. Expedited shipping(if available): 3\u20135 business days for an additional fee.",
+        "shipping_policy": "Standard shipping: 5\u20137 business days(in\u2011stock) or 10\u201314 business days(out\u2011of\u2011state). Expedited shipping: $35\u2013$55 depending on destination; available at checkout if offered. Free shipping threshold: $350 (subject to change; may apply to accessories like extra filters or a frothing pitcher).",
+        "order_tracking": "You\u2019ll receive a tracking number via email once the order ships. The tracking page will show: \n- Status: Order Processing \u2192 Shipped \u2192 Out for Delivery \u2192 Delivered\n- Real\u2011time updates at each carrier hub(e.g., UPS, FedEx, or local carrier)\n- Options to request a signature requirement or delivery instructions(e.g., \u201cleave at back door\u201d) during checkout."
+    }
+}

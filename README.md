@@ -10,15 +10,19 @@
 
 | Бенчмарк | Что тестирует | Лучший результат | Папка |
 |----------|---------------|------------------|-------|
-| **BFCL** | Tool calling (вызов функций) | Simple Python **89.5%**, Multiple **91.0%** | [`benchmarks/bfcl/`](benchmarks/bfcl/) |
-| **tau2-bench** | Агентные диалоги (multi-turn) | Pass^1 **0.0%** (airline, 50 задач) | [`benchmarks/tau2-bench/`](benchmarks/tau2-bench/) |
+| **BFCL Single-turn** | Tool calling (вызов функций) | Simple Python **89.5%**, Multiple **91.0%** | [`benchmarks/bfcl/`](benchmarks/bfcl/) |
+| **BFCL Multi-turn** | Многоходовые tool calls | Base **15.0%**, Overall **10.6%** | [`benchmarks/bfcl/`](benchmarks/bfcl/) |
+| **BFCL Agentic** | Memory + Web Search | Overall **0.0%** | [`benchmarks/bfcl/`](benchmarks/bfcl/) |
+| **tau2-bench** | Агентные диалоги | Pass^1 **0.0%** (airline, 50 задач) | [`benchmarks/tau2-bench/`](benchmarks/tau2-bench/) |
 | **SWE-bench Lite** | Решение GitHub issues | Score **0%**, best patch rate **8%** | [`benchmarks/swe-bench/`](benchmarks/swe-bench/) |
 
 ---
 
 ## BFCL - Berkeley Function Calling Leaderboard
 
-Тестирует способность модели выбрать правильную функцию и передать правильные аргументы.
+Полный прогон всех категорий BFCL v4.
+
+### Single-turn (v1/v2)
 
 | Категория | Accuracy | Описание |
 |-----------|----------|----------|
@@ -28,7 +32,25 @@
 | Simple JavaScript | 58.00% | Один вызов, JS-функции |
 | Parallel | 0.00% | Параллельные вызовы (не поддерживается) |
 
-Для модели с 1.8B активных параметров - 89.5% на Python сопоставимо с GPT-4o (~90-95%).
+### Multi-turn (v3)
+
+| Категория | Accuracy | Описание |
+|-----------|----------|----------|
+| Base | **15.00%** | Базовые многоходовые задачи (file system, API) |
+| Miss Param | **13.00%** | Пропущен обязательный параметр функции |
+| Miss Func | 8.50% | Отсутствует одна из функций |
+| Long Context | 6.00% | Длинный контекст описания функций |
+| **Overall** | **10.62%** | |
+
+### Agentic (v4) - Memory + Web Search
+
+| Категория | Accuracy | Описание |
+|-----------|----------|----------|
+| Memory KV / Vector / Rec Sum | 0.00% | Key-value, вектор, recursive summary |
+| Web Search Base / No Snippet | 0.00% | Поиск DuckDuckGo, без сниппетов |
+| **Overall** | **0.00%** | |
+
+Для модели с 1.8B активных параметров - 89.5% на Python FC сопоставимо с GPT-4o (~90-95%). Multi-turn 10.6% - ожидаемый результат для маленькой модели.
 
 Подробности: [`benchmarks/bfcl/README.md`](benchmarks/bfcl/README.md)
 
@@ -72,9 +94,10 @@
 ### Слабые стороны
 
 1. **Parallel tool calls** - не поддерживаются (0%)
-2. **Агентные сценарии** - модель не справляется с длинными цепочками рассуждений
-3. **Генерация diff** - не может стабильно генерировать unified diff формат
-4. **Галлюцинации инструментов** - иногда вызывает несуществующие функции
+2. **Multi-turn recovery** - после ошибки модель часто дает пустой ответ вместо альтернативного подхода
+3. **Агентные сценарии** - memory и web search требуют длинных цепочек рассуждений, 0%
+4. **Генерация diff** - не может стабильно генерировать unified diff формат
+5. **Галлюцинации инструментов** - иногда вызывает несуществующие функции
 
 ### Рекомендации
 
@@ -110,16 +133,25 @@ gigachat-bench/
   results/                           # Результаты оценки SWE-bench
   patches/                           # Кастомный chat template
   benchmarks/
-    bfcl/                            # BFCL результаты и инструкция
-      README.md                      # Как запустить BFCL
-      data_overall.csv               # Сводная таблица
-      BFCL_v4_*_result.json          # Сырые ответы модели
-      BFCL_v4_*_score.json           # Оценки по категориям
-    tau2-bench/                      # tau2-bench результаты и инструкция
-      README.md                      # Как запустить tau2-bench
+    bfcl/                            # BFCL - все категории
+      README.md                      # Как запустить, описание категорий
+      data_overall.csv               # Сводная таблица (v1/v2)
+      data_overall_v2.csv            # Сводная таблица (все категории)
+      BFCL_v4_*_result.json          # Single-turn сырые ответы
+      BFCL_v4_*_score.json           # Single-turn оценки
+      v3_multi_turn/                 # Multi-turn (v3) результаты
+        data_multi_turn.csv          # Сводка
+        results/                     # Сырые ответы
+        scores/                      # Оценки
+      v4_agentic/                    # Agentic (v4) результаты
+        data_agentic.csv             # Сводка
+        results/                     # Сырые ответы (memory + web_search)
+        scores/                      # Оценки
+    tau2-bench/                      # tau2-bench
+      README.md                      # Как запустить
       results_airline.json           # Полные результаты (50 задач)
-    swe-bench/                       # SWE-bench подробности
-      README.md                      # Как запустить SWE-bench
+    swe-bench/                       # SWE-bench
+      README.md                      # Как запустить
       REPORT.md                      # Подробный отчет (EN)
       REPORT_RU.md                   # Подробный отчет (RU)
 ```

@@ -1,0 +1,18 @@
+{
+    "core_memory": {
+        "next_id": 7,
+        "store": {
+            "0": "Patient is a 55\u2011year\u2011old resident of Kansas. Has experienced multiple surgeries, chronic conditions, and now manages joint pain and seasonal illnesses. Takes a proactive approach to health care.",
+            "1": "Patient has Type 2 Diabetes diagnosed 10 years ago. Focused on diet(cut sugary snacks, watch carbs) and regular activity(30\u2011minute walk after dinner). Actively monitors blood glucose. Doctor guidance has helped achieve good control.",
+            "2": "Patient has hypertension, family history. Managing with medication and lifestyle(diet, light exercise: walking, yoga). Stress worsens blood pressure. Uses indoor workouts/treadmill in winter. Scariest moment: hypertensive crisis leading to ER visit.",
+            "3": "Patient has osteoarthritis affecting knees and hands. Weather changes worsen pain. Physical therapy helped. Using ergonomic chairs, good shoes, avoiding overuse. Trying glucosamine supplements uncertain efficacy.",
+            "4": "Patient has hypothyroidism diagnosed early 40s due to fatigue and unexplained weight gain. Managed with medication; dosage adjustment took time. Regular monitoring and adherence to meds keep symptoms under control.",
+            "5": "Patient had gallbladder removal a few years ago after years of gallstones and a severe gallbladder attack. Recovery uncomplicated but digestion changed. Avoids fried/greasy foods; learned which foods work best post\u2011gallbladder removal.",
+            "6": "Patient\u2019s overall health philosophy: proactive, listening to body, taking rest when needed, not ignoring symptoms. Emphasis on managing own health, staying informed, taking charge."
+        }
+    },
+    "archival_memory": {
+        "next_id": 0,
+        "store": {}
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "core_memory": {
+        "next_id": 4,
+        "store": {
+            "0": "User is a Computer Science major, fourth year, taking higher-level courses like complex algorithms, advanced system design, and quantum computing basics.",
+            "1": "Favorite class: Advanced Algorithms. Enjoys theory that ties to real\u2011world problems like pathfinding optimization in large networks and efficient handling of huge datasets. Covered topics: dynamic programming, approximation algorithms for NP\u2011hard problems. Professor explains concepts intuitively.",
+            "2": "Distributed Systems(CS 2631) \u2013 second hardest. Major project: simulate a decentralized file storage system. Group work requires integrating code with varied styles, managing concurrency, handling node failures. Experienced a frustrating bug from a misplaced bracket, then a satisfying fix.",
+            "3": "Favorite class: Advanced Algorithms. Second hardest: Distributed Systems(CS 2631). Elective: Game Design(industry professor, 2D/3D engines, physics, UX). Also taking Introduction to Quantum Computing(conceptual focus, linear algebra, quantum\u2011circuit simulators, Grover\u2019s and Shor\u2019s algorithms)."
+        }
+    },
+    "archival_memory": {
+        "next_id": 0,
+        "store": {}
+    }
+}

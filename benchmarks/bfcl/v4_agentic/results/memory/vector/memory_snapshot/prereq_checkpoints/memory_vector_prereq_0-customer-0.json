@@ -1,0 +1,18 @@
+{
+    "core_memory": {
+        "next_id": 7,
+        "store": {
+            "0": "User introduced as Michael, first time interacting with the company.",
+            "1": "User profile: 35-year-old freelance graphic designer from Seattle, serious about work and hobbies, likes gadgets and appliances that fit seamlessly into lifestyle, interested in high-quality coffee machine with design aesthetic.",
+            "2": "User interest: high-quality coffee machine with design aesthetic, specifically comparing standard drip coffee makers and espresso machines.",
+            "3": "User preference: espresso machine with caf\u00e9-like experience, not a professional barista, prefers steam-based espresso system, design aesthetic: sleek, modern, stainless-steel finish.",
+            "4": "User interest: specific features of espresso machines for non-professional barista, caf\u00e9-like experience at home, preference for steam-based espresso system, design aesthetic: sleek, modern, stainless-steel finish.",
+            "5": "User interest: pricing range for espresso machines, discounts for first-time buyers, bundle deals, limited-time promos.",
+            "6": "User location: Seattle, shipping concerns for rainy weather, shipping origin, shipping time frame, family gathering later this month."
+        }
+    },
+    "archival_memory": {
+        "next_id": 0,
+        "store": {}
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "core_memory": {
+        "next_id": 7,
+        "store": {
+            "0": "Nostalgic about home; close bond with 16\u2011year\u2011old sister who introduced you to mobile games; dinner\u2011table conversations often revolve around golden retriever Archie.",
+            "1": "Favorite class: Advanced Algorithms. Enjoys theory that ties to real\u2011world problems like pathfinding optimization in large networks and efficient handling of huge datasets. Covered topics: dynamic programming, approximation algorithms for NP\u2011hard problems. Professor explains concepts intuitively.",
+            "2": "Distributed Systems(CS 2631) \u2013 second hardest. Major project: simulate a decentralized file storage system. Group work requires integrating code with varied styles, managing concurrency, handling node failures. Experienced a frustrating bug from a misplaced bracket, then a satisfying fix.",
+            "3": "Favorite class: Advanced Algorithms. Second hardest: Distributed Systems(CS 2631). Elective: Game Design(industry professor, 2D/3D engines, physics, UX). Also taking Introduction to Quantum Computing(conceptual focus, linear algebra, quantum\u2011circuit simulators, Grover\u2019s and Shor\u2019s algorithms).",
+            "4": "User is a fourth-year computer science major, 21\u201122, mentions that hobbies keep them sane and help bring a fresh perspective to programming.",
+            "5": "User\u2019s hobby: sailing. Grew up near a marina, started with tiny sailboats, now uses local sailing club for rentals. Enjoys sense of freedom, problem\u2011solving aspect, and the way it clears other thoughts.",
+            "6": "User\u2019s second hobby: gym. Started lifting freshman year, now works out ~4 times/week, enjoys incremental strength gains, stress relief, mental clarity, and better sleep after coding marathons."
+        }
+    },
+    "archival_memory": {
+        "next_id": 3,
+        "store": {
+            "0": "User shares regret about not joining clubs early and now participates in Computer Science Society weekly meetups, discussing new technologies, sharing projects, and having industry speakers. Also mentions seeking help on concurrency and containerization.",
+            "1": "User mentions attending VR/AR Club since sophomore year, doing research in immersive analytics, hands\u2011on VR lab, demos of mini\u2011games and AR tutor concept for advanced math, supportive vibe.",
+            "2": "User mentions occasional attendance at student\u2011run radio station open\u2011mic nights, a friend from Distributed Systems class performed acoustic set, reminder that people have hidden talents beyond coding."
+        }
+    }
+}

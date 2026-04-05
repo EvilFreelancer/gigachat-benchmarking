@@ -1,0 +1,18 @@
+{
+    "core_memory": {
+        "next_id": 14,
+        "store": {
+            "0": "Patient has a history of diabetes and hypertension. Recent bloodwork showed some ups and downs but nothing alarming. Patient lives in Kansas and notes seasonal effects on energy and joint pain, emphasizing close monitoring of numbers and lifestyle adjustments.",
+            "1": "Most recent fasting blood glucose: 135 mg/dL(target <100 mg/dL). A1C: 6.9% (target \u22646.5%). Doctor recommended increasing dietary fiber and doing light exercise after meals. Home morning readings: 125\u2011130 mg/dL.",
+            "2": "Blood pressure: last check 138/85 mmHg(target <130/80 mmHg). Home readings 135\u2011140 systolic, 80\u201190 diastolic, influenced by stress and salt intake. Efforts: reducing sodium, increasing water intake.",
+            "3": "Vitamin D: initial level 22 ng/mL(deficient, target 30\u201150 ng/mL). Started 2,000 IU daily supplement; plan to retest in a few months.",
+            "5": "For Type 2 Diabetes, patient takes metformin 1000 mg twice daily. A1C ~6.9%; fasting blood glucose 125\u2011130 mg/dL. Recently added semaglutide(Ozempic) low dose; notes appetite control benefit.",
+            "6": "For hypertension, patient takes losartan 50 mg once daily. Blood pressure readings 135\u2011140/80\u201190 mmHg. Doctor recommends stress management and reducing sodium rather than increasing dosage. Daily magnesium supplement taken.",
+            "13": "Overall, medication routine is working well; pill planner and phone reminders used. Lifestyle changes emphasized to reduce reliance on meds; goal is staying healthy and avoiding unnecessary prescriptions by managing naturally."
+        }
+    },
+    "archival_memory": {
+        "next_id": 0,
+        "store": {}
+    }
+}
